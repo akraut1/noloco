@@ -2,7 +2,6 @@
 <style>
 
 /* Light mode variables */
-/* Light mode variables */
 :root {
   --background: 0 0% 100%;
   --foreground: 240 10% 3.9%;
@@ -175,13 +174,13 @@
 
 /* Project Canvas */
 [data-testid="project-canvas"] {
-  background-color: hsl(var(--gray-50)) !important;
+  background-color: hsl(var(--gray-800)) !important;
   color: hsl(var(--foreground));
 }
 
 /* Table Styles */
 .collection-view-table {
-  --table-bg: hsl(var(--background));
+  --table-bg: transparent;
   --table-border-color: hsl(var(--border));
 }
 
@@ -203,6 +202,7 @@
 
 .collection-view-table tbody tr {
   border-bottom: 1px solid hsl(var(--border));
+  
 }
 
 .collection-view-table tbody tr:hover {
