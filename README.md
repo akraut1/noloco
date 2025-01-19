@@ -1,2 +1,2 @@
 # nolococss
-Custom css for a Noloco app
+Shadcn inspired CSS and component modifications to customize a Noloco application
