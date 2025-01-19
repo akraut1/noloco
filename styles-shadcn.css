@@ -352,9 +352,6 @@ marker {
 }
 
 /* Collections & "record" items */
-.collection-view-rows > div {
-  padding-left: 0;
-}
 .collection-view > div:first-child h1 {
   padding-left: 0;
   font-size: 16px;
@@ -389,8 +386,8 @@ marker {
 
 /* Filters, etc. */
 .collection-view-table > div {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 .collection-view-table > div:first-child > div > div:last-child > div:last-child {
   display: none;
