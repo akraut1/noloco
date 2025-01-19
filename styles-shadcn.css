@@ -3,18 +3,6 @@
 /* shadcn new york zinc */
 
   :root {
-    /* Full Zinc Scale */
-    --zinc-50:  #fafafa;
-    --zinc-100: #f4f4f5;
-    --zinc-200: #e4e4e7;
-    --zinc-300: #d4d4d8;
-    --zinc-400: #a1a1aa;
-    --zinc-500: #71717a;
-    --zinc-600: #52525b;
-    --zinc-700: #3f3f46;
-    --zinc-800: #27272a;
-    --zinc-900: #18181b;
-    
     /* Shadcn New York Zinc: Light Mode */
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -90,7 +78,6 @@
     --sidebar-ring: 240 4.9% 83.9%;
   }
 
-/* Base background/text color */
 /* Background overrides */
 [data-testid="project-canvas"] {
   background: hsl(var(--background)) !important;
