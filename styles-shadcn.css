@@ -25,14 +25,25 @@
   --radius: 0.5rem;
 
   /* Role-based badge colors */
-  --admin-bg: 346 77.8% 49.8%;
-  --admin-text: 346 100% 96.1%;
-  --account-exec-bg: 270 70.8% 45.8%;
-  --account-exec-text: 270 100% 96.1%;
-  --loan-processor-bg: 172 66.8% 40.8%;
-  --loan-processor-text: 172 100% 96.1%;
-  --loan-opener-bg: 221 83.2% 53.3%;
-  --loan-opener-text: 221 100% 96.1%;
+  /* Admin - Royal Purple */
+  --admin-from: 272 90% 60%;
+  --admin-to: 272 85% 65%;
+  --admin-border: 272 90% 40%;
+
+  /* Account Executive - Deep Teal */
+  --account-exec-from: 180 75% 45%;
+  --account-exec-to: 180 70% 50%;
+  --account-exec-border: 180 75% 35%;
+
+  /* Loan Processor - Rich Amber */
+  --loan-processor-from: 43 96% 50%;
+  --loan-processor-to: 43 90% 55%;
+  --loan-processor-border: 43 96% 40%;
+
+  /* Loan Opener - Vibrant Indigo */
+  --loan-opener-from: 231 83% 60%;
+  --loan-opener-to: 231 78% 65%;
+  --loan-opener-border: 231 83% 50%;
 }
 
 /* Dark mode variables */
@@ -56,6 +67,22 @@
   --border: 216 34% 17%;
   --input: 216 34% 17%;
   --ring: 216 34% 17%;
+  /* Adjust colors for dark mode */
+  --admin-from: 272 70% 45%;
+  --admin-to: 272 65% 50%;
+  --admin-border: 272 70% 35%;
+
+  --account-exec-from: 180 65% 35%;
+  --account-exec-to: 180 60% 40%;
+  --account-exec-border: 180 65% 25%;
+
+  --loan-processor-from: 43 86% 45%;
+  --loan-processor-to: 43 80% 50%;
+  --loan-processor-border: 43 86% 35%;
+
+  --loan-opener-from: 231 73% 45%;
+  --loan-opener-to: 231 68% 50%;
+  --loan-opener-border: 231 73% 35%;
 }
 
 /* Project Canvas */
@@ -91,35 +118,57 @@
 }
 
 /* Role Badges */
+/* Base badge styles */
 [data-testid="field-cell"] span.rounded {
-  padding: 0.25rem 0.75rem;
-  border-radius: 0.375rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 0.75rem;
   font-weight: 500;
   font-size: 0.75rem;
+  letter-spacing: 0.025em;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
 }
 
-/* Admin badge */
+[data-testid="field-cell"] span.rounded:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Role-specific styles */
 [data-testid="field-cell"] span.rounded:has(div:contains("Admin")) {
-  background-color: hsl(var(--admin-bg));
-  color: hsl(var(--admin-text));
+  background: linear-gradient(135deg, hsla(var(--admin-from), 0.9), hsla(var(--admin-to), 0.8));
+  border-color: hsla(var(--admin-border), 0.3);
+  color: hsl(var(--background));
 }
 
-/* Account Executive badge */
 [data-testid="field-cell"] span.rounded:has(div:contains("Account Executive")) {
-  background-color: hsl(var(--account-exec-bg));
-  color: hsl(var(--account-exec-text));
+  background: linear-gradient(135deg, hsla(var(--account-exec-from), 0.9), hsla(var(--account-exec-to), 0.8));
+  border-color: hsla(var(--account-exec-border), 0.3);
+  color: hsl(var(--background));
 }
 
-/* Loan Processor badge */
 [data-testid="field-cell"] span.rounded:has(div:contains("Loan Processor")) {
-  background-color: hsl(var(--loan-processor-bg));
-  color: hsl(var(--loan-processor-text));
+  background: linear-gradient(135deg, hsla(var(--loan-processor-from), 0.9), hsla(var(--loan-processor-to), 0.8));
+  border-color: hsla(var(--loan-processor-border), 0.3);
+  color: hsl(var(--background));
 }
 
-/* Loan Opener badge */
 [data-testid="field-cell"] span.rounded:has(div:contains("Loan Opener")) {
-  background-color: hsl(var(--loan-opener-bg));
-  color: hsl(var(--loan-opener-text));
+  background: linear-gradient(135deg, hsla(var(--loan-opener-from), 0.9), hsla(var(--loan-opener-to), 0.8));
+  border-color: hsla(var(--loan-opener-border), 0.3);
+  color: hsl(var(--background));
+}
+
+/* Group header count badges */
+[data-testid="collection-group-header"] span.rounded {
+  background: hsla(var(--muted), 0.8);
+  border: 1px solid hsla(var(--border), 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 /* Action Buttons */
@@ -190,7 +239,7 @@
   [data-testid="record-view-body"] {
     padding: 0.75rem;
   }
-  
+
   .collection-view-table .collection-filter input {
     width: 100%;
   }
