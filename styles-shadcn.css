@@ -326,8 +326,8 @@ body,
    for background & color overrides below 
 */
 [data-testid="record-view-section"] > div > div > div {
-  background: none !important;
-  color: var(--zinc-800) !important;
+  background: linear-gradient(0deg, var(--alpha-40, rgba(9, 9, 11, 0.60)) 0%, var(--alpha-40, rgba(9, 9, 11, 0.60)) 100%), var(--base-muted, #27272A); !important;
+  color: var(foreground) !important;
 }
 
 [data-testid="view-collection"] {
