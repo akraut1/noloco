@@ -105,7 +105,11 @@ button[type="submit"]:disabled {
    opacity: hsl(var(--opacity-50)); 
 }
 
-button[type="submit"]:hover,
+button[type="submit"]:hover {
+   background-color: hsl(var(--linear-gradient-90));
+   opacity: hsl(var(--opacity-90));
+}
+
 button[type="submit"]:active,
 button[type="submit"]:focus {
    border-radius: hsl(var(--border-radius-md));
@@ -118,19 +122,17 @@ div.mt-6 > button.group.bg-nlc_primary-600 {
    border-radius: hsl(var(--border-radius-md));
    background-color: hsl(var(--primary));
    opacity: hsl(var(--opacity-100));
+   box-shadow: hsl(var(--shadow-base)); 
 }
 
 div.mt-6 > button.group.bg-nlc_primary-600:hover {
-   border-radius: hsl(var((--border-radius-md));
-   background-color: hsl(var(--primary));
-   opacity: 0.75;
+   background-color: hsl(var(--linear-gradient-90));
+   opacity: hsl(var(--opacity-90));
 }
 
 div.mt-6 > button.group.bg-nlc_primary-600:active {
-   border-radius: hsl(var(--border-radius-md));
-   background-color: hsl(var(--linear-gradient-90));
-   opacity: hsl(var(--opacity-80));
-   box-shadow: hsl(var(--shadow-base));   
+   background-color: hsl(var(--linear-gradient-80));
+   opacity: hsl(var(--opacity-80));  
 }
 
 #root.div.div.div.flex.w-full.flex-col.items-center.justify-center.overflow-hidden.bg-gray-100.min-h-screen.div.div.div.p.span.span {
