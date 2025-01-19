@@ -36,27 +36,28 @@
   --gray-700: 240 5.9% 10%;
   --gray-800: 240 3.7% 15.9%;
   --gray-900: 240 5.9% 10%;
+}
 
-  /* Role-Based Badge Colors */
-  /* Admin - Royal Purple */
-  --admin-from: 272 90% 60%;
-  --admin-to: 272 85% 65%;
-  --admin-border: 272 90% 40%;
+	/* Role-based badge colors */
+	/* Admin - Royal Purple */
+	--admin-from: 272 90% 60%;
+	--admin-to: 272 85% 65%;
+	--admin-border: 272 90% 40%;
 
-  /* Account Executive - Deep Teal */
-  --account-exec-from: 180 75% 45%;
-  --account-exec-to: 180 70% 50%;
-  --account-exec-border: 180 75% 35%;
+	/* Account Executive - Deep Teal */
+	--account-exec-from: 180 75% 45%;
+	--account-exec-to: 180 70% 50%;
+	--account-exec-border: 180 75% 35%;
 
-  /* Loan Processor - Rich Amber */
-  --loan-processor-from: 43 96% 50%;
-  --loan-processor-to: 43 90% 55%;
-  --loan-processor-border: 43 96% 40%;
+	/* Loan Processor - Rich Amber */
+	--loan-processor-from: 43 96% 50%;
+	--loan-processor-to: 43 90% 55%;
+	--loan-processor-border: 43 96% 40%;
 
-  /* Loan Opener - Vibrant Indigo */
-  --loan-opener-from: 231 83% 60%;
-  --loan-opener-to: 231 78% 65%;
-  --loan-opener-border: 231 83% 50%;
+	/* Loan Opener - Vibrant Indigo */
+	--loan-opener-from: 231 83% 60%;
+	--loan-opener-to: 231 78% 65%;
+	--loan-opener-border: 231 83% 50%;
 }
 
 /* Dark mode variables */
@@ -97,22 +98,22 @@
   --loan-opener-to: 231 68% 50%;
   --loan-opener-border: 231 73% 35%;
 
-  /* Custom gray spectrum for dark mode */
-  --gray-50: 240 5.9% 10%;
-  --gray-100: 240 5.2% 11.5%;
-  --gray-200: 240 3.7% 15.9%;
-  --gray-300: 240 5.3% 26%;
-  --gray-400: 240 5% 33.9%;
-  --gray-500: 240 3.7% 44%;
-  --gray-600: 240 5% 65%;
-  --gray-700: 240 5.2% 84%;
-  --gray-800: 240 4.8% 95.9%;
-  --gray-900: 240 5% 96%;
+  /* Refined gray spectrum for dark mode - using zinc theme values */
+  --gray-50: 240 5% 98%; /* Lightest */
+  --gray-100: 240 5% 96%;
+  --gray-200: 240 4% 90%;
+  --gray-300: 240 5% 84%;
+  --gray-400: 240 5% 65%;
+  --gray-500: 240 5% 50%;
+  --gray-600: 240 5% 34%;
+  --gray-700: 240 5% 26%;
+  --gray-800: 240 4% 16%;
+  --gray-900: 240 6% 10%; /* Darkest */
 }
 
 /* Override Tailwind gray classes */
 .bg-gray-50 {
-	background-color: hsl(var(--gray-50)) !important;
+  background-color: hsl(var(--gray-50)) !important;
 }
 .bg-gray-100 {
   background-color: hsl(var(--gray-100)) !important;
@@ -175,7 +176,7 @@
 
 /* Project Canvas */
 [data-testid="project-canvas"] {
-  background-color: hsl(var(--gray-900)) !important;
+  background-color: hsl(var(--gray-50)) !important;
   color: hsl(var(--foreground));
 }
 
@@ -186,7 +187,7 @@
 }
 
 .collection-view-table > div {
-  background-color: hsl(var(--gray-900)) !important;
+  background-color: hsl(var(--gray-50)) !important;
   border-color: hsl(var(--table-border-color)) !important;
   border-radius: var(--radius);
 }
@@ -296,6 +297,7 @@
 
 .dark [data-testid="navigation-sidebar"] {
   background-color: hsl(var(--gray-800)) !important;
+  border-right: 1px solid hsl(var(--border));
 }
 
 [data-testid="sidebar-nav-item"] > div > a {
@@ -328,6 +330,86 @@
 
 [data-testid="collection-group-header"] .text-gray-400 {
   color: hsl(var(--muted-foreground));
+}
+
+/* Force override any existing background colors */
+.dark [data-testid="project-canvas"],
+.dark .bg-gray-900,
+.dark [class*="bg-gray-900"] {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Header specific override */
+.dark [data-testid="header"],
+.dark header,
+.dark .header {
+  background-color: hsl(var(--gray-900)) !important;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+/* Main content area override */
+.dark main,
+.dark .main-content {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Additional specific overrides for any remaining blue backgrounds */
+.dark [class*="bg-blue"],
+.dark [class*="bg-indigo"],
+.dark [style*="background-color: rgb(30, 41, 59)"],
+.dark [style*="background-color: #1e293b"] {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Ensure text colors are properly contrasted */
+.dark .text-gray-100 {
+  color: hsl(var(--gray-100)) !important;
+}
+.dark .text-gray-200 {
+  color: hsl(var(--gray-200)) !important;
+}
+.dark .text-gray-300 {
+  color: hsl(var(--gray-300)) !important;
+}
+.dark .text-gray-400 {
+  color: hsl(var(--gray-400)) !important;
+}
+
+/* Add !important to all existing gray background classes to ensure they override */
+.dark .bg-gray-50 {
+  background-color: hsl(var(--gray-50)) !important;
+}
+.dark .bg-gray-100 {
+  background-color: hsl(var(--gray-100)) !important;
+}
+.dark .bg-gray-200 {
+  background-color: hsl(var(--gray-200)) !important;
+}
+.dark .bg-gray-300 {
+  background-color: hsl(var(--gray-300)) !important;
+}
+.dark .bg-gray-400 {
+  background-color: hsl(var(--gray-400)) !important;
+}
+.dark .bg-gray-500 {
+  background-color: hsl(var(--gray-500)) !important;
+}
+.dark .bg-gray-600 {
+  background-color: hsl(var(--gray-600)) !important;
+}
+.dark .bg-gray-700 {
+  background-color: hsl(var(--gray-700)) !important;
+}
+.dark .bg-gray-800 {
+  background-color: hsl(var(--gray-800)) !important;
+}
+.dark .bg-gray-900 {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Add specific attribute selectors for inline styles */
+.dark [style*="background-color"] {
+  background-color: hsl(var(--gray-900)) !important;
 }
 
 /* Responsive Design */
