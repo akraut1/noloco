@@ -93,124 +93,73 @@
 /* Base background/text color */
 /* Background overrides */
 [data-testid="project-canvas"] {
-  /* Example “canvas” background = zinc-800 */
-  background: var(--background) !important;
-  color: var(--foreground) !important;
-}
-.bg-gray-900 {
-  background-color: var(--zinc-900) !important;
-}
-.bg-gray-800 {
-  background-color: var(--zinc-800) !important;
-}
-.bg-gray-700 {
-  background-color: var(--zinc-700) !important;
-}
-.bg-gray-600 {
-  background-color: var(--zinc-600) !important;
-}
-.bg-gray-500 {
-  background-color: var(--zinc-500) !important;
-}
-.bg-gray-400 {
-  background-color: var(--zinc-400) !important;
-}
-.bg-gray-300 {
-  background-color: var(--zinc-300) !important;
-}
-.bg-gray-200 {
-  background-color: var(--zinc-200) !important;
-}
-.bg-gray-100 {
-  background-color: var(--zinc-100) !important;
+  background: hsl(var(--background)) !important;
 }
 
-/* Example custom color for .bg-orange-100 */
+.bg-gray-900,
+.bg-gray-800,
+.bg-gray-700,
+.bg-gray-600,
+.bg-gray-500,
+.bg-gray-400,
+.bg-gray-300,
+.bg-gray-200,
+.bg-gray-100 {
+  background-color: hsl(var(--background)) !important;
+}
+
+/* Example custom color for .bg-orange-100 still preserved */
 .bg-orange-100 {
   background-color: #C4A241 !important;
 }
 
-/* For demonstration, this “dark:text-orange-200” was in your file */
+/* If Noloco uses .dark:text-orange-200, keep or revise as needed */
 .dark:text-orange-200 {
   background-color: red !important;
 }
-/* The Tailwind dark variant version: */
 .dark\:text-orange-200:is(.dark *) {
-  color: var(--zinc-800) !important;
+  color: hsl(var(--foreground)) !important;
 }
 
-/* Border overrides */
-.border-gray-900,
-.divide-gray-900 {
-  border-color: var(--zinc-900) !important;
+/* Text classes → unify to --foreground */
+.text-gray-900,
+.text-gray-800,
+.text-gray-700,
+.text-gray-600,
+.text-gray-500,
+.text-gray-400,
+.text-gray-300,
+.text-gray-200,
+.text-gray-100 {
+  color: hsl(var(--foreground)) !important;
 }
-.border-gray-800,
-.divide-gray-800 {
-  border-color: var(--zinc-800) !important;
-}
-.border-gray-700,
-.divide-gray-700 {
-  border-color: var(--zinc-700) !important;
-}
-.border-gray-600,
-.divide-gray-600 {
-  border-color: var(--zinc-600) !important;
-}
-.border-gray-500,
-.divide-gray-500 {
-  border-color: var(--zinc-500) !important;
-}
-.border-gray-400,
-.divide-gray-400 {
-  border-color: var(--zinc-400) !important;
-}
-.border-gray-300,
-.divide-gray-300 {
-  border-color: var(--zinc-300) !important;
-}
-.border-gray-200,
-.divide-gray-200 {
-  border-color: var(--zinc-200) !important;
-}
-.border-gray-100,
-.divide-gray-100 {
-  border-color: var(--zinc-100) !important;
-}
-
-/* Text overrides */
-.text-gray-900 {
-  color: var(--zinc-900) !important;
-}
-.text-gray-800 {
-  color: var(--zinc-800) !important;
-}
-.text-gray-700 {
-  color: var(--zinc-700) !important;
-}
-.text-gray-600 {
-  color: var(--zinc-600) !important;
-}
-.text-gray-500 {
-  color: var(--zinc-500) !important;
-}
-.text-gray-400 {
-  color: var(--zinc-400) !important;
-}
-/* The original had a “dark:text-gray-400” override: */
 .dark:text-gray-400 {
-  color: var(--zinc-400) !important;
+  color: hsl(var(--foreground)) !important;
 }
 .dark\:text-gray-400:is(.dark *) {
-  color: var(--zinc-300) !important;
+  color: hsl(var(--foreground)) !important;
 }
-.text-gray-300 {
-  color: var(--zinc-300) !important;
-}
-.text-gray-200 {
-  color: var(--zinc-200) !important;
-}
-.text-gray-100 {
-  color: var(--zinc-100) !important;
+
+/* Border/Divider classes → unify to --border */
+.border-gray-900,
+.divide-gray-900,
+.border-gray-800,
+.divide-gray-800,
+.border-gray-700,
+.divide-gray-700,
+.border-gray-600,
+.divide-gray-600,
+.border-gray-500,
+.divide-gray-500,
+.border-gray-400,
+.divide-gray-400,
+.border-gray-300,
+.divide-gray-300,
+.border-gray-200,
+.divide-gray-200,
+.border-gray-100,
+.divide-gray-100 {
+  border-color: hsl(var(--border)) !important;
 }
 
 /* 
@@ -226,7 +175,7 @@ body,
 [role="dialog"] {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   letter-spacing: 0em;
-  color: var(--zinc-200) !important; /* wrap in var(...) */
+  color: var(--foreground) !important; /* wrap in var(...) */
 }
 
 [data-testid="project-canvas"] h1,
@@ -269,7 +218,7 @@ body,
 [role="dialog"] p,
 [role="dialog"] div {
   letter-spacing: 0.015em;
-  color: var(--zinc-200);
+  color: hsl(var(--foreground)) !important;
 }
 
 .section-iframe > div > div {
@@ -293,7 +242,7 @@ body,
   padding-bottom: 0;
   font-size: 14.2px;
   opacity: 0.7;
-  color: var(--zinc-200);
+  color: hsl(var(--foreground));
 }
 
 [data-testid="sidebar-nav-item"] > div > a.bg-nlc_primary-900 {
@@ -302,7 +251,7 @@ body,
 }
 
 [data-testid="sidebar-nav-item"] > div > a.focus:bg-nlc_primary-600 {
-  color: green;
+  color: hsl(var(--sidebar-accent));
 }
 
 [data-testid="navigation-sidebar"] > div.items-center > a {
@@ -327,7 +276,7 @@ body,
 */
 [data-testid="record-view-section"] > div > div > div {
   background: linear-gradient(0deg, var(--alpha-40, rgba(9, 9, 11, 0.60)) 0%, var(--alpha-40, rgba(9, 9, 11, 0.60)) 100%), var(--base-muted, #27272A); !important;
-  color: var(foreground) !important;
+  color: hsl(var(foreground)) !important;
 }
 
 [data-testid="view-collection"] {
@@ -342,12 +291,12 @@ body,
 }
 
 [data-testid="record-view"] > div:first-child > div:first-child h1 {
-  border: 1px solid green !important;
+  border: 1px solid blue !important;
   display: none;
 }
 
 [data-testid="record-view"] > div:first-child > div:first-child h1 + span {
-  color: var(--zinc-100) !important;
+  color: hsl(var(--foreground)) !important;
   font-weight: 500;
   font-size: 20px;
   margin: 0;
@@ -380,20 +329,20 @@ body,
   background: var(--table-bg) !important;
 }
 .collection-view-table th.table-fixed {
-  color: var(--zinc-300);
-  background: var(--zinc-900) !important;
+  color: hsl(var(--foreground)) !important;
+  background: hsl(var(--background)) !important;
 }
 .collection-view-table tbody tr {
   background: var(--table-bg) !important;
   font-size: 14px !important;
 }
 .collection-view-table tbody tr a {
-  color: var(--zinc-200) !important;
+  color: hsl(var(--foreground)) !important;
 }
 .collection-view-table tbody tr:hover {
-  background: var(--zinc-800) !important;
+  background: hsl(var(--background)) !important;
   font-size: 14px !important;
-  color: var(--zinc-200) !important;
+  color: hsl(var(--foreground)) !important;
 }
 .collection-view-table tbody td {
   padding-top: var(--table-row-padding);
@@ -429,7 +378,7 @@ label > spanc > div {
 
 /* Chart & Icon styling */
 [stroke-opacity="1"] {
-  stroke: var(--zinc-500) !important;
+  stroke: hsl(var(--foreground)) !important;
 }
 .visx-path {
   stroke: rgba(0, 254, 149, 0.6) !important;
@@ -441,7 +390,7 @@ marker {
   fill: #00FE95;
 }
 [shape-rendering="crispEdges"] {
-  stroke: var(--zinc-800) !important;
+  stroke: hsl(var(--border)) !important;
 }
 
 /* Collections & “record” items */
@@ -451,17 +400,17 @@ marker {
 .collection-view > div:first-child h1 {
   padding-left: 0;
   font-size: 16px;
-  color: var(--zinc-200);
+  color: hsl(var(--foreground));
   font-weight: 500;
 }
 .collection-view-rows [data-testid="collection-record"] {
-  border-top: 1px solid var(--zinc-800) !important;
+  border-top: 1px solid hsl(var(--border)) !important;
 }
 [data-testid="record-view-section"] {
   padding: 0;
 }
 .section-notice > div > div {
-  border: 1px solid var(--zinc-800);
+  border: 1px solid hsl(var(--border));
 }
 [data-testid="record-view"] > div:first-child > div:first-child {
   backdrop-filter: blur(10px);
@@ -474,10 +423,6 @@ marker {
   padding-bottom: 8px;
   padding-left: 14px;
   padding-right: 14px;
-}
-[data-testid="action-button"].bg-orange-300 {
-  background: #FFC523;
-  color: var(--zinc-800) !important;
 }
 
 /* Filters, etc. */
@@ -499,7 +444,7 @@ marker {
   height: 36px;
   padding: 12px;
   padding-left: 28px;
-  background: var(--zinc-800) !important;
+  background: hsl(var(--background)) !important;
 }
 .collection-view-table .collection-filter input:focus {
   box-shadow: none !important;
@@ -525,7 +470,7 @@ svg.icon.icon-tabler.icon-tabler-star [fill="currentColor"] {
 
 /* Example hidden element */
 div > div:first-child > div:first-child > div:first-child a span.h-6 {
-  border: 1px solid green !important;
+  border: 1px solid blue !important;
   background: none !important;
   display: none;
 }
