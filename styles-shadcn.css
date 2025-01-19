@@ -2,7 +2,6 @@
 <style>
 
 /* Light mode variables */
-/* Light mode variables */
 :root {
   --background: 0 0% 100%;
   --foreground: 240 10% 3.9%;
@@ -38,26 +37,26 @@
   --gray-900: 240 5.9% 10%;
 }
 
-	/* Role-based badge colors */
-	/* Admin - Royal Purple */
-	--admin-from: 272 90% 60%;
-	--admin-to: 272 85% 65%;
-	--admin-border: 272 90% 40%;
+/* Role-based badge colors */
+/* Admin - Royal Purple */
+--admin-from: 272 90% 60%;
+--admin-to: 272 85% 65%;
+--admin-border: 272 90% 40%;
 
-	/* Account Executive - Deep Teal */
-	--account-exec-from: 180 75% 45%;
-	--account-exec-to: 180 70% 50%;
-	--account-exec-border: 180 75% 35%;
+/* Account Executive - Deep Teal */
+--account-exec-from: 180 75% 45%;
+--account-exec-to: 180 70% 50%;
+--account-exec-border: 180 75% 35%;
 
-	/* Loan Processor - Rich Amber */
-	--loan-processor-from: 43 96% 50%;
-	--loan-processor-to: 43 90% 55%;
-	--loan-processor-border: 43 96% 40%;
+/* Loan Processor - Rich Amber */
+--loan-processor-from: 43 96% 50%;
+--loan-processor-to: 43 90% 55%;
+--loan-processor-border: 43 96% 40%;
 
-	/* Loan Opener - Vibrant Indigo */
-	--loan-opener-from: 231 83% 60%;
-	--loan-opener-to: 231 78% 65%;
-	--loan-opener-border: 231 83% 50%;
+/* Loan Opener - Vibrant Indigo */
+--loan-opener-from: 231 83% 60%;
+--loan-opener-to: 231 78% 65%;
+--loan-opener-border: 231 83% 50%;
 }
 
 /* Dark mode variables */
