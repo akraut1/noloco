@@ -81,77 +81,180 @@
   }
 
 /* Background overrides */
+/* <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/akraut1/noloco@refs/heads/main/styles.css"> */
+
 [data-testid="project-canvas"] {
-  background: hsl(var(--background)) !important;
+	background: var(--nlc-primary-800) !important;
 }
 
-.bg-gray-900,
-.bg-gray-800,
-.bg-gray-700,
-.bg-gray-600,
-.bg-gray-500,
-.bg-gray-400,
-.bg-gray-300,
-.bg-gray-200,
+.bg-gray-900 {
+	background-color: var(--nlc-primary-900) !important;
+}
+
+.bg-gray-800 {
+	background-color: var(--nlc-primary-800) !important;
+}
+
+.bg-gray-700 {
+	background-color: var(--nlc-primary-700) !important;
+}
+
+.bg-gray-600 {
+	background-color: var(--nlc-primary-600) !important;
+}
+
+.bg-gray-500 {
+	background-color: var(--nlc-primary-500) !important;
+}
+
+.bg-gray-400 {
+	background-color: var(--nlc-primary-400) !important;
+}
+
+.bg-gray-300 {
+	background-color: var(--nlc-primary-300) !important;
+}
+
+.bg-gray-200 {
+	background-color: var(--nlc-primary-200) !important;
+}
+
 .bg-gray-100 {
-  background-color: hsl(var(--background)) !important;
+	background-color: var(--nlc-primary-100) !important;
 }
 
-/* Text classes → unify to --foreground */
-.text-gray-900,
-.text-gray-800,
-.text-gray-700,
-.text-gray-600,
-.text-gray-500,
-.text-gray-400,
-.text-gray-300,
-.text-gray-200,
-.text-gray-100 {
-  color: hsl(var(--foreground)) !important;
-}
-.dark:text-gray-400 {
-  color: hsl(var(--foreground)) !important;
-}
-.dark\:text-gray-400:is(.dark *) {
-  color: hsl(var(--foreground)) !important;
+.bg-orange-100 {
+	background-color: #C4A241 !important;
 }
 
-/* Border/Divider classes → unify to --border */
-.border-gray-900,
-.divide-gray-900,
-.border-gray-800,
-.divide-gray-800,
-.border-gray-700,
-.divide-gray-700,
-.border-gray-600,
-.divide-gray-600,
-.border-gray-500,
-.divide-gray-500,
-.border-gray-400,
-.divide-gray-400,
-.border-gray-300,
-.divide-gray-300,
-.border-gray-200,
-.divide-gray-200,
-.border-gray-100,
+.dark:text-orange-200 {
+	background-color: red !important;
+}
+
+.dark\:text-orange-200:is(.dark *) {
+	color: var(--nlc-primary-800) !important;
+}
+
+.border-gray-900 {
+	border-color: var(--nlc-primary-900) !important;
+}
+
+.border-gray-800 {
+	border-color: var(--nlc-primary-800) !important;
+}
+
+.border-gray-700 {
+	border-color: var(--nlc-primary-700) !important;
+}
+
+.border-gray-600 {
+	border-color: var(--nlc-primary-600) !important;
+}
+
+.border-gray-500 {
+	border-color: var(--nlc-primary-500) !important;
+}
+
+.border-gray-400 {
+	border-color: var(--nlc-primary-400) !important;
+}
+
+.border-gray-300 {
+	border-color: var(--nlc-primary-300) !important;
+}
+
+.border-gray-200 {
+	border-color: var(--nlc-primary-200) !important;
+}
+
+.border-gray-100 {
+	border-color: var(--nlc-primary-100) !important;
+}
+
+.divide-gray-900 {
+	border-color: var(--nlc-primary-900) !important;
+}
+
+.divide-gray-800 {
+	border-color: var(--nlc-primary-800) !important;
+}
+
+.divide-gray-700 {
+	border-color: var(--nlc-primary-700) !important;
+}
+
+.divide-gray-600 {
+	border-color: var(--nlc-primary-600) !important;
+}
+
+.divide-gray-500 {
+	border-color: var(--nlc-primary-500) !important;
+}
+
+.divide-gray-400 {
+	border-color: var(--nlc-primary-400) !important;
+}
+
+.divide-gray-300 {
+	border-color: var(--nlc-primary-300) !important;
+}
+
+.divide-gray-200 {
+	border-color: var(--nlc-primary-200) !important;
+}
+
 .divide-gray-100 {
-  border-color: hsl(var(--border)) !important;
+	border-color: var(--nlc-primary-100) !important;
 }
 
-/* 
-   3) REMAINING NOloco & UI RULES
-   ------------------------------
-   These mostly remain unchanged except for references to 
-   var(--nlc-primary-XXX). Now replaced by the new zinc or 
-   ShadCN variables. 
-*/
+.text-gray-900 {
+	color: var(--nlc-primary-900) !important;
+}
 
-/* Fix any “--nlc-primary-200” references to “var(--zinc-200)” */
-body,
-[role="dialog"] {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  letter-spacing: 0em;
-  color: hsl(var(--foreground)) !important; /* wrap in var(...) */
+.text-gray-800 {
+	color: var(--nlc-primary-800) !important;
+}
+
+.text-gray-700 {
+	color: var(--nlc-primary-700) !important;
+}
+
+.text-gray-600 {
+	color: var(--nlc-primary-600) !important;
+}
+
+.text-gray-500 {
+	color: var(--nlc-primary-500) !important;
+}
+
+.text-gray-400 {
+	color: var(--nlc-primary-400) !important;
+}
+
+.dark:text-gray-400 {
+	color: var(--nlc-primary-400) !important;
+}
+
+.dark\:text-gray-400:is(.dark *) {
+	color: var(--nlc-primary-300) !important;
+}
+
+.text-gray-300 {
+	color: var(--nlc-primary-300) !important;
+}
+
+.text-gray-200 {
+	color: var(--nlc-primary-200) !important;
+}
+
+.text-gray-100 {
+	color: var(--nlc-primary-100) !important;
+}
+
+body, [role="dialog"] {
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	letter-spacing: 0em;
+	color: var(--nlc-primary-200) !important;
 }
 
 [data-testid="project-canvas"] h1,
@@ -166,8 +269,7 @@ body,
 [data-testid="project-canvas"] .quick-link span,
 [data-testid="project-canvas"] [navoptions] a,
 [data-testid="project-canvas"] p,
-[data-testid="project-canvas"] div,
-[data-testid="navigation-sidebar"] h1,
+[data-testid="project-canvas"] div, [data-testid="navigation-sidebar"] h1,
 [data-testid="navigation-sidebar"] .sticky h1,
 [data-testid="navigation-sidebar"] .collection-view h1,
 [data-testid="navigation-sidebar"] h2,
@@ -179,8 +281,7 @@ body,
 [data-testid="navigation-sidebar"] .quick-link span,
 [data-testid="navigation-sidebar"] [navoptions] a,
 [data-testid="navigation-sidebar"] p,
-[data-testid="navigation-sidebar"] div,
-[role="dialog"] h1,
+[data-testid="navigation-sidebar"] div, [role="dialog"] h1,
 [role="dialog"] .sticky h1,
 [role="dialog"] .collection-view h1,
 [role="dialog"] h2,
@@ -193,260 +294,280 @@ body,
 [role="dialog"] [navoptions] a,
 [role="dialog"] p,
 [role="dialog"] div {
-  letter-spacing: 0.015em;
-  color: hsl(var(--foreground)) !important;
+	letter-spacing: 0.015em;
+	color: var(--nlc-primary-200);
 }
 
 .section-iframe > div > div {
-  border: none !important;
-  background: none !important;
-  border-radius: 0;
+	border: none !important;
+	background: none !important;
+	border-radius: 0;
 }
 
 .section-iframe .max-h-screen-25 {
-  max-height: 100px !important;
+	max-height: 100px !important;
 }
 
 [data-testid="record-view-body"] {
-  padding-left: 12px;
-  padding-right: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
 }
 
-/* Sidebar items, same color logic: var(--zinc-200) or others */
 [data-testid="sidebar-nav-item"] > div > a {
-  padding-top: 0;
-  padding-bottom: 0;
-  font-size: 14.2px;
-  opacity: 0.7;
-  color: hsl(var(--foreground));
+	padding-top: 0;
+	padding-bottom: 0;
+	font-size: 14.2px;
+	opacity: 0.7;
+	color: var(--nlc-primary-200);
 }
 
 [data-testid="sidebar-nav-item"] > div > a.bg-nlc_primary-900 {
-  opacity: 1;
-  background: none;
+	opacity: 1;
+	background: none;
 }
 
 [data-testid="sidebar-nav-item"] > div > a.focus:bg-nlc_primary-600 {
-  color: hsl(var(--sidebar-accent));
+	color: green;
 }
 
 [data-testid="navigation-sidebar"] > div.items-center > a {
-  justify-content: flex-start;
-  padding-left: 14px;
+	justify-content: flex-start;
+	padding-left: 14px;
 }
 
 [data-testid="sidebar-nav-item"] > div > .h-8 {
-  height: 12px;
-  opacity: 0.3;
+	height: 12px;
+	opacity: 0.3;
 }
 
 [data-testid="sidebar-nav-item"] > div > a > div > :first-child {
-  opacity: 0.45;
-  margin-right: 9px;
-  display: none;
+	opacity: 0.45;
+	margin-right: 9px;
+	display: none;
 }
 
-/* 
-   Switch references from “var(--nlc-primary-800)” → “var(--zinc-800)” 
-   for background & color overrides below 
-*/
 [data-testid="record-view-section"] > div > div > div {
-  background: hsl(var(--sidebar-background)) !important;
-  color: hsl(var(--foreground)) !important;
+	background: none !important;
+	color: var(--nlc-primary-800) !important;
+}
+
+:root {
+	--table-bg: transparent;
+	--table-border-color: var(--nlc-primary-800);
+	--table-row-padding: 12px;
+	--page-content-width: 1258px;
 }
 
 [data-testid="view-collection"] {
-  padding-left: 12px;
-  padding-right: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
 }
 
 [data-testid="view-collection"] > div:first-child {
-  margin: 0 !important;
-  padding-top: 8px;
-  padding-bottom: 8px;
+	margin: 0 !important;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 [data-testid="record-view"] > div:first-child > div:first-child h1 {
-  border: 1px solid blue !important;
-  display: none;
+	border: 1px solid green !important;
+	display: none;
 }
 
 [data-testid="record-view"] > div:first-child > div:first-child h1 + span {
-  color: hsl(var(--foreground)) !important;
-  font-weight: 500;
-  font-size: 20px;
-  margin: 0;
-  padding: 0;
+	color: var(--nlc-primary-100) !important;
+	font-weight: 500;
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
 }
 
-/* Table styling uses “--table-bg” and “--table-border-color” 
-   (both defined in :root). 
-*/
 .collection-view-table > div {
-  background-color: hsl(var(--table-bg)) !important;
-  border-color: hsl(var(--table-border-color)) !important;
-  border-radius: 2px;
-}
-.collection-view-table table ~ div {
-  border-color: hsl(var(--table-border-color)) !important;
-}
-.collection-view-table table tr {
-  background: hsl(var(--table-bg)) !important;
-  border-color: hsl(var(--table-border-color)) !important;
-}
-.collection-view-table table ~ div {
-  background: hsl(var(--background)) !important;
-}
-.collection-view-table thead {
-  border-color: hsl(var(--table-border-color)) !important;
-  background: hsl(var(--table-bg)) !important;
-}
-.collection-view-table tbody {
-  background: hsl(var(--table-bg)) !important;
-}
-.collection-view-table th.table-fixed {
-  color: hsl(var(--foreground)) !important;
-  background: hsl(var(--background)) !important;
-}
-.collection-view-table tbody tr {
-  background: hsl(var(--table-bg)) !important;
-  font-size: 14px !important;
-}
-.collection-view-table tbody tr a {
-  color: hsl(var(--foreground)) !important;
-}
-.collection-view-table tbody tr:hover {
-  background: hsl(var(--background)) !important;
-  font-size: 14px !important;
-  color: hsl(var(--foreground)) !important;
-}
-.collection-view-table tbody td {
-  padding-top: hsl(var(--table-row-padding)) !important;
-  padding-bottom: hsl(var(--table-row-padding)) !important;
-}
-.collection-view-table tbody td.pr-6 {
-  padding-left: hsl(var(--table-row-padding)) !important;
+	background-color: var(--table-bg) !important;
+	border-color: var(--table-border-color) !important;
+	border-radius: 2px;
 }
 
-/* Rounded “label” fields */
+.collection-view-table table ~ div {
+	border-color: var(--table-border-color) !important;
+}
+
+.collection-view-table table tr {
+	background: var(--table-bg) !important;
+	border-color: var(--table-border-color) !important;
+}
+
+.collection-view-table table ~ div {
+	background: var(--nlc-primary-900) !important;
+}
+
+.collection-view-table thead {
+	border-color: var(--table-border-color) !important;
+	background: var(--table-bg) !important;
+}
+
+.collection-view-table tbody {
+	background: var(--table-bg) !important;
+}
+
+.collection-view-table th.table-fixed {
+	color: var(--nlc-primary-300);
+	background: var(--nlc-primary-900) !important;
+}
+
+.collection-view-table tbody tr {
+	background: var(--table-bg) !important;
+	font-size: 14px !important;
+}
+
+.collection-view-table tbody tr a {
+	color: var(--nlc-primary-200) !important;
+}
+
+.collection-view-table tbody tr:hover {
+	background: var(--nlc-primary-800) !important;
+	font-size: 14px !important;
+	color: var(--nlc-primary-200) !important;
+}
+
+.collection-view-table tbody td {
+	padding-top: var(--table-row-padding);
+	padding-bottom: var(--table-row-padding);
+}
+
+.collection-view-table tbody td.pr-6 {
+	padding-left: var(--table-row-padding);
+}
+
 .collection-view-table [data-testid="field-cell"] span.rounded,
 [data-testid="details-section"] span.rounded,
-.collection-view-cards [data-testid="field-cell"] span.rounded,
-.collection-view-rows [data-testid="field-cell"] span.rounded,
-label > spanc {
-  font-weight: 600 !important;
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
-  padding-left: 10px !important;
-  padding-right: 10px !important;
-  border-radius: 20px !important;
+.collection-view-cards [data-testid="field-cell"] span.rounded, .collection-view-rows [data-testid="field-cell"] span.rounded, label > spanc {
+	font-weight: 600 !important;
+	padding-top: 2px !important;
+	padding-bottom: 2px !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+	border-radius: 20px !important;
 }
+
 .collection-view-table [data-testid="field-cell"] span.rounded > div,
-[data-testid="details-section"] span.rounded > div,
-.collection-view-cards [data-testid="field-cell"] span.rounded > div,
-.collection-view-rows [data-testid="field-cell"] span.rounded > div,
-label > spanc > div {
-  opacity: 1 !important;
-  color: rgba(0, 0, 0, 0.8) !important;
-  mix-blend-mode: darken;
-  font-weight: 600;
+  [data-testid="details-section"] span.rounded > div,
+  .collection-view-cards [data-testid="field-cell"] span.rounded > div, .collection-view-rows [data-testid="field-cell"] span.rounded > div, label > spanc > div {
+	opacity: 1 !important;
+	color: rgba(0, 0, 0, 0.8) !important;
+	mix-blend-mode: darken;
+	font-weight: 600;
 }
 
-/* Chart & Icon styling */
 [stroke-opacity="1"] {
-  stroke: hsl(var(--foreground)) !important;
+	stroke: var(--nlc-primary-500) !important;
 }
+
 .visx-path {
-  stroke: rgba(0, 254, 149, 0.6) !important;
+	stroke: rgba(0, 254, 149, 0.6) !important;
 }
+
 .visx-axis-tick {
-  opacity: 0.8;
+	opacity: 0.8;
 }
+
 marker {
-  fill: #00FE95;
+	fill: #00FE95;
 }
+
 [shape-rendering="crispEdges"] {
-  stroke: hsl(var(--border)) !important;
+	stroke: var(--nlc-primary-800) !important;
 }
 
-/* Collections & “record” items */
 .collection-view-rows > div {
-  padding-left: 0;
+	padding-left: 0;
 }
+
 .collection-view > div:first-child h1 {
-  padding-left: 0;
-  font-size: 16px;
-  color: hsl(var(--foreground));
-  font-weight: 500;
+	padding-left: 0;
+	font-size: 16px;
+	color: var(--nlc-primary-200);
+	font-weight: 500;
 }
+
 .collection-view-rows [data-testid="collection-record"] {
-  border-top: 1px solid hsl(var(--border)) !important;
+	border-top: 1px solid var(--nlc-primary-800) !important;
 }
+
 [data-testid="record-view-section"] {
-  padding: 0;
+	padding: 0;
 }
+
 .section-notice > div > div {
-  border: 1px solid hsl(var(--border));
+	border: 1px solid var(--nlc-primary-800);
 }
+
 [data-testid="record-view"] > div:first-child > div:first-child {
-  backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
 }
 
-/* Action Button */
 [data-testid="action-button"] {
-  border-radius: 4px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 14px;
-  padding-right: 14px;
+	border-radius: 4px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 14px;
+	padding-right: 14px;
 }
 
-/* Filters, etc. */
+[data-testid="action-button"].bg-orange-300 {
+	background: #FFC523;
+	color: var(--nlc-primary-800) !important;
+}
+
 .collection-view-table > div {
-  padding-left: 0;
-  padding-right: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
+
 .collection-view-table > div:first-child > div > div:last-child > div:last-child {
-  display: none;
+	display: none;
 }
+
 .collection-view-table .collection-filter {
-  margin-right: 0;
+	margin-right: 0;
 }
+
 [navoptions] > a.border-nlc_primary-500 {
-  border-bottom-color: #00FE95 !important;
+	border-bottom-color: #00FE95 !important;
 }
+
 .collection-view-table .collection-filter input {
-  width: 400px;
-  height: 36px;
-  padding: 12px;
-  padding-left: 28px;
-  background: hsl(var(--background)) !important;
-}
-.collection-view-table .collection-filter input:focus {
-  box-shadow: none !important;
+	width: 400px;
+	height: 36px;
+	padding: 12px;
+	padding-left: 28px;
+	background: var(--nlc-primary-800) !important;
 }
 
-/* Star Icon Fill */
 svg.icon.icon-tabler.icon-tabler-star [fill="currentColor"] {
-  stroke: #D9A53C !important;
-  fill: #D9A53C !important;
+	stroke: #D9A53C !important;
+	fill: #D9A53C !important;
 }
 
-/* Responsiveness / Layout */
+.collection-view-table .collection-filter input:focus {
+	box-shadow: none !important;
+}
+
 [data-testid="record-view"] > div > div > div > div {
-  max-width: hsl(var(--page-content-width));
-}
-[data-testid="record-view"] > div > div:first-child > div:first-child {
-  max-width: hsl(var(--page-content-width));
-}
-[data-testid="record-view"] > div > div:first-child {
-  border: none !important;
-  background: none !important;
+	max-width: var(--page-content-width);
 }
 
-/* Example hidden element */
+[data-testid="record-view"] > div > div:first-child > div:first-child {
+	max-width: var(--page-content-width);
+}
+
+[data-testid="record-view"] > div > div:first-child {
+	border: none !important;
+	background: none !important;
+}
+
 div > div:first-child > div:first-child > div:first-child a span.h-6 {
-  border: 1px solid blue !important;
-  background: none !important;
-  display: none;
+	border: 1px solid green !important;
+	background: none !important;
+	display: none;
 }
