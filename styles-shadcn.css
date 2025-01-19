@@ -176,6 +176,36 @@
   color: hsl(var(--gray-900)) !important;
 }
 
+/* Buttons */ 
+a.new-button.whitespace-nowrap {
+  background-color: hsl(var(--primary)) !important;
+}
+
+[data-testid="action-button"] {
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  transition: all 150ms;
+}
+
+[data-testid="action-button"].bg-gray-700 {
+  background-color: hsl(var(--gray-700));
+  color: hsl(var(--secondary-foreground));
+  border-color: hsl(var(--border));
+  opacity: 0.5;
+}
+
+[data-testid="action-button"].bg-gray-700:hover {
+  background-color: hsl(var(--gray-700));
+  opacity: 0.9;
+}
+
+[data-testid="action-button"].bg-red-500 {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
 /* Table Styles */
 .collection-view-table {
   --table-bg: hsl(var(--background));
@@ -258,31 +288,6 @@
   border: 1px solid hsla(var(--border), 0.3);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-}
-
-/* Action Buttons */
-[data-testid="action-button"] {
-  border-radius: var(--radius);
-  padding: 0.5rem 1rem;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  transition: all 150ms;
-}
-
-[data-testid="action-button"].bg-gray-700 {
-  background-color: hsl(var(--gray-700));
-  color: hsl(var(--secondary-foreground));
-  border-color: hsl(var(--border));
-}
-
-[data-testid="action-button"].bg-gray-700:hover {
-  background-color: hsl(var(--gray-700));
-  opacity: 0.9;
-}
-
-[data-testid="action-button"].bg-red-500 {
-  background-color: hsl(var(--destructive));
-  color: hsl(var(--destructive-foreground));
 }
 
 /* Navigation Sidebar */
