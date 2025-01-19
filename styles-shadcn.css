@@ -365,7 +365,7 @@ marker {
   border-top: 1px solid hsl(var(--border)) !important;
 }
 [data-testid="record-view-section"] {
-  padding: 0;
+  padding: 8px;
 }
 .section-notice > div > div {
   border: 1px solid hsl(var(--border));
