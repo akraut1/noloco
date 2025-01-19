@@ -1,6 +1,5 @@
 /* <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/akraut1/noloco@refs/heads/main/styles-shadcn.css"> */
 <style>
-
 /* Light mode variables */
 :root {
   --background: 0 0% 100%;
@@ -174,13 +173,13 @@
 
 /* Project Canvas */
 [data-testid="project-canvas"] {
-  background-color: hsl(var(--gray-800)) !important;
+  background-color: hsl(var(--gray-50)) !important;
   color: hsl(var(--foreground));
 }
 
 /* Table Styles */
 .collection-view-table {
-  --table-bg: transparent;
+  --table-bg: hsl(var(--background));
   --table-border-color: hsl(var(--border));
 }
 
@@ -202,7 +201,6 @@
 
 .collection-view-table tbody tr {
   border-bottom: 1px solid hsl(var(--border));
-  
 }
 
 .collection-view-table tbody tr:hover {
@@ -335,6 +333,25 @@
 .dark [data-testid="project-canvas"],
 .dark .bg-gray-900,
 .dark [class*="bg-gray-900"] {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Override Tailwind slate backgrounds */
+.dark .bg-slate-800,
+.dark .bg-slate-900,
+.dark [class*="bg-slate-"],
+.dark div[class*="bg-slate-"] {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Target the specific flex container causing the blue background */
+.dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800 {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Additional slate background overrides */
+.dark [class*="bg-slate-800"],
+.dark [class*="bg-slate-900"] {
   background-color: hsl(var(--gray-900)) !important;
 }
 
