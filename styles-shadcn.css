@@ -1,181 +1,144 @@
 /* <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/akraut1/noloco@refs/heads/main/styles-shadcn.css"> */
 
-/* <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/akraut1/noloco@refs/heads/main/styles.css"> */
+/* =============================================
+   FILE: styles-shadcn.css
+   Combined ShadCN variable definitions + 
+   Tailwind override (gray → background/foreground)
+============================================= */
 
+/* 1) SHADCN NEW YORK VARIABLES (LIGHT & DARK) */
+:root {
+  /* Light Mode */
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 240 5.9% 10%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 240 5.9% 10%;
+  --radius: 0.5rem;
+}
+
+html.dark {
+  /* Dark Mode */
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 240 5.9% 10%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
+}
+
+/* 2) TAILWIND-LIKE “GRAY” CLASSES → SHADCN TOKENS */
+
+/* Canvas background */
 [data-testid="project-canvas"] {
-	background: var(--nlc-primary-800) !important;
+  background: hsl(var(--background)) !important;
 }
 
-.bg-gray-900 {
-	background-color: var(--nlc-primary-900) !important;
-}
-
-.bg-gray-800 {
-	background-color: var(--nlc-primary-800) !important;
-}
-
-.bg-gray-700 {
-	background-color: var(--nlc-primary-700) !important;
-}
-
-.bg-gray-600 {
-	background-color: var(--nlc-primary-600) !important;
-}
-
-.bg-gray-500 {
-	background-color: var(--nlc-primary-500) !important;
-}
-
-.bg-gray-400 {
-	background-color: var(--nlc-primary-400) !important;
-}
-
-.bg-gray-300 {
-	background-color: var(--nlc-primary-300) !important;
-}
-
-.bg-gray-200 {
-	background-color: var(--nlc-primary-200) !important;
-}
-
+/* bg-gray-XXX → --background */
+.bg-gray-900,
+.bg-gray-800,
+.bg-gray-700,
+.bg-gray-600,
+.bg-gray-500,
+.bg-gray-400,
+.bg-gray-300,
+.bg-gray-200,
 .bg-gray-100 {
-	background-color: var(--nlc-primary-100) !important;
+  background-color: hsl(var(--background)) !important;
 }
 
+/* Example custom .bg-orange-100 */
 .bg-orange-100 {
-	background-color: #C4A241 !important;
+  background-color: #C4A241 !important;
 }
 
+/* dark:text-orange-200 override if needed */
 .dark:text-orange-200 {
-	background-color: red !important;
+  background-color: red !important;
 }
-
 .dark\:text-orange-200:is(.dark *) {
-	color: var(--nlc-primary-800) !important;
+  color: hsl(var(--foreground)) !important;
 }
 
-.border-gray-900 {
-	border-color: var(--nlc-primary-900) !important;
-}
-
-.border-gray-800 {
-	border-color: var(--nlc-primary-800) !important;
-}
-
-.border-gray-700 {
-	border-color: var(--nlc-primary-700) !important;
-}
-
-.border-gray-600 {
-	border-color: var(--nlc-primary-600) !important;
-}
-
-.border-gray-500 {
-	border-color: var(--nlc-primary-500) !important;
-}
-
-.border-gray-400 {
-	border-color: var(--nlc-primary-400) !important;
-}
-
-.border-gray-300 {
-	border-color: var(--nlc-primary-300) !important;
-}
-
-.border-gray-200 {
-	border-color: var(--nlc-primary-200) !important;
-}
-
-.border-gray-100 {
-	border-color: var(--nlc-primary-100) !important;
-}
-
-.divide-gray-900 {
-	border-color: var(--nlc-primary-900) !important;
-}
-
-.divide-gray-800 {
-	border-color: var(--nlc-primary-800) !important;
-}
-
-.divide-gray-700 {
-	border-color: var(--nlc-primary-700) !important;
-}
-
-.divide-gray-600 {
-	border-color: var(--nlc-primary-600) !important;
-}
-
-.divide-gray-500 {
-	border-color: var(--nlc-primary-500) !important;
-}
-
-.divide-gray-400 {
-	border-color: var(--nlc-primary-400) !important;
-}
-
-.divide-gray-300 {
-	border-color: var(--nlc-primary-300) !important;
-}
-
-.divide-gray-200 {
-	border-color: var(--nlc-primary-200) !important;
-}
-
+/* Borders & dividers → --border */
+.border-gray-900,
+.border-gray-800,
+.border-gray-700,
+.border-gray-600,
+.border-gray-500,
+.border-gray-400,
+.border-gray-300,
+.border-gray-200,
+.border-gray-100,
+.divide-gray-900,
+.divide-gray-800,
+.divide-gray-700,
+.divide-gray-600,
+.divide-gray-500,
+.divide-gray-400,
+.divide-gray-300,
+.divide-gray-200,
 .divide-gray-100 {
-	border-color: var(--nlc-primary-100) !important;
+  border-color: hsl(var(--border)) !important;
 }
 
-.text-gray-900 {
-	color: var(--nlc-primary-900) !important;
-}
-
-.text-gray-800 {
-	color: var(--nlc-primary-800) !important;
-}
-
-.text-gray-700 {
-	color: var(--nlc-primary-700) !important;
-}
-
-.text-gray-600 {
-	color: var(--nlc-primary-600) !important;
-}
-
-.text-gray-500 {
-	color: var(--nlc-primary-500) !important;
-}
-
-.text-gray-400 {
-	color: var(--nlc-primary-400) !important;
-}
-
-.dark:text-gray-400 {
-	color: var(--nlc-primary-400) !important;
-}
-
-.dark\:text-gray-400:is(.dark *) {
-	color: var(--nlc-primary-300) !important;
-}
-
-.text-gray-300 {
-	color: var(--nlc-primary-300) !important;
-}
-
-.text-gray-200 {
-	color: var(--nlc-primary-200) !important;
-}
-
+/* Text colors → --foreground */
+.text-gray-900,
+.text-gray-800,
+.text-gray-700,
+.text-gray-600,
+.text-gray-500,
+.text-gray-400,
+.text-gray-300,
+.text-gray-200,
 .text-gray-100 {
-	color: var(--nlc-primary-100) !important;
+  color: hsl(var(--foreground)) !important;
+}
+.dark:text-gray-400 {
+  color: hsl(var(--foreground)) !important;
+}
+.dark\:text-gray-400:is(.dark *) {
+  color: hsl(var(--foreground)) !important;
 }
 
-body, [role="dialog"] {
-	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-	letter-spacing: 0em;
-	color: var(--nlc-primary-200) !important;
+/* 3) YOUR NOLOCO & LAYOUT OVERRIDES */
+
+/* Body/dialog default text color */
+body,
+[role="dialog"] {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0em;
+  color: hsl(var(--foreground)) !important;
 }
 
+/* Noloco headings, links, and text. Just unify color to --foreground */
 [data-testid="project-canvas"] h1,
 [data-testid="project-canvas"] .sticky h1,
 [data-testid="project-canvas"] .collection-view h1,
@@ -188,7 +151,9 @@ body, [role="dialog"] {
 [data-testid="project-canvas"] .quick-link span,
 [data-testid="project-canvas"] [navoptions] a,
 [data-testid="project-canvas"] p,
-[data-testid="project-canvas"] div, [data-testid="navigation-sidebar"] h1,
+[data-testid="project-canvas"] div,
+
+[data-testid="navigation-sidebar"] h1,
 [data-testid="navigation-sidebar"] .sticky h1,
 [data-testid="navigation-sidebar"] .collection-view h1,
 [data-testid="navigation-sidebar"] h2,
@@ -200,7 +165,9 @@ body, [role="dialog"] {
 [data-testid="navigation-sidebar"] .quick-link span,
 [data-testid="navigation-sidebar"] [navoptions] a,
 [data-testid="navigation-sidebar"] p,
-[data-testid="navigation-sidebar"] div, [role="dialog"] h1,
+[data-testid="navigation-sidebar"] div,
+
+[role="dialog"] h1,
 [role="dialog"] .sticky h1,
 [role="dialog"] .collection-view h1,
 [role="dialog"] h2,
@@ -213,280 +180,259 @@ body, [role="dialog"] {
 [role="dialog"] [navoptions] a,
 [role="dialog"] p,
 [role="dialog"] div {
-	letter-spacing: 0.015em;
-	color: var(--nlc-primary-200);
+  letter-spacing: 0.015em;
+  color: hsl(var(--foreground));
 }
 
+/* iFrame & Layout tweaks */
 .section-iframe > div > div {
-	border: none !important;
-	background: none !important;
-	border-radius: 0;
+  border: none !important;
+  background: none !important;
+  border-radius: 0;
 }
-
 .section-iframe .max-h-screen-25 {
-	max-height: 100px !important;
+  max-height: 100px !important;
 }
-
 [data-testid="record-view-body"] {
-	padding-left: 12px;
-	padding-right: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
+/* Sidebar & nav items */
 [data-testid="sidebar-nav-item"] > div > a {
-	padding-top: 0;
-	padding-bottom: 0;
-	font-size: 14.2px;
-	opacity: 0.7;
-	color: var(--nlc-primary-200);
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 14.2px;
+  opacity: 0.7;
+  color: hsl(var(--foreground));
 }
-
 [data-testid="sidebar-nav-item"] > div > a.bg-nlc_primary-900 {
-	opacity: 1;
-	background: none;
+  opacity: 1;
+  background: none;
 }
-
 [data-testid="sidebar-nav-item"] > div > a.focus:bg-nlc_primary-600 {
-	color: green;
+  color: green;
 }
-
 [data-testid="navigation-sidebar"] > div.items-center > a {
-	justify-content: flex-start;
-	padding-left: 14px;
+  justify-content: flex-start;
+  padding-left: 14px;
 }
-
 [data-testid="sidebar-nav-item"] > div > .h-8 {
-	height: 12px;
-	opacity: 0.3;
+  height: 12px;
+  opacity: 0.3;
 }
-
 [data-testid="sidebar-nav-item"] > div > a > div > :first-child {
-	opacity: 0.45;
-	margin-right: 9px;
-	display: none;
+  opacity: 0.45;
+  margin-right: 9px;
+  display: none;
 }
 
+/* Record-view sections */
 [data-testid="record-view-section"] > div > div > div {
-	background: none !important;
-	color: var(--nlc-primary-800) !important;
+  background: none !important;
+  color: hsl(var(--foreground)) !important;
 }
 
+/* Table/Content tokens */
 :root {
-	--table-bg: transparent;
-	--table-border-color: var(--nlc-primary-800);
-	--table-row-padding: 12px;
-	--page-content-width: 1258px;
+  --table-bg: transparent;
+  --table-border-color: hsl(var(--border));
+  --table-row-padding: 12px;
+  --page-content-width: 1258px;
 }
 
+/* Collections & table styling */
 [data-testid="view-collection"] {
-	padding-left: 12px;
-	padding-right: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
-
 [data-testid="view-collection"] > div:first-child {
-	margin: 0 !important;
-	padding-top: 8px;
-	padding-bottom: 8px;
+  margin: 0 !important;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
-
 [data-testid="record-view"] > div:first-child > div:first-child h1 {
-	border: 1px solid green !important;
-	display: none;
+  border: 1px solid green !important;
+  display: none;
 }
-
 [data-testid="record-view"] > div:first-child > div:first-child h1 + span {
-	color: var(--nlc-primary-100) !important;
-	font-weight: 500;
-	font-size: 20px;
-	margin: 0;
-	padding: 0;
+  color: hsl(var(--foreground)) !important;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
 }
 
+/* Table backgrounds, borders, etc. */
 .collection-view-table > div {
-	background-color: var(--table-bg) !important;
-	border-color: var(--table-border-color) !important;
-	border-radius: 2px;
+  background-color: var(--table-bg) !important;
+  border-color: var(--table-border-color) !important;
+  border-radius: 2px;
 }
-
 .collection-view-table table ~ div {
-	border-color: var(--table-border-color) !important;
+  border-color: var(--table-border-color) !important;
 }
-
 .collection-view-table table tr {
-	background: var(--table-bg) !important;
-	border-color: var(--table-border-color) !important;
+  background: var(--table-bg) !important;
+  border-color: var(--table-border-color) !important;
 }
-
 .collection-view-table table ~ div {
-	background: var(--nlc-primary-900) !important;
+  background: hsl(var(--background)) !important;
 }
-
 .collection-view-table thead {
-	border-color: var(--table-border-color) !important;
-	background: var(--table-bg) !important;
+  border-color: var(--table-border-color) !important;
+  background: var(--table-bg) !important;
 }
-
 .collection-view-table tbody {
-	background: var(--table-bg) !important;
+  background: var(--table-bg) !important;
 }
-
 .collection-view-table th.table-fixed {
-	color: var(--nlc-primary-300);
-	background: var(--nlc-primary-900) !important;
+  color: hsl(var(--foreground));
+  background: hsl(var(--background)) !important;
 }
-
 .collection-view-table tbody tr {
-	background: var(--table-bg) !important;
-	font-size: 14px !important;
+  background: var(--table-bg) !important;
+  font-size: 14px !important;
 }
-
 .collection-view-table tbody tr a {
-	color: var(--nlc-primary-200) !important;
+  color: hsl(var(--foreground)) !important;
 }
-
 .collection-view-table tbody tr:hover {
-	background: var(--nlc-primary-800) !important;
-	font-size: 14px !important;
-	color: var(--nlc-primary-200) !important;
+  background: hsl(var(--background)) !important;
+  font-size: 14px !important;
+  color: hsl(var(--foreground)) !important;
 }
-
 .collection-view-table tbody td {
-	padding-top: var(--table-row-padding);
-	padding-bottom: var(--table-row-padding);
+  padding-top: var(--table-row-padding);
+  padding-bottom: var(--table-row-padding);
 }
-
 .collection-view-table tbody td.pr-6 {
-	padding-left: var(--table-row-padding);
+  padding-left: var(--table-row-padding);
 }
 
+/* "Rounded" label fields */
 .collection-view-table [data-testid="field-cell"] span.rounded,
 [data-testid="details-section"] span.rounded,
-.collection-view-cards [data-testid="field-cell"] span.rounded, .collection-view-rows [data-testid="field-cell"] span.rounded, label > spanc {
-	font-weight: 600 !important;
-	padding-top: 2px !important;
-	padding-bottom: 2px !important;
-	padding-left: 10px !important;
-	padding-right: 10px !important;
-	border-radius: 20px !important;
+.collection-view-cards [data-testid="field-cell"] span.rounded,
+.collection-view-rows [data-testid="field-cell"] span.rounded,
+label > spanc {
+  font-weight: 600 !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  border-radius: 20px !important;
 }
-
 .collection-view-table [data-testid="field-cell"] span.rounded > div,
-  [data-testid="details-section"] span.rounded > div,
-  .collection-view-cards [data-testid="field-cell"] span.rounded > div, .collection-view-rows [data-testid="field-cell"] span.rounded > div, label > spanc > div {
-	opacity: 1 !important;
-	color: rgba(0, 0, 0, 0.8) !important;
-	mix-blend-mode: darken;
-	font-weight: 600;
+[data-testid="details-section"] span.rounded > div,
+.collection-view-cards [data-testid="field-cell"] span.rounded > div,
+.collection-view-rows [data-testid="field-cell"] span.rounded > div,
+label > spanc > div {
+  opacity: 1 !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+  mix-blend-mode: darken;
+  font-weight: 600;
 }
 
+/* Chart & Icon styling */
 [stroke-opacity="1"] {
-	stroke: var(--nlc-primary-500) !important;
+  stroke: hsl(var(--foreground)) !important;
 }
-
 .visx-path {
-	stroke: rgba(0, 254, 149, 0.6) !important;
+  stroke: rgba(0, 254, 149, 0.6) !important;
 }
-
 .visx-axis-tick {
-	opacity: 0.8;
+  opacity: 0.8;
 }
-
 marker {
-	fill: #00FE95;
+  fill: #00FE95;
 }
-
 [shape-rendering="crispEdges"] {
-	stroke: var(--nlc-primary-800) !important;
+  stroke: hsl(var(--border)) !important;
 }
 
+/* Collections & "record" items */
 .collection-view-rows > div {
-	padding-left: 0;
+  padding-left: 0;
 }
-
 .collection-view > div:first-child h1 {
-	padding-left: 0;
-	font-size: 16px;
-	color: var(--nlc-primary-200);
-	font-weight: 500;
+  padding-left: 0;
+  font-size: 16px;
+  color: hsl(var(--foreground));
+  font-weight: 500;
 }
-
 .collection-view-rows [data-testid="collection-record"] {
-	border-top: 1px solid var(--nlc-primary-800) !important;
+  border-top: 1px solid hsl(var(--border)) !important;
 }
-
 [data-testid="record-view-section"] {
-	padding: 0;
+  padding: 0;
 }
-
 .section-notice > div > div {
-	border: 1px solid var(--nlc-primary-800);
+  border: 1px solid hsl(var(--border));
 }
-
 [data-testid="record-view"] > div:first-child > div:first-child {
-	backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
+/* Action Button */
 [data-testid="action-button"] {
-	border-radius: 4px;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	padding-left: 14px;
-	padding-right: 14px;
+  border-radius: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
-
 [data-testid="action-button"].bg-orange-300 {
-	background: #FFC523;
-	color: var(--nlc-primary-800) !important;
+  background: #FFC523;
+  color: hsl(var(--foreground)) !important;
 }
 
+/* Filters, etc. */
 .collection-view-table > div {
-	padding-left: 0;
-	padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
-
 .collection-view-table > div:first-child > div > div:last-child > div:last-child {
-	display: none;
+  display: none;
 }
-
 .collection-view-table .collection-filter {
-	margin-right: 0;
+  margin-right: 0;
 }
-
 [navoptions] > a.border-nlc_primary-500 {
-	border-bottom-color: #00FE95 !important;
+  border-bottom-color: #00FE95 !important;
 }
-
 .collection-view-table .collection-filter input {
-	width: 400px;
-	height: 36px;
-	padding: 12px;
-	padding-left: 28px;
-	background: var(--nlc-primary-800) !important;
+  width: 400px;
+  height: 36px;
+  padding: 12px;
+  padding-left: 28px;
+  background: hsl(var(--background)) !important;
 }
-
-svg.icon.icon-tabler.icon-tabler-star [fill="currentColor"] {
-	stroke: #D9A53C !important;
-	fill: #D9A53C !important;
-}
-
 .collection-view-table .collection-filter input:focus {
-	box-shadow: none !important;
+  box-shadow: none !important;
 }
 
+/* Star Icon Fill */
+svg.icon.icon-tabler.icon-tabler-star [fill="currentColor"] {
+  stroke: #D9A53C !important;
+  fill: #D9A53C !important;
+}
+
+/* Responsive containers */
 [data-testid="record-view"] > div > div > div > div {
-	max-width: var(--page-content-width);
+  max-width: var(--page-content-width);
 }
-
 [data-testid="record-view"] > div > div:first-child > div:first-child {
-	max-width: var(--page-content-width);
+  max-width: var(--page-content-width);
 }
-
 [data-testid="record-view"] > div > div:first-child {
-	border: none !important;
-	background: none !important;
+  border: none !important;
+  background: none !important;
 }
 
+/* Example hidden element */
 div > div:first-child > div:first-child > div:first-child a span.h-6 {
-	border: 1px solid green !important;
-	background: none !important;
-	display: none;
+  border: 1px solid green !important;
+  background: none !important;
+  display: none;
 }
