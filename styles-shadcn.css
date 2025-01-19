@@ -108,6 +108,11 @@
   --gray-900: 240 6% 10%; /* Darkest */
 }
 
+[data-testid="project-canvas"] {
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground));
+}
+
 /* Override Tailwind gray classes */
 .bg-gray-50 {
   background-color: hsl(var(--gray-50)) !important;
@@ -169,12 +174,6 @@
 }
 .text-gray-900 {
   color: hsl(var(--gray-900)) !important;
-}
-
-/* Project Canvas */
-[data-testid="project-canvas"] {
-  background-color: hsl(var(--gray-50)) !important;
-  color: hsl(var(--foreground));
 }
 
 /* Table Styles */
