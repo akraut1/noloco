@@ -2,6 +2,7 @@
 <style>
 
 /* Light mode variables */
+/* Light mode variables */
 :root {
   --background: 0 0% 100%;
   --foreground: 240 10% 3.9%;
@@ -24,26 +25,63 @@
   --ring: 240 5.9% 10%;
   --radius: 0.5rem;
 
-  /* Role-based badge colors */
-  /* Admin - Royal Purple */
-  --admin-from: 272 90% 60%;
-  --admin-to: 272 85% 65%;
-  --admin-border: 272 90% 40%;
+  /* Custom gray spectrum for light mode */
+  --gray-50: 240 5% 96%;
+  --gray-100: 240 4.8% 94%;
+  --gray-200: 240 5.9% 90%;
+  --gray-300: 240 5.2% 84%;
+  --gray-400: 240 5% 65%;
+  --gray-500: 240 3.7% 44%;
+  --gray-600: 240 5.3% 26%;
+  --gray-700: 240 5.9% 10%;
+  --gray-800: 240 3.7% 15.9%;
+  --gray-900: 240 5.9% 10%;
+}
 
-  /* Account Executive - Deep Teal */
-  --account-exec-from: 180 75% 45%;
-  --account-exec-to: 180 70% 50%;
-  --account-exec-border: 180 75% 35%;
+/* Role-based badge colors */
+/* Admin - Royal Purple */
+--admin-from: 272 90% 60
+%
+;
+--admin-to: 272 85% 65
+%
+;
+--admin-border: 272 90% 40
+%
+;
 
-  /* Loan Processor - Rich Amber */
-  --loan-processor-from: 43 96% 50%;
-  --loan-processor-to: 43 90% 55%;
-  --loan-processor-border: 43 96% 40%;
+/* Account Executive - Deep Teal */
+--account-exec-from: 180 75% 45
+%
+;
+--account-exec-to: 180 70% 50
+%
+;
+--account-exec-border: 180 75% 35
+%
+;
 
-  /* Loan Opener - Vibrant Indigo */
-  --loan-opener-from: 231 83% 60%;
-  --loan-opener-to: 231 78% 65%;
-  --loan-opener-border: 231 83% 50%;
+/* Loan Processor - Rich Amber */
+--loan-processor-from: 43 96% 50
+%
+;
+--loan-processor-to: 43 90% 55
+%
+;
+--loan-processor-border: 43 96% 40
+%
+;
+
+/* Loan Opener - Vibrant Indigo */
+--loan-opener-from: 231 83% 60
+%
+;
+--loan-opener-to: 231 78% 65
+%
+;
+--loan-opener-border: 231 83% 50
+%
+;
 }
 
 /* Dark mode variables */
@@ -83,11 +121,86 @@
   --loan-opener-from: 231 73% 45%;
   --loan-opener-to: 231 68% 50%;
   --loan-opener-border: 231 73% 35%;
+
+  /* Custom gray spectrum for dark mode */
+  --gray-50: 240 5.9% 10%;
+  --gray-100: 240 5.2% 11.5%;
+  --gray-200: 240 3.7% 15.9%;
+  --gray-300: 240 5.3% 26%;
+  --gray-400: 240 5% 33.9%;
+  --gray-500: 240 3.7% 44%;
+  --gray-600: 240 5% 65%;
+  --gray-700: 240 5.2% 84%;
+  --gray-800: 240 4.8% 95.9%;
+  --gray-900: 240 5% 96%;
+}
+
+/* Override Tailwind gray classes */
+.bg-gray-50 {
+  background-color: hsl(var(--gray-50)) !important;
+}
+.bg-gray-100 {
+  background-color: hsl(var(--gray-100)) !important;
+}
+.bg-gray-200 {
+  background-color: hsl(var(--gray-200)) !important;
+}
+.bg-gray-300 {
+  background-color: hsl(var(--gray-300)) !important;
+}
+.bg-gray-400 {
+  background-color: hsl(var(--gray-400)) !important;
+}
+.bg-gray-500 {
+  background-color: hsl(var(--gray-500)) !important;
+}
+.bg-gray-600 {
+  background-color: hsl(var(--gray-600)) !important;
+}
+.bg-gray-700 {
+  background-color: hsl(var(--gray-700)) !important;
+}
+.bg-gray-800 {
+  background-color: hsl(var(--gray-800)) !important;
+}
+.bg-gray-900 {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+.text-gray-50 {
+  color: hsl(var(--gray-50)) !important;
+}
+.text-gray-100 {
+  color: hsl(var(--gray-100)) !important;
+}
+.text-gray-200 {
+  color: hsl(var(--gray-200)) !important;
+}
+.text-gray-300 {
+  color: hsl(var(--gray-300)) !important;
+}
+.text-gray-400 {
+  color: hsl(var(--gray-400)) !important;
+}
+.text-gray-500 {
+  color: hsl(var(--gray-500)) !important;
+}
+.text-gray-600 {
+  color: hsl(var(--gray-600)) !important;
+}
+.text-gray-700 {
+  color: hsl(var(--gray-700)) !important;
+}
+.text-gray-800 {
+  color: hsl(var(--gray-800)) !important;
+}
+.text-gray-900 {
+  color: hsl(var(--gray-900)) !important;
 }
 
 /* Project Canvas */
 [data-testid="project-canvas"] {
-  background-color: hsl(var(--background)) !important;
+  background-color: hsl(var(--gray-50)) !important;
   color: hsl(var(--foreground));
 }
 
@@ -98,9 +211,13 @@
 }
 
 .collection-view-table > div {
-  background-color: var(--table-bg) !important;
-  border-color: var(--table-border-color) !important;
+  background-color: hsl(var(--gray-50)) !important;
+  border-color: hsl(var(--table-border-color)) !important;
   border-radius: var(--radius);
+}
+
+.dark .collection-view-table > div {
+  background-color: hsl(var(--gray-900)) !important;
 }
 
 .collection-view-table thead th.table-fixed {
@@ -181,13 +298,13 @@
 }
 
 [data-testid="action-button"].bg-gray-700 {
-  background-color: hsl(var(--secondary));
+  background-color: hsl(var(--gray-700));
   color: hsl(var(--secondary-foreground));
   border-color: hsl(var(--border));
 }
 
 [data-testid="action-button"].bg-gray-700:hover {
-  background-color: hsl(var(--secondary));
+  background-color: hsl(var(--gray-700));
   opacity: 0.9;
 }
 
@@ -198,8 +315,12 @@
 
 /* Navigation Sidebar */
 [data-testid="navigation-sidebar"] {
-  background-color: hsl(var(--card));
+  background-color: hsl(var(--gray-100)) !important;
   border-right: 1px solid hsl(var(--border));
+}
+
+.dark [data-testid="navigation-sidebar"] {
+  background-color: hsl(var(--gray-800)) !important;
 }
 
 [data-testid="sidebar-nav-item"] > div > a {
