@@ -123,7 +123,7 @@
 .dark .card,
 .dark [class*="bg-card"],
 .dark [data-testid="navigation-sidebar"] {
-  background-color: hsl(var(--base-background)) !important;
+  background-color: hsl(var(--background)) !important;
   border-color: hsl(var(--border)) !important;
 }
 
@@ -133,11 +133,11 @@
 }
 
 .collection-view-table > div {
-  border-radius: var(--radius);
+  border-radius: 6px;
 }
 
 .collection-view-table thead th.table-fixed {
-  background-color: hsl(var(--muted)) !important;
+  background-color: hsl(var(--background)) !important;
   color: hsl(var(--muted-foreground));
   font-weight: 500;
   padding: 0.75rem 1rem;
@@ -148,7 +148,7 @@
 }
 
 .collection-view-table tbody tr:hover {
-  background-color: hsl(var(--accent)) !important;
+  background-color: hsl(var(--muted)) !important;
 }
 
 /* Role Badges */
@@ -218,7 +218,7 @@
 
 /* Action Buttons */
 [data-testid="action-button"] {
-  border-radius: var(--radius);
+  border-radius: 6px;
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
   line-height: 1rem;
