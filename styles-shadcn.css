@@ -177,8 +177,15 @@
 }
 
 /* Buttons */ 
-a.new-button.whitespace-nowrap {
+a.new-button whitespace-nowrap {
   background-color: hsl(var(--primary)) !important;
+  padding: 8px 16px;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: hsl(var(border-radius-6px));
+  border: 1px solid hsl(var(--input));
+  box-shadow: var(--box-shadow-sm), 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
 
 [data-testid="action-button"] {
