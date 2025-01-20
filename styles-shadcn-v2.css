@@ -29,15 +29,7 @@
 .dark .simplebar-wrapper,
 .dark .simplebar-mask,
 .dark .simplebar-content-wrapper {
-  background-color: hsl(var(--gray-900)) !important;
-}
-
-/* Override any inline styles */
-.dark *[style*="background-color: rgb(30, 41, 59)"],
-.dark *[style*="background-color: #1e293b"],
-.dark *[style*="background-color: rgb(15, 23, 42)"],
-.dark *[style*="background-color: #0f172a"] {
-  background-color: hsl(var(--gray-900)) !important;
+  background-color: hsl(var(--background)) !important;
 }
 
 /* Target specific canvas elements */
@@ -45,7 +37,7 @@
 .dark .canvas.project-preview.relative,
 .dark [data-testid="canvas"].bg-gray-900,
 .dark [data-testid="canvas"].bg-slate-800 {
-  background-color: hsl(var(--gray-900)) !important;
+  background-color: hsl(var(--background)) !important;
 }
 
 /* Light mode variables */
