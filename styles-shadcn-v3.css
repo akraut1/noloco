@@ -133,6 +133,8 @@
 }
 
 .collection-view-table > div {
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--muted-foreground));
   border-radius: 6px;
 }
 
@@ -140,7 +142,7 @@
   background-color: hsl(var(--background)) !important;
   color: hsl(var(--muted-foreground));
   font-weight: 500;
-  padding: 0.75rem 1rem;
+  padding: 0px 8px;
 }
 
 .collection-view-table tbody tr {
@@ -150,6 +152,11 @@
 
 .collection-view-table tbody tr:hover {
   background-color: hsl(var(--muted)) !important;
+}
+
+[data-testid="record-view-section"] {
+  background-color: hsl(var(--background)) !important;
+  border-radius: 6px
 }
 
 /* Role Badges */
@@ -256,6 +263,7 @@
 
   .collection-view-table .collection-filter input {
     width: 100%;
+    border-radius: 6px;
   }
 }
 
