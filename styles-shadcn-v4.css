@@ -221,13 +221,15 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 
 [data-testid="view-collection"] td a,
 .collection-view-table td a {
-  color: hsl(var(--primary));
+  color: hsl(221.2 83.2% 53.3%);
   transition: color 0.2s;
 }
 
 [data-testid="view-collection"] td a:hover,
-.collection-view-table td a:hover {
-  color: hsl(var(--primary-foreground));
+.collection-view-table td a:hover,
+[data-testid="view-collection"] td a:active,
+.collection-view-table td a:active {
+  color: hsl(201 90% 27.5%);
 }
 
 /* Specific selectors for the provided classes */
@@ -385,6 +387,19 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 
 .dark [data-test-id="stages-section"] .ml-3 {
   color: hsl(var(--foreground));
+}
+
+/* Dark mode link colors for table cells */
+.dark [data-testid="view-collection"] td a,
+.dark .collection-view-table td a {
+  color: hsl(187.9 85.7% 53.3%); /* Sky 400 */
+}
+
+.dark [data-testid="view-collection"] td a:hover,
+.dark .collection-view-table td a:hover,
+.dark [data-testid="view-collection"] td a:active,
+.dark .collection-view-table td a:active {
+  color: hsl(191.6 91.4% 36.5%); /* Sky 600 */
 }
 
 /* Role Badges */
