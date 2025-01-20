@@ -152,6 +152,8 @@
 .dark [data-testid="collection-group-header"],
 .dark .card,
 .dark [class*="bg-card"],
+.dark [data-testid="details-section"],
+.dark [data-testid="stages-section"],
 .dark [data-testid="navigation-sidebar"] {
   background-color: hsl(var(--base-background)) !important;
   border-color: hsl(var(--border)) !important;
@@ -176,6 +178,7 @@
 [data-testid="view-collection"] thead tr,
 .collection-view-table thead tr {
   border-bottom: 1px solid hsl(var(--border));
+  transition: background-color 0.3s;
 }
 
 /* Table Header Cells */
@@ -189,14 +192,14 @@
   font-weight: 500;
   color: hsl(var(--foreground));
   background-color: hsl(var(--muted));
-  transition: background-color 0.2s;
+  transition: background-color 0.3s;
 }
 
 /* Table Body Rows */
 [data-testid="view-collection"] tbody tr,
 .collection-view-table tbody tr,
 tr[class*="record-"][data-test-id="collection-record"] {
-  background-color: hsl(var(--table-row-bg));
+  background-color: hsl(var(--background));
   border-bottom: 1px solid hsl(var(--border));
   transition: background-color 0.2s;
 }
