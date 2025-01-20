@@ -147,10 +147,10 @@
 }
 
 /* Component backgrounds */
-.dark .collection-view-table > div,
-.dark [data-testid="collection-group-header"],
 .dark .card,
 .dark [class*="bg-card"],
+.dark .collection-view-table > div,
+.dark [data-testid="collection-group-header"],
 .dark [data-testid="navigation-sidebar"] {
   background-color: hsl(var(--base-background)) !important;
   border-color: hsl(var(--border)) !important;
@@ -195,23 +195,15 @@
 [data-testid="view-collection"] tbody tr,
 .collection-view-table tbody tr,
 tr[class*="record-"][data-test-id="collection-record"] {
-  background-color: hsl(240 10% 3.9%);
+  background-color: hsl{var(background));
   border-bottom: 1px solid hsl(var(--border));
   transition: background-color 0.2s;
-}
-
-/* Specific selectors for the provided classes */
-.record-WyI1OCJd\@65532,
-.record-WyI1OSJd\@65532,
-.record-WyI1NyJd\@65532,
-.record-WyI1NiJd\@65532 {
-  background-color: hsl(240 10% 3.9%);
 }
 
 [data-testid="view-collection"] tbody tr:hover,
 .collection-view-table tbody tr:hover,
 tr[class*="record-"][data-test-id="collection-record"]:hover {
-  background-color: #27272a;
+  background-color: hsl(var(--secondary));
 }
 
 /* Table Body Cells */
@@ -223,6 +215,18 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   color: hsl(var(--foreground));
 }
 
+[data-testid="view-collection"] .collection-view-table td a {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: hsl(221.2 83.2% 53.3%);
+  transition: color 0.2s;
+}
+
+  [data-testid="view-collection"] .collection-view-table td a:hover {
+    
+  }
+
 /* Checkbox Column */
 [data-testid="view-collection"] th:first-child,
 [data-testid="view-collection"] td:first-child,
@@ -232,7 +236,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   padding-left: 1rem;
   padding-right: 0;
 }
-
+  
 /* Filter Input */
 [data-testid="view-collection"] input[type="text"],
 .collection-view-table input[type="text"] {
@@ -298,7 +302,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 
 .dark [data-testid="view-collection"] input[type="text"],
 .dark .collection-view-table input[type="text"] {
-  background-color: hsl(var(--input));
+  background-color: hsl(var(--background));
   color: hsl(var(--foreground));
 }
 
@@ -309,7 +313,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   align-items: center;
   justify-content: center;
   border-radius: 0.375rem;
-  padding: 0.125rem 0.5rem;
+  padding: 0.20rem 1.0rem;
   font-size: 0.75rem;
   line-height: 1.25;
   font-weight: 500;
@@ -365,7 +369,11 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 
 /* Action Buttons */
 [data-testid="action-button"] {
-  border-radius: var(--radius);
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  opacity: 0.40
+  border: 1px solid hsl(var(--border))
+  border-radius: hsl(var(--radius));
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -379,6 +387,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 }
 
 [data-testid="action-button"].bg-gray-700:hover {
+  background-color: hsl(var(--secondary));
   opacity: 0.9;
 }
 
