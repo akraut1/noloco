@@ -193,6 +193,7 @@
 /* Table Body Rows */
 [data-testid="view-collection"] tbody tr,
 .collection-view-table tbody tr {
+  background-color: hsl(var(--background));
   border-bottom: 1px solid hsl(var(--border));
   transition: background-color 0.2s;
 }
