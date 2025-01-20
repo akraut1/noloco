@@ -61,8 +61,8 @@
   /* Deal Disposition */
   --badge-active-bg: 142 76% 36%;
   --badge-active-text: 142 72% 29%;
-  --badge-pending-bg: 48 96% 89%;
-  --badge-pending-text: 48 96% 89%;
+  --badge-onhold-bg: 48 96% 89%;
+  --badge-onhold-text: 48 96% 89%;
 
   /* Deal Stage 1 */
   --badge-stage1-bg: 221 83% 53%;
@@ -121,8 +121,8 @@
   /* Deal Disposition */
   --badge-active-bg: 142 76% 36%;
   --badge-active-text: 142 72% 29%;
-  --badge-pending-bg: 48 96% 89%;
-  --badge-pending-text: 48 96% 89%;
+  --badge-onhold-bg: 48 96% 89%;
+  --badge-onhold-text: 48 96% 89%;
 
   /* Deal Stage 1 */
   --badge-stage1-bg: 221 83% 53%;
@@ -291,6 +291,19 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   line-height: 1.25rem;
 }
 
+/* Stages Section Styling */
+[data-test-id="stages-section"] {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  overflow-y: auto;
+  border-radius: var(--radius);
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+}
+
 /* Dark mode specific styles */
 .dark
   [data-testid="view-collection"]
@@ -315,6 +328,12 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 .dark .collection-view-table input[type="text"] {
   background-color: hsl(var(--input));
   color: hsl(var(--foreground));
+}
+
+.dark [data-test-id="stages-section"] {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
 }
 
 /* Role Badges */
@@ -364,9 +383,9 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   color: hsl(var(--badge-active-text));
 }
 
-[data-testid="field-cell"] span.rounded:has(div:contains("Pending")) {
-  background-color: hsl(var(--badge-pending-bg));
-  color: hsl(var(--badge-pending-text));
+[data-testid="field-cell"] span.rounded:has(div:contains("On Hold")) {
+  background-color: hsl(var(--badge-onhold-bg));
+  color: hsl(var(--badge-onhold-text));
 }
 
 /* Deal Stage Badges */
