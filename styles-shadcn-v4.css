@@ -304,6 +304,47 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   border: 1px solid hsl(var(--border));
 }
 
+/* Stage Option Styling */
+[data-test-id="stages-section"] .group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+}
+
+/* Stage Number Indicator */
+[data-test-id="stages-section"] .text-white {
+  color: hsl(var(--background));
+}
+
+/* Stage Title Text */
+[data-test-id="stages-section"] .ml-3 {
+  color: hsl(var(--foreground));
+  margin-left: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Active Stage Styling */
+[data-test-id="stages-section"] [class*="stage-option-"] {
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+[data-test-id="stages-section"] [class*="stage-option-"]:hover {
+  background-color: hsl(var(--accent));
+}
+
+/* Stage Number Circle */
+[data-test-id="stages-section"] .flex.h-7.w-7 {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-color: transparent;
+}
+
 /* Dark mode specific styles */
 .dark
   [data-testid="view-collection"]
@@ -334,6 +375,15 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   border: 1px solid hsl(var(--border));
+}
+
+.dark [data-test-id="stages-section"] {
+  background-color: hsl(var(--background));
+  border-color: hsl(var(--border));
+}
+
+.dark [data-test-id="stages-section"] .ml-3 {
+  color: hsl(var(--foreground));
 }
 
 /* Role Badges */
