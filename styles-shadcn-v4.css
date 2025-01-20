@@ -1,0 +1,346 @@
+
+/* Main page background with gradient */
+.dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800,
+.dark [class*="bg-slate-800"],
+.dark [class*="bg-slate-900"],
+.dark [class*="bg-gray-900"],
+.dark main,
+.dark .main-content,
+.dark body,
+.dark #root,
+.dark #__next {
+  background: linear-gradient(0deg, hsl(var(--alpha-40)) 0%, hsl(var(--alpha-40)) 100%),
+    linear-gradient(0deg, hsl(var(--base-muted)) 0%, hsl(var(--base-muted)) 100%), hsl(var(--base-background)) !important;
+}
+
+/* Component backgrounds */
+.dark .collection-view-table > div,
+.dark [data-testid="collection-group-header"],
+.dark .card,
+.dark [class*="bg-card"],
+.dark [data-testid="navigation-sidebar"] {
+  background-color: hsl(var(--base-background)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+/* Data Table Styles - Shadcn Match */
+[data-testid="view-collection"]
+  > div
+  > div
+  > div
+  > div
+  > .focus\:outline-none.focus\:shadow-none.w-full.shadow-lg.mb-2.overflow-y-hidden.overflow-x-auto.border.rounded-lg,
+.collection-view-table > div {
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Table Header Row */
+[data-testid="view-collection"] thead tr,
+.collection-view-table thead tr {
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+/* Table Header Cells */
+[data-testid="view-collection"] th,
+.collection-view-table th {
+  height: 3rem;
+  padding: 0 1rem;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--muted));
+  transition: background-color 0.2s;
+}
+
+/* Table Body Rows */
+[data-testid="view-collection"] tbody tr,
+.collection-view-table tbody tr,
+tr[class*="record-"][data-test-id="collection-record"] {
+  background-color: hsl(var(--table-row-bg));
+  border-bottom: 1px solid hsl(var(--border));
+  transition: background-color 0.2s;
+}
+
+[data-testid="view-collection"] tbody tr:hover,
+.collection-view-table tbody tr:hover,
+tr[class*="record-"][data-test-id="collection-record"]:hover {
+  background-color: hsl(var(--muted));
+}
+
+/* Table Body Cells */
+[data-testid="view-collection"] td,
+.collection-view-table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: hsl(var(--foreground));
+}
+
+[data-testid="view-collection"] td a,
+.collection-view-table td a {
+  color: hsl(var(--primary));
+  transition: color 0.2s;
+}
+
+[data-testid="view-collection"] td a:hover,
+.collection-view-table td a:hover {
+  color: hsl(var(--primary-foreground));
+}
+
+/* Specific selectors for the provided classes */
+.record-WyI1OCJd\@65532,
+.record-WyI1OSJd\@65532,
+.record-WyI1NyJd\@65532,
+.record-WyI1NiJd\@65532 {
+  background-color: hsl(var(--background));
+}
+
+/* Checkbox Column */
+[data-testid="view-collection"] th:first-child,
+[data-testid="view-collection"] td:first-child,
+.collection-view-table th:first-child,
+.collection-view-table td:first-child {
+  width: 40px;
+  padding-left: 1rem;
+  padding-right: 0;
+}
+
+/* Filter Input */
+[data-testid="view-collection"] input[type="text"],
+.collection-view-table input[type="text"] {
+  width: 100%;
+  height: 2.25rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--input));
+  border-radius: var(--radius);
+}
+
+[data-testid="view-collection"] input[type="text"]:focus,
+.collection-view-table input[type="text"]:focus {
+  outline: none;
+  ring: 2px solid hsl(var(--ring));
+  border-color: hsl(var(--ring));
+}
+
+/* Pagination Controls */
+[data-testid="view-collection"] .pagination,
+.collection-view-table .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid hsl(var(--border));
+}
+
+/* Status Badges */
+[data-testid="view-collection"] .status-badge,
+.collection-view-table .status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+/* Dark mode specific styles */
+.dark
+  [data-testid="view-collection"]
+  > div
+  > div
+  > div
+  > div
+  > .focus\:outline-none.focus\:shadow-none.w-full.shadow-lg.mb-2.overflow-y-hidden.overflow-x-auto.border.rounded-lg,
+.dark .collection-view-table > div {
+  background-color: hsl(var(--background));
+  border-color: hsl(var(--border));
+}
+
+.dark [data-testid="view-collection"] th,
+.dark .collection-view-table th,
+.dark [data-testid="view-collection"] td,
+.dark .collection-view-table td {
+  color: hsl(var(--foreground));
+}
+
+.dark [data-testid="view-collection"] input[type="text"],
+.dark .collection-view-table input[type="text"] {
+  background-color: hsl(var(--input));
+  color: hsl(var(--foreground));
+}
+
+/* Role Badges */
+[class*="px-3 py-0 rounded bg-green-700"],
+[data-testid="field-cell"] span.rounded {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 150ms;
+  height: 1.5rem;
+}
+
+/* Role-specific badge styles */
+[data-testid="field-cell"] span.rounded:has(div:contains("Admin")) {
+  background: linear-gradient(135deg, hsla(var(--admin-from), 0.9), hsla(var(--admin-to), 0.8));
+  border-color: hsla(var(--admin-border), 0.3);
+  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Account Executive")) {
+  background: linear-gradient(135deg, hsla(var(--account-exec-from), 0.9), hsla(var(--account-exec-to), 0.8));
+  border-color: hsla(var(--account-exec-border), 0.3);
+  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Loan Processor")) {
+  background: linear-gradient(135deg, hsla(var(--loan-processor-from), 0.9), hsla(var(--loan-processor-to), 0.8));
+  border-color: hsla(var(--loan-processor-border), 0.3);
+  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Loan Opener")) {
+  background: linear-gradient(135deg, hsla(var(--loan-opener-from), 0.9), hsla(var(--loan-opener-to), 0.8));
+  border-color: hsla(var(--loan-opener-border), 0.3);
+  color: hsl(var(--background));
+}
+
+/* Deal Disposition Badges */
+[data-testid="field-cell"] span.rounded:has(div:contains("Active")) {
+  background-color: hsl(var(--badge-active-bg));
+  color: hsl(var(--badge-active-text));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Pending")) {
+  background-color: hsl(var(--badge-pending-bg));
+  color: hsl(var(--badge-pending-text));
+}
+
+/* Deal Stage Badges */
+[data-testid="field-cell"] span.rounded:has(div:contains("Stage 1")) {
+  background-color: hsl(var(--badge-stage1-bg));
+  color: hsl(var(--badge-stage1-text));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Stage 2")) {
+  background-color: hsl(var(--badge-stage2-bg));
+  color: hsl(var(--badge-stage2-text));
+}
+
+/* Navigation */
+[data-testid="navigation-sidebar"] {
+  border-right: 1px solid hsl(var(--border));
+}
+
+[data-testid="sidebar-nav-item"] > div > a {
+  color: hsl(var(--muted-foreground));
+  transition: color 0.2s;
+}
+
+[data-testid="sidebar-nav-item"] > div > a:hover {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--accent));
+}
+
+[data-testid="sidebar-nav-item"] > div > a.bg-nlc_primary-900 {
+  background-color: hsl(var(--accent)) !important;
+  color: hsl(var(--accent-foreground)) !important;
+}
+
+/* Action Buttons */
+[data-testid="action-button"] {
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  transition: all 150ms;
+}
+
+[data-testid="action-button"].bg-gray-700 {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border-color: hsl(var(--border));
+}
+
+[data-testid="action-button"].bg-gray-700:hover {
+  opacity: 0.9;
+}
+
+[data-testid="action-button"].bg-red-500 {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+/* Dark Mode Toggle */
+[data-testid="dark-mode-switch"] {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border-color: hsl(var(--border));
+}
+
+/* Record View Section Styles */
+[data-test-id="record-view-section"] {
+  background-color: hsl(var(--background));
+}
+
+/* Target the outer wrapper */
+[data-test-id="record-view-section"] > div {
+  border: 1px solid hsl(var(--border));
+}
+
+/* Target the inner content wrapper */
+[data-test-id="record-view-section"] > div > div {
+  padding: 1.5rem; /* 24px */
+}
+
+/* Target the flex column container */
+[data-test-id="record-view-section"] .mb-2.px-4.sm\:p-0.flex.flex-col {
+  padding: 1.5rem; /* 24px */
+}
+
+/* Target the icon container */
+[data-test-id="record-view-section"]
+  .relative.hidden.h-10.w-10.items-center.justify-center.rounded-lg.border.p-2.sm\:flex {
+  padding: 1.5rem; /* 24px */
+}
+
+/* Ensure proper background color for all record view sections */
+[data-test-id="record-view-section"],
+.dark [data-test-id="record-view-section"],
+[id="FNLvmEeio"] [data-test-id="record-view-section"] {
+  background-color: hsl(var(--background)) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  [data-testid="record-view-body"] {
+    padding: 0.75rem;
+    background-color: hsl(var(--secondary));
+  }
+
+  .collection-view-table .collection-filter input {
+    width: 100%;
+  }
+}
+
+.sticky.top-0.z-40.flex.w-full.flex-col.overflow-hidden.border-b.sm\:static.bg-gray-800.border-gray-700.px-3 {
+  background-color: hsl(var(--background));
+  border-color: hsl(var(--border));
+}
+
