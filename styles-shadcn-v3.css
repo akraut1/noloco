@@ -2,6 +2,7 @@
 <style>
 /* Light mode variables */
 /* Light mode variables */
+/* Light mode variables */
 :root {
   --background: 0 0% 100%;
   --foreground: 240 10% 3.9%;
@@ -344,5 +345,6 @@
     width: 100%;
   }
 }
+
 
 </style>
