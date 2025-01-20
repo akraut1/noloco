@@ -1,0 +1,490 @@
+<style>
+/* Add these overrides at the top of the file to ensure maximum specificity */
+.dark .bg-slate-800,
+.dark .bg-slate-900,
+.dark [class*="bg-slate-"],
+.dark div[class*="bg-slate-"],
+.dark .bg-gray-900,
+.dark [class*="bg-gray-900"],
+.dark .canvas,
+.dark [data-testid="canvas"],
+.dark .project-preview,
+.dark [data-tour="canvas"],
+.dark div.bg-slate-800,
+.dark div.bg-gray-900,
+.dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800,
+.dark
+  .canvas.project-preview.relative.z-10.mx-auto.flex.h-full.max-h-screen.w-full.flex-grow.flex-col.overflow-hidden.shadow.sm\:h-screen.bg-gray-900,
+.dark div[class*="bg-gray-900"],
+.dark div[class*="bg-slate-800"] {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Target parent containers */
+.dark body,
+.dark #root,
+.dark #__next,
+.dark main,
+.dark [data-testid="project-canvas"],
+.dark .simplebar-wrapper,
+.dark .simplebar-mask,
+.dark .simplebar-content-wrapper {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Override any inline styles */
+.dark *[style*="background-color: rgb(30, 41, 59)"],
+.dark *[style*="background-color: #1e293b"],
+.dark *[style*="background-color: rgb(15, 23, 42)"],
+.dark *[style*="background-color: #0f172a"] {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Target specific canvas elements */
+.dark .canvas.h-100.project-preview,
+.dark .canvas.project-preview.relative,
+.dark [data-testid="canvas"].bg-gray-900,
+.dark [data-testid="canvas"].bg-slate-800 {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Light mode variables */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 240 5.9% 10%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 240 5.9% 10%;
+  --radius: 0.5rem;
+
+  /* Custom gray spectrum for light mode */
+  --gray-50: 240 5% 96%;
+  --gray-100: 240 4.8% 94%;
+  --gray-200: 240 5.9% 90%;
+  --gray-300: 240 5.2% 84%;
+  --gray-400: 240 5% 65%;
+  --gray-500: 240 3.7% 44%;
+  --gray-600: 240 5.3% 26%;
+  --gray-700: 240 5.9% 10%;
+  --gray-800: 240 3.7% 15.9%;
+  --gray-900: 240 5.9% 10%;
+
+  /* Role-based badge colors */
+  /* Admin - Royal Purple */
+  --admin-from: 272 90% 60%;
+  --admin-to: 272 85% 65%;
+  --admin-border: 272 90% 40%;
+
+  /* Account Executive - Deep Teal */
+  --account-exec-from: 180 75% 45%;
+  --account-exec-to: 180 70% 50%;
+  --account-exec-border: 180 75% 35%;
+
+  /* Loan Processor - Rich Amber */
+  --loan-processor-from: 43 96% 50%;
+  --loan-processor-to: 43 90% 55%;
+  --loan-processor-border: 43 96% 40%;
+
+  /* Loan Opener - Vibrant Indigo */
+  --loan-opener-from: 231 83% 60%;
+  --loan-opener-to: 231 78% 65%;
+  --loan-opener-border: 231 83% 50%;
+}
+
+/* Dark mode variables */
+.dark {
+  --background: 224 71% 4%;
+  --foreground: 213 31% 91%;
+  --card: 224 71% 4%;
+  --card-foreground: 213 31% 91%;
+  --popover: 224 71% 4%;
+  --popover-foreground: 215 20.2% 65.1%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 1.2%;
+  --secondary: 222.2 47.4% 11.2%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 223 47% 11%;
+  --muted-foreground: 215.4 16.3% 56.9%;
+  --accent: 216 34% 17%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 216 34% 17%;
+  --input: 216 34% 17%;
+  --ring: 216 34% 17%;
+  /* Adjust colors for dark mode */
+  --admin-from: 272 70% 45%;
+  --admin-to: 272 65% 50%;
+  --admin-border: 272 70% 35%;
+
+  --account-exec-from: 180 65% 35%;
+  --account-exec-to: 180 60% 40%;
+  --account-exec-border: 180 65% 25%;
+
+  --loan-processor-from: 43 86% 45%;
+  --loan-processor-to: 43 80% 50%;
+  --loan-processor-border: 43 86% 35%;
+
+  --loan-opener-from: 231 73% 45%;
+  --loan-opener-to: 231 68% 50%;
+  --loan-opener-border: 231 73% 35%;
+
+  /* Refined gray spectrum for dark mode - using zinc theme values */
+  --gray-50: 240 5% 98%; /* Lightest */
+  --gray-100: 240 5% 96%;
+  --gray-200: 240 4% 90%;
+  --gray-300: 240 5% 84%;
+  --gray-400: 240 5% 65%;
+  --gray-500: 240 5% 50%;
+  --gray-600: 240 5% 34%;
+  --gray-700: 240 5% 26%;
+  --gray-800: 240 4% 16%;
+  --gray-900: 240 6% 10%; /* Darkest */
+}
+
+/* Override Tailwind gray classes */
+.bg-gray-50 {
+  background-color: hsl(var(--gray-50)) !important;
+}
+.bg-gray-100 {
+  background-color: hsl(var(--gray-100)) !important;
+}
+.bg-gray-200 {
+  background-color: hsl(var(--gray-200)) !important;
+}
+.bg-gray-300 {
+  background-color: hsl(var(--gray-300)) !important;
+}
+.bg-gray-400 {
+  background-color: hsl(var(--gray-400)) !important;
+}
+.bg-gray-500 {
+  background-color: hsl(var(--gray-500)) !important;
+}
+.bg-gray-600 {
+  background-color: hsl(var(--gray-600)) !important;
+}
+.bg-gray-700 {
+  background-color: hsl(var(--gray-700)) !important;
+}
+.bg-gray-800 {
+  background-color: hsl(var(--gray-800)) !important;
+}
+.bg-gray-900 {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+.text-gray-50 {
+  color: hsl(var(--gray-50)) !important;
+}
+.text-gray-100 {
+  color: hsl(var(--gray-100)) !important;
+}
+.text-gray-200 {
+  color: hsl(var(--gray-200)) !important;
+}
+.text-gray-300 {
+  color: hsl(var(--gray-300)) !important;
+}
+.text-gray-400 {
+  color: hsl(var(--gray-400)) !important;
+}
+.text-gray-500 {
+  color: hsl(var(--gray-500)) !important;
+}
+.text-gray-600 {
+  color: hsl(var(--gray-600)) !important;
+}
+.text-gray-700 {
+  color: hsl(var(--gray-700)) !important;
+}
+.text-gray-800 {
+  color: hsl(var(--gray-800)) !important;
+}
+.text-gray-900 {
+  color: hsl(var(--gray-900)) !important;
+}
+
+/* Project Canvas */
+[data-testid="project-canvas"] {
+  background-color: hsl(var(--gray-50)) !important;
+  color: hsl(var(--foreground));
+}
+
+/* Table Styles */
+.collection-view-table {
+  --table-bg: hsl(var(--background));
+  --table-border-color: hsl(var(--border));
+}
+
+.collection-view-table > div {
+  background-color: hsl(var(--gray-50)) !important;
+  border-color: hsl(var(--table-border-color)) !important;
+  border-radius: var(--radius);
+}
+
+.dark .collection-view-table > div {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+.collection-view-table thead th.table-fixed {
+  background-color: hsl(var(--muted)) !important;
+  color: hsl(var(--muted-foreground));
+  font-weight: 500;
+}
+
+.collection-view-table tbody tr {
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.collection-view-table tbody tr:hover {
+  background-color: hsl(var(--accent)) !important;
+}
+
+/* Role Badges */
+/* Base badge styles */
+[data-testid="field-cell"] span.rounded {
+  padding: 0.375rem 0.875rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.025em;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+[data-testid="field-cell"] span.rounded:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Role-specific styles */
+[data-testid="field-cell"] span.rounded:has(div:contains("Admin")) {
+  background: linear-gradient(135deg, hsla(var(--admin-from), 0.9), hsla(var(--admin-to), 0.8));
+  border-color: hsla(var(--admin-border), 0.3);
+  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Account Executive")) {
+  background: linear-gradient(135deg, hsla(var(--account-exec-from), 0.9), hsla(var(--account-exec-to), 0.8));
+  border-color: hsla(var(--account-exec-border), 0.3);
+  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Loan Processor")) {
+  background: linear-gradient(135deg, hsla(var(--loan-processor-from), 0.9), hsla(var(--loan-processor-to), 0.8));
+  border-color: hsla(var(--loan-processor-border), 0.3);
+  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Loan Opener")) {
+  background: linear-gradient(135deg, hsla(var(--loan-opener-from), 0.9), hsla(var(--loan-opener-to), 0.8));
+  border-color: hsla(var(--loan-opener-border), 0.3);
+  color: hsl(var(--background));
+}
+
+/* Group header count badges */
+[data-testid="collection-group-header"] span.rounded {
+  background: hsla(var(--muted), 0.8);
+  border: 1px solid hsla(var(--border), 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Action Buttons */
+[data-testid="action-button"] {
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  transition: all 150ms;
+}
+
+[data-testid="action-button"].bg-gray-700 {
+  background-color: hsl(var(--gray-700));
+  color: hsl(var(--secondary-foreground));
+  border-color: hsl(var(--border));
+}
+
+[data-testid="action-button"].bg-gray-700:hover {
+  background-color: hsl(var(--gray-700));
+  opacity: 0.9;
+}
+
+[data-testid="action-button"].bg-red-500 {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+/* Navigation Sidebar */
+[data-testid="navigation-sidebar"] {
+  background-color: hsl(var(--gray-100)) !important;
+  border-right: 1px solid hsl(var(--border));
+}
+
+.dark [data-testid="navigation-sidebar"] {
+  background-color: hsl(var(--gray-800)) !important;
+  border-right: 1px solid hsl(var(--border));
+}
+
+[data-testid="sidebar-nav-item"] > div > a {
+  color: hsl(var(--muted-foreground));
+  transition: color 0.2s;
+}
+
+[data-testid="sidebar-nav-item"] > div > a:hover {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--accent));
+}
+
+[data-testid="sidebar-nav-item"] > div > a.bg-nlc_primary-900 {
+  background-color: hsl(var(--accent)) !important;
+  color: hsl(var(--accent-foreground)) !important;
+}
+
+/* Dark Mode Toggle */
+[data-testid="dark-mode-switch"] {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border-color: hsl(var(--border));
+}
+
+/* Group Headers */
+[data-testid="collection-group-header"] {
+  background-color: hsl(var(--muted));
+  border-color: hsl(var(--border));
+}
+
+[data-testid="collection-group-header"] .text-gray-400 {
+  color: hsl(var(--muted-foreground));
+}
+
+/* Force override any existing background colors */
+.dark [data-testid="project-canvas"],
+.dark .bg-gray-900,
+.dark [class*="bg-gray-900"] {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Override Tailwind slate backgrounds */
+.dark .bg-slate-800,
+.dark .bg-slate-900,
+.dark [class*="bg-slate-"],
+.dark div[class*="bg-slate-"] {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Target the specific flex container causing the blue background */
+.dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800 {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Additional slate background overrides */
+.dark [class*="bg-slate-800"],
+.dark [class*="bg-slate-900"] {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Header specific override */
+.dark [data-testid="header"],
+.dark header,
+.dark .header {
+  background-color: hsl(var(--gray-900)) !important;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+/* Main content area override */
+.dark main,
+.dark .main-content {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Additional specific overrides for any remaining blue backgrounds */
+.dark [class*="bg-blue"],
+.dark [class*="bg-indigo"],
+.dark [style*="background-color: rgb(30, 41, 59)"],
+.dark [style*="background-color: #1e293b"] {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Ensure text colors are properly contrasted */
+.dark .text-gray-100 {
+  color: hsl(var(--gray-100)) !important;
+}
+.dark .text-gray-200 {
+  color: hsl(var(--gray-200)) !important;
+}
+.dark .text-gray-300 {
+  color: hsl(var(--gray-300)) !important;
+}
+.dark .text-gray-400 {
+  color: hsl(var(--gray-400)) !important;
+}
+
+/* Add !important to all existing gray background classes to ensure they override */
+.dark .bg-gray-50 {
+  background-color: hsl(var(--gray-50)) !important;
+}
+.dark .bg-gray-100 {
+  background-color: hsl(var(--gray-100)) !important;
+}
+.dark .bg-gray-200 {
+  background-color: hsl(var(--gray-200)) !important;
+}
+.dark .bg-gray-300 {
+  background-color: hsl(var(--gray-300)) !important;
+}
+.dark .bg-gray-400 {
+  background-color: hsl(var(--gray-400)) !important;
+}
+.dark .bg-gray-500 {
+  background-color: hsl(var(--gray-500)) !important;
+}
+.dark .bg-gray-600 {
+  background-color: hsl(var(--gray-600)) !important;
+}
+.dark .bg-gray-700 {
+  background-color: hsl(var(--gray-700)) !important;
+}
+.dark .bg-gray-800 {
+  background-color: hsl(var(--gray-800)) !important;
+}
+.dark .bg-gray-900 {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Add specific attribute selectors for inline styles */
+.dark [style*="background-color"] {
+  background-color: hsl(var(--gray-900)) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  [data-testid="record-view-body"] {
+    padding: 0.75rem;
+  }
+
+  .collection-view-table .collection-filter input {
+    width: 100%;
+  }
+}
+
+</style>
