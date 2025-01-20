@@ -144,6 +144,7 @@
 }
 
 .collection-view-table tbody tr {
+  background-color: hsl(var(--background)) !important;
   border-bottom: 1px solid hsl(var(--border));
 }
 
