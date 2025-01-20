@@ -17,7 +17,7 @@
   .canvas.project-preview.relative.z-10.mx-auto.flex.h-full.max-h-screen.w-full.flex-grow.flex-col.overflow-hidden.shadow.sm\:h-screen.bg-gray-900,
 .dark div[class*="bg-gray-900"],
 .dark div[class*="bg-slate-800"] {
-  background-color: hsl(var(--gray-900)) !important;
+  background-color: hsl(var(--background)) !important;
 }
 
 /* Target parent containers */
