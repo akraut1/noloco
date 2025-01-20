@@ -1,6 +1,7 @@
 /* <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/akraut1/noloco@refs/heads/main/styles-shadcn-v3.css"> */
 <style>
 /* Light mode variables */
+/* Light mode variables */
 :root {
   --background: 0 0% 100%;
   --foreground: 240 10% 3.9%;
@@ -163,7 +164,7 @@
   > div
   > .focus\:outline-none.focus\:shadow-none.w-full.shadow-lg.mb-2.overflow-y-hidden.overflow-x-auto.border.rounded-lg,
 .collection-view-table > div {
-  background-color: hsl(var(--background));
+  background-color: hsl(240 10% 3.9%);
   border: 1px solid hsl(var(--border));
   border-radius: var(--radius);
   width: 100%;
@@ -186,21 +187,31 @@
   font-size: 0.875rem;
   font-weight: 500;
   color: hsl(var(--foreground));
-  background-color: hsl(var(--background));
+  background-color: hsl(240 10% 3.9%);
   transition: background-color 0.2s;
 }
 
 /* Table Body Rows */
 [data-testid="view-collection"] tbody tr,
-.collection-view-table tbody tr {
-  background-color: hsl(var(--background));
+.collection-view-table tbody tr,
+tr[class*="record-"][data-test-id="collection-record"] {
+  background-color: hsl(240 10% 3.9%);
   border-bottom: 1px solid hsl(var(--border));
   transition: background-color 0.2s;
 }
 
+/* Specific selectors for the provided classes */
+.record-WyI1OCJd\@65532,
+.record-WyI1OSJd\@65532,
+.record-WyI1NyJd\@65532,
+.record-WyI1NiJd\@65532 {
+  background-color: hsl(240 10% 3.9%);
+}
+
 [data-testid="view-collection"] tbody tr:hover,
-.collection-view-table tbody tr:hover {
-  background-color: hsl(var(--muted));
+.collection-view-table tbody tr:hover,
+tr[class*="record-"][data-test-id="collection-record"]:hover {
+  background-color: #27272a;
 }
 
 /* Table Body Cells */
@@ -250,7 +261,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1rem;
-  border: 1px solid hsl(var(--border));
+  border-top: 1px solid hsl(var(--border));
 }
 
 /* Status Badges */
@@ -385,7 +396,7 @@
 
 /* Record View Section Styles */
 [data-test-id="record-view-section"] {
-  background-color: hsl(var(--background));
+  background-color: #09090b;
 }
 
 /* Target the outer wrapper */
@@ -409,9 +420,11 @@
   padding: 1.5rem; /* 24px */
 }
 
-/* Ensure proper background color */
-.dark [data-test-id="record-view-section"] {
-  background-color: hsl(var(--background)) !important;
+/* Ensure proper background color for all record view sections */
+[data-test-id="record-view-section"],
+.dark [data-test-id="record-view-section"],
+[id="FNLvmEeio"] [data-test-id="record-view-section"] {
+  background-color: #09090b !important;
 }
 
 /* Responsive Design */
