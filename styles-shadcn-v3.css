@@ -1,0 +1,263 @@
+/* <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/akraut1/noloco@refs/heads/main/styles-shadcn-v3.css"> */
+
+<style>
+
+/* Light mode variables */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 240 5.9% 10%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 240 5.9% 10%;
+  --radius: 0.5rem;
+
+  /* Custom gray spectrum for light mode */
+  --gray-50: 240 5% 96%;
+  --gray-100: 240 4.8% 94%;
+  --gray-200: 240 5.9% 90%;
+  --gray-300: 240 5.2% 84%;
+  --gray-400: 240 5% 65%;
+  --gray-500: 240 3.7% 44%;
+  --gray-600: 240 5.3% 26%;
+  --gray-700: 240 5.9% 10%;
+  --gray-800: 240 3.7% 15.9%;
+  --gray-900: 240 5.9% 10%;
+
+  /* Role-based badge colors */
+  --admin-from: 272 90% 60%;
+  --admin-to: 272 85% 65%;
+  --admin-border: 272 90% 40%;
+
+  --account-exec-from: 180 75% 45%;
+  --account-exec-to: 180 70% 50%;
+  --account-exec-border: 180 75% 35%;
+
+  --loan-processor-from: 43 96% 50%;
+  --loan-processor-to: 43 90% 55%;
+  --loan-processor-border: 43 96% 40%;
+
+  --loan-opener-from: 231 83% 60%;
+  --loan-opener-to: 231 78% 65%;
+  --loan-opener-border: 231 83% 50%;
+
+  /* Dashboard theme colors */
+  --base-background: 240 10% 3.9%;
+  --base-muted: 240 4% 16%;
+  --alpha-40: 240 10% 3.9% / 0.6;
+}
+
+/* Dark mode variables */
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 240 5.9% 10%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
+
+  /* Role-based badge colors - adjusted for dark mode */
+  --admin-from: 272 70% 45%;
+  --admin-to: 272 65% 50%;
+  --admin-border: 272 70% 35%;
+
+  --account-exec-from: 180 65% 35%;
+  --account-exec-to: 180 60% 40%;
+  --account-exec-border: 180 65% 25%;
+
+  --loan-processor-from: 43 86% 45%;
+  --loan-processor-to: 43 80% 50%;
+  --loan-processor-border: 43 86% 35%;
+
+  --loan-opener-from: 231 73% 45%;
+  --loan-opener-to: 231 68% 50%;
+  --loan-opener-border: 231 73% 35%;
+
+  /* Dashboard theme colors */
+  --base-background: 240 10% 3.9%;
+  --base-muted: 240 4% 16%;
+  --alpha-40: 240 10% 3.9% / 0.6;
+}
+
+/* Main page background with gradient */
+.dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800,
+.dark [class*="bg-slate-800"],
+.dark [class*="bg-slate-900"],
+.dark [class*="bg-gray-900"],
+.dark main,
+.dark .main-content,
+.dark body,
+.dark #root,
+.dark #__next {
+  background: linear-gradient(0deg, hsl(var(--alpha-40)) 0%, hsl(var(--alpha-40)) 100%),
+    linear-gradient(0deg, hsl(var(--base-muted)) 0%, hsl(var(--base-muted)) 100%), hsl(var(--base-background)) !important;
+}
+
+/* Component backgrounds */
+.dark .collection-view-table > div,
+.dark [data-testid="collection-group-header"],
+.dark .card,
+.dark [class*="bg-card"],
+.dark [data-testid="navigation-sidebar"] {
+  background-color: hsl(var(--base-background)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+/* Table Styles */
+.collection-view-table {
+  --table-border-color: hsl(var(--border));
+}
+
+.collection-view-table > div {
+  border-radius: var(--radius);
+}
+
+.collection-view-table thead th.table-fixed {
+  background-color: hsl(var(--muted)) !important;
+  color: hsl(var(--muted-foreground));
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+}
+
+.collection-view-table tbody tr {
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.collection-view-table tbody tr:hover {
+  background-color: hsl(var(--accent)) !important;
+}
+
+/* Role Badges */
+[data-testid="field-cell"] span.rounded {
+  padding: 0.375rem 0.875rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.025em;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+[data-testid="field-cell"] span.rounded:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Role-specific badge styles */
+[data-testid="field-cell"] span.rounded:has(div:contains("Admin")) {
+  background: linear-gradient(135deg, hsla(var(--admin-from), 0.9), hsla(var(--admin-to), 0.8));
+  border-color: hsla(var(--admin-border), 0.3);
+  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Account Executive")) {
+  background: linear-gradient(135deg, hsla(var(--account-exec-from), 0.9), hsla(var(--account-exec-to), 0.8));
+  border-color: hsla(var(--account-exec-border), 0.3);
+  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Loan Processor")) {
+  background: linear-gradient(135deg, hsla(var(--loan-processor-from), 0.9), hsla(var(--loan-processor-to), 0.8));
+  border-color: hsla(var(--loan-processor-border), 0.3);
+  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Loan Opener")) {
+  background: linear-gradient(135deg, hsla(var(--loan-opener-from), 0.9), hsla(var(--loan-opener-to), 0.8));
+  border-color: hsla(var(--loan-opener-border), 0.3);
+  color: hsl(var(--background));
+}
+
+/* Navigation */
+[data-testid="navigation-sidebar"] {
+  border-right: 1px solid hsl(var(--border));
+}
+
+[data-testid="sidebar-nav-item"] > div > a {
+  color: hsl(var(--muted-foreground));
+  transition: color 0.2s;
+}
+
+[data-testid="sidebar-nav-item"] > div > a:hover {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--accent));
+}
+
+[data-testid="sidebar-nav-item"] > div > a.bg-nlc_primary-900 {
+  background-color: hsl(var(--accent)) !important;
+  color: hsl(var(--accent-foreground)) !important;
+}
+
+/* Action Buttons */
+[data-testid="action-button"] {
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  transition: all 150ms;
+}
+
+[data-testid="action-button"].bg-gray-700 {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border-color: hsl(var(--border));
+}
+
+[data-testid="action-button"].bg-gray-700:hover {
+  opacity: 0.9;
+}
+
+[data-testid="action-button"].bg-red-500 {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+/* Dark Mode Toggle */
+[data-testid="dark-mode-switch"] {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border-color: hsl(var(--border));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  [data-testid="record-view-body"] {
+    padding: 0.75rem;
+  }
+
+  .collection-view-table .collection-filter input {
+    width: 100%;
+  }
+}
+
+</style>
