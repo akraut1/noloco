@@ -535,6 +535,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 /* Target the flex column container */
 [data-test-id="record-view-section"] .mb-2.px-4.sm\:p-0.flex.flex-col {
   padding: 3.0rem;
+  border: 0px
 }
 
 /* Target the icon container */
