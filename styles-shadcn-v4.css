@@ -23,7 +23,9 @@
   --ring: 240 5.9% 10%;
   --radius: 0.5rem;
   --table-row-bg: 0 0% 98%;
-
+  --sidebar-background: 0 0% 98%; 
+  --sidebar-foreground: 240 5% 26%;
+  --sidebar-accent: 240 5% 96%;
   /* Custom gray spectrum for light mode */
   --gray-50: 240 5% 96%;
   --gray-100: 240 4.8% 94%;
@@ -95,6 +97,9 @@
   --input: 240 3.7% 15.9%;
   --ring: 240 4.9% 83.9%;
   --table-row-bg: 240 10% 3.9%;
+  --sidebar-background: 240 6% 10%; 
+  --sidebar-foreground: 240 5% 96%;
+  --sidebar-accent: 240 4% 16%;
 
   /* Role-based badge colors - adjusted for dark mode */
   --role-admin-bg: 272 70% 45%;
@@ -484,26 +489,26 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 
 /* Role-specific badge styles */
 [data-testid="field-cell"] span.rounded:has(div:contains("Admin")) {
-  background: linear-gradient(135deg, hsla(var(--admin-bg), 0.9), hsla(var(--admin-text), 0.8));
-  border-color: hsla(var(--admin-border), 0.3);
+  background: linear-gradient(135deg, hsla(var(--admin-bg), 0.9), hsla(var(--role-admin-text), 0.8));
+  border-color: hsla(var(--role-admin-border), 0.3);
   color: hsl(var(--background));
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Account Executive")) {
-  background: linear-gradient(135deg, hsla(var(--account-exec-bg), 0.9), hsla(var(--account-exec-text), 0.8));
-  border-color: hsla(var(--account-exec-border), 0.3);
+  background: linear-gradient(135deg, hsla(var(--role-ae-bg), 0.9), hsla(var(--role-ae-text), 0.8));
+  border-color: hsla(var(--role-ae-border), 0.3);
   color: hsl(var(--background));
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Loan Processor")) {
-  background: linear-gradient(135deg, hsla(var(--loan-processor-bg), 0.9), hsla(var(--loan-processor-text), 0.8));
-  border-color: hsla(var(--loan-processor-border), 0.3);
+  background: linear-gradient(135deg, hsla(var(--role-lp-bg), 0.9), hsla(var(--role-lp-text), 0.8));
+  border-color: hsla(var(--role-lp-border), 0.3);
   color: hsl(var(--background));
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Loan Opener")) {
-  background: linear-gradient(135deg, hsla(var(--loan-opener-bg), 0.9), hsla(var(--loan-opener-text), 0.8));
-  border-color: hsla(var(--loan-opener-border), 0.3);
+  background: linear-gradient(135deg, hsla(var(--role-loan-opener-bg), 0.9), hsla(var(--role-loan-opener-text), 0.8));
+  border-color: hsla(var(--role-loan-opener-border), 0.3);
   color: hsl(var(--background));
 }
 
@@ -531,17 +536,18 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 
 /* Navigation */
 [data-testid="navigation-sidebar"] {
+  background-color: hsl(var(--sidebar-background);
   border-right: 1px solid hsl(var(--border));
 }
 
 [data-testid="sidebar-nav-item"] > div > a {
-  color: hsl(var(--muted-foreground));
+  color: hsl(var(--sidebar-foreground));
   transition: color 0.2s;
 }
 
 [data-testid="sidebar-nav-item"] > div > a:hover {
-  color: hsl(var(--foreground));
-  background-color: hsl(var(--accent));
+  color: hsl(var(--sidebar-foreground));
+  background-color: hsl(var(--sidebar-accent));
 }
 
 [data-testid="sidebar-nav-item"] > div > a.bg-nlc_primary-900 {
