@@ -179,6 +179,38 @@
   border-color: hsl(var(--border)) !important;
 }
 
+/* Component Backgrounds */
+.dark .collection-view-table > div,
+.dark [data-testid="collection-group-header"],
+.dark .card,
+.dark [class*="bg-card"] {
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  border: 1px hsl(var(--radius)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+.dark [data-testid="details-section"] {
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  border: 1px hsl(var(--radius));
+  border-color: hsl(var(--border)) !important;
+}
+
+.dark [data-testid="stages-section"] {
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  border: 1px hsl(var(--radius)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+/* Sidebar */
+.dark [data-testid="navigation-sidebar"] {
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
 /* Data Table Styles - Shadcn Match */
 [data-testid="view-collection"]
   > div
