@@ -37,21 +37,21 @@
   --gray-900: 240 5.9% 10%;
 
   /* Role-based badge colors */
-  --admin-bg: 272 90% 60%;
-  --admin-text: 272 85% 65%;
-  --admin-border: 272 90% 40%;
+  --role-admin-bg: 272 90% 60%;
+  --role-admin-text: 272 85% 65%;
+  --role-admin-border: 272 90% 40%;
 
-  --account-exec-bg: 180 75% 45%;
-  --account-exec-text: 180 70% 50%;
-  --account-exec-border: 180 75% 35%;
+  --role-ae-bg: 180 75% 45%;
+  --role-ae-text: 180 70% 50%;
+  --role-ae-border: 180 75% 35%;
 
-  --loan-processor-bg: 43 96% 50%;
-  --loan-processor-text: 43 90% 55%;
-  --loan-processor-border: 43 96% 40%;
+  --role-lp-bg: 43 96% 50%;
+  --role-lp-text: 43 90% 55%;
+  --role-lp-border: 43 96% 40%;
 
-  --loan-opener-bg: 231 83% 60%;
-  --loan-opener-text: 231 78% 65%;
-  --loan-opener-border: 231 83% 50%;
+  --role-loan-opener-bg: 231 83% 60%;
+  --role-loan-opener-text: 231 78% 65%;
+  --role-loan-opener-border: 231 83% 50%;
 
   /* Dashboard theme colors */
   --base-background: 240 10% 3.9%;
@@ -97,21 +97,21 @@
   --table-row-bg: 240 10% 3.9%;
 
   /* Role-based badge colors - adjusted for dark mode */
-  --admin-bg: 272 70% 45%;
-  --admin-text: 272 65% 50%;
-  --admin-border: 272 70% 35%;
+  --role-admin-bg: 272 70% 45%;
+  --role-admin-text: 272 65% 50%;
+  --role-admin-border: 272 70% 35%;
 
-  --account-exec-bg: 180 65% 35%;
-  --account-exec-text: 180 60% 40%;
-  --account-exec-border: 180 65% 25%;
+  --role-ae-bg: 180 65% 35%;
+  --role-ae-text: 180 60% 40%;
+  --role-ae-border: 180 65% 25%;
 
-  --loan-processor-bg: 43 86% 45%;
-  --loan-processor-text: 43 80% 50%;
-  --loan-processor-border: 43 86% 35%;
+  --role-lp-bg: 43 86% 45%;
+  --role-lp-text: 43 80% 50%;
+  --role-lp-border: 43 86% 35%;
 
-  --loan-opener-bg: 231 73% 45%;
-  --loan-opener-text: 231 68% 50%;
-  --loan-opener-border: 231 73% 35%;
+  --role-loan-opener-bg: 231 73% 45%;
+  --role-loan-opener-text: 231 68% 50%;
+  --role-loan-opener-border: 231 73% 35%;
 
   /* Dashboard theme colors */
   --base-background: 240 10% 3.9%;
@@ -169,7 +169,16 @@
 .dark [class*="bg-gray-900"] {
   background-color: hsl(var(--background)) !important;
   color: hsl(var(--foreground)) !important;
+  border: 1px hsl(var(--radius)) !important;
   border-color: hsl(var(--border)) !important;
+}
+
+/* Sidebar */
+.dark [data-testid="navigation-sidebar"] {
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: var(--radius) !important;
 }
 
 /* Component Backgrounds */
@@ -197,15 +206,7 @@
   border-radius: var(--radius) !important;
 }
 
-/* Sidebar */
-.dark [data-testid="navigation-sidebar"] {
-  background-color: hsl(var(--background)) !important;
-  color: hsl(var(--foreground)) !important;
-  border: 1px solid hsl(var(--border)) !important;
-  border-radius: var(--radius) !important;
-}
-
-/* Data Table Styles - Shadcn Match */
+/* Data Tables Shadcn */
 [data-testid="view-collection"]
   > div
   > div
@@ -221,7 +222,7 @@
   overflow: hidden;
 }
 
-/* Table Header Row */
+/* Table - Header Row */
 [data-testid="view-collection"] thead tr,
 .collection-view-table thead tr {
   background-color: hsl(var(--background)) !important;
@@ -247,10 +248,12 @@
 
 /* Table Body Rows */
 [data-testid="view-collection"] tbody tr,
+.collection-view-table thead tr,
 .collection-view-table tbody tr,
 tr[class*="record-"][data-test-id="collection-record"] {
   background-color: hsl(var(--background));
   border: 1px solid hsl(var(--border));
+  radius: hsl(var(--radius));
   transition: background-color 0.2s;
 }
 
@@ -269,17 +272,22 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   color: hsl(var(--foreground));
 }
 
+[data-testid="field-cell"] a,
 [data-testid="view-collection"] td a,
 .collection-view-table td a {
   color: hsl(221.2 83.2% 53.3%);
   transition: color 0.2s;
+  text decoration: none;
 }
 
+[data-testid="field-cell"] a:hover,
+[data-testid="field-cell"] a:active,
 [data-testid="view-collection"] td a:hover,
-.collection-view-table td a:hover,
 [data-testid="view-collection"] td a:active,
+.collection-view-table td a:hover,
 .collection-view-table td a:active {
-  color: hsl(201 90% 27.5%);
+  color: hsl(225.9 70.7% 40.2%);
+  text-decoration: underline;
 }
 
 /* Specific selectors for the provided classes */
