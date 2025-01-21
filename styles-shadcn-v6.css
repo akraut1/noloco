@@ -24,8 +24,8 @@
   --radius: 0.5rem;
   --table-row-bg: 0 0% 98%;
   --sidebar-background: 0 0% 98%;
-  --sidebar-foreground: 240 5% 26%;
-  --sidebar-accent: 240 5% 96%;
+  --sidebar-foreground: 240 5% 96%;
+  --sidebar-accent: 240 4% 16%;
 
   /* Custom zinc spectrum for light mode */
   --zinc-50: 240 5% 96%;
@@ -40,21 +40,21 @@
   --zinc-900: 240 6% 10%;
 
   /* Role-based badge colors */
-  --role-admin-bg: 272 90% 60%;
-  --role-admin-text: 272 85% 65%;
-  --role-admin-border: 272 90% 40%;
+  --role-admin-bg: 240 5% 65%;
+  --role-admin-text: 240 5% 96%;
+  --role-admin-border: 240 5% 65%;
 
-  --role-ae-bg: 180 75% 45%;
-  --role-ae-text: 180 70% 50%;
-  --role-ae-border: 180 75% 35%;
+  --role-ae-bg: 17 88% 40%;
+  --role-ae-text: 34 100% 92%;
+  --role-ae-border: 17 88% 40%;
 
-  --role-lp-bg: 43 96% 50%;
-  --role-lp-text: 43 90% 55%;
-  --role-lp-border: 43 96% 40%;
+  --role-lp-bg: 29 90% 37%;
+  --role-lp-text: 48 96% 89%;
+  --role-lp-border: 29 90% 37%;
 
-  --role-loan-opener-bg: 231 83% 60%;
-  --role-loan-opener-text: 231 78% 65%;
-  --role-loan-opener-border: 231 83% 50%;
+  --role-loan-opener-bg: 35 92% 33%;
+  --role-loan-opener-text: 55 97% 88%;
+  --role-loan-opener-border: 35 92% 33%;
 
   /* Dashboard theme colors */
   --base-background: 240 10% 3.9%;
@@ -98,26 +98,26 @@
   --input: 240 3.7% 15.9%;
   --ring: 240 4.9% 83.9%;
   --table-row-bg: 240 10% 3.9%;
-  --sidebar-background: 240 6% 10%;
+  --sidebar-background: 0 0% 98%;
   --sidebar-foreground: 240 5% 96%;
   --sidebar-accent: 240 4% 16%;
 
   /* Role-based badge colors - adjusted for dark mode */
-  --role-admin-bg: 272 70% 45%;
-  --role-admin-text: 272 65% 50%;
-  --role-admin-border: 272 70% 35%;
+  --role-admin-bg: 240 4% 16%;
+  --role-admin-text: 240 4% 46%;
+  --role-admin-border: 240 4% 16%;
 
-  --role-ae-bg: 180 65% 35%;
-  --role-ae-text: 180 60% 40%;
-  --role-ae-border: 180 65% 25%;
+  --role-ae-bg: 13 81% 15%;
+  --role-ae-text: 27 96% 61%;
+  --role-ae-border: 13 81% 15%;
 
-  --role-lp-bg: 43 86% 45%;
-  --role-lp-text: 43 80% 50%;
-  --role-lp-border: 43 86% 35%;
+  --role-lp-bg: 21 92% 14%;
+  --role-lp-text: 43 96% 56%;
+  --role-lp-border: 21 92% 14%;
 
-  --role-loan-opener-bg: 231 73% 45%;
-  --role-loan-opener-text: 231 68% 50%;
-  --role-loan-opener-border: 231 73% 35%;
+  --role-loan-opener-bg: 26 83% 14%;
+  --role-loan-opener-text: 48 96% 53%;
+  --role-loan-opener-border: 26 83% 14%;
 
   /* Dashboard theme colors */
   --base-background: 240 10% 3.9%;
