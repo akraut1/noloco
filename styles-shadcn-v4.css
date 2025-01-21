@@ -147,10 +147,6 @@
 }
 
 /* Component backgrounds */
-.dark .collection-view-table > div,
-.dark [data-testid="collection-group-header"],
-.dark .card,
-.dark [class*="bg-card"],
 .dark [class*="bg-slate-50"],
 .dark [class*="bg-slate-100"],
 .dark [class*="bg-slate-200"],
@@ -193,22 +189,23 @@
 .dark [data-testid="details-section"] {
   background-color: hsl(var(--background)) !important;
   color: hsl(var(--foreground)) !important;
-  border: 1px hsl(var(--radius));
+  border: 1px hsl(var(--radius)) !important;
   border-color: hsl(var(--border)) !important;
 }
 
 .dark [data-testid="stages-section"] {
   background-color: hsl(var(--background)) !important;
   color: hsl(var(--foreground)) !important;
-  border: 1px hsl(var(--radius)) !important;
-  border-color: hsl(var(--border)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: var(--radius) !important;
 }
 
 /* Sidebar */
 .dark [data-testid="navigation-sidebar"] {
   background-color: hsl(var(--background)) !important;
   color: hsl(var(--foreground)) !important;
-  border-color: hsl(var(--border)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: var(--radius) !important;
 }
 
 /* Data Table Styles - Shadcn Match */
@@ -219,9 +216,10 @@
   > div
   > .focus\:outline-none.focus\:shadow-none.w-full.shadow-lg.mb-2.overflow-y-hidden.overflow-x-auto.border.rounded-lg,
 .collection-view-table > div {
-  background-color: hsl(var(--background));
-  border: 1px solid hsl(var(--border));
-  border-radius: var(--radius);
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: var(--radius) !important;
   width: 100%;
   overflow: hidden;
 }
@@ -229,9 +227,10 @@
 /* Table Header Row */
 [data-testid="view-collection"] thead tr,
 .collection-view-table thead tr {
-  background-color: hsl(var(--background));
-  color: hsl(var(--secondary))
-  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  border-top: 1px solid hsl(var(--border));
+  border-radius: var(--radius) !important;
   transition: background-color 0.3s;
 }
 
