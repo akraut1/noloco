@@ -1,6 +1,6 @@
 /* <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/akraut1/noloco@refs/heads/main/styles-shadcn-v4.css"> */
+
 <style>
-/* Light mode variables */
 /* Light mode variables */
 :root {
   --background: 0 0% 100%;
@@ -332,6 +332,12 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   color: #38bdf8; /* Sky 400 */
 }
 
+.dark.dark [data-testid="field-cell"] a,
+.dark [data-testid="view-collection"] td a,
+.dark .collection-view-table td a {
+  color: #38bdf8; /* Sky 400 */
+}
+
 .dark [data-testid="field-cell"] a:hover,
 .dark [data-testid="field-cell"] a:active,
 .dark [data-testid="view-collection"] td a:hover,
@@ -543,6 +549,131 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 .dark [data-test-id="record-view-section"],
 [id="FNLvmEeio"] [data-test-id="record-view-section"] {
   background-color: hsl(var(--background)) !important;
+}
+
+/* Record View Tabs */
+[data-testid="record-view-tabs"] {
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.dark [data-testid="record-view-tabs"] button {
+  color: #a1a1aa;
+  transition: color 0.2s ease;
+}
+
+.dark [data-testid="record-view-tabs"] button:hover {
+  color: hsl(var(--foreground));
+}
+
+[data-testid="record-view-tabs"] button[aria-selected="true"] {
+  color: hsl(var(--foreground));
+  border-bottom-width: 2px;
+  border-image: linear-gradient(90deg, #f72121 24%, #ff9500 71%, #f0d047 100%) 1;
+}
+
+/* Pivot Table Styles */
+.collection-view.collection-view-pivot_table {
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 2px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.collection-view.collection-view-pivot_table thead {
+  border-bottom: 1px solid hsl(var(--border));
+  background-color: hsl(var(--muted));
+}
+
+.collection-view.collection-view-pivot_table th {
+  height: 2.5rem;
+  padding: 0 1rem;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #a1a1aa;
+  border-right: 1px solid hsl(var(--border));
+  background-color: hsl(var(--muted));
+  transition: background-color 0.2s;
+}
+
+.collection-view.collection-view-pivot_table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: hsl(var(--foreground));
+  border-right: 1px solid hsl(var(--border));
+}
+
+/* Style for the SUM row */
+.collection-view.collection-view-pivot_table tr:last-child td {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  font-weight: 500;
+}
+
+/* Navigation Sidebar - Shadcn Style */
+[data-testid="navigation-sidebar"] {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: hsl(var(--sidebar-background));
+  border-right: 1px solid hsl(var(--border));
+}
+
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a.active,
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a[aria-current="page"] {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+/* Sidebar Group Headers */
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-group"] > div:first-child {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Sidebar Icons */
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a:hover svg,
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a.active svg,
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a[aria-current="page"] svg {
+  opacity: 1;
 }
 
 /* Responsive Design */
