@@ -37,20 +37,20 @@
   --gray-900: 240 5.9% 10%;
 
   /* Role-based badge colors */
-  --admin-from: 272 90% 60%;
-  --admin-to: 272 85% 65%;
+  --admin-bg: 272 90% 60%;
+  --admin-text: 272 85% 65%;
   --admin-border: 272 90% 40%;
 
-  --account-exec-from: 180 75% 45%;
-  --account-exec-to: 180 70% 50%;
+  --account-exec-bg: 180 75% 45%;
+  --account-exec-text: 180 70% 50%;
   --account-exec-border: 180 75% 35%;
 
-  --loan-processor-from: 43 96% 50%;
-  --loan-processor-to: 43 90% 55%;
+  --loan-processor-bg: 43 96% 50%;
+  --loan-processor-text: 43 90% 55%;
   --loan-processor-border: 43 96% 40%;
 
-  --loan-opener-from: 231 83% 60%;
-  --loan-opener-to: 231 78% 65%;
+  --loan-opener-bg: 231 83% 60%;
+  --loan-opener-text: 231 78% 65%;
   --loan-opener-border: 231 83% 50%;
 
   /* Dashboard theme colors */
@@ -97,20 +97,20 @@
   --table-row-bg: 240 10% 3.9%;
 
   /* Role-based badge colors - adjusted for dark mode */
-  --admin-from: 272 70% 45%;
-  --admin-to: 272 65% 50%;
+  --admin-bg: 272 70% 45%;
+  --admin-text: 272 65% 50%;
   --admin-border: 272 70% 35%;
 
-  --account-exec-from: 180 65% 35%;
-  --account-exec-to: 180 60% 40%;
+  --account-exec-bg: 180 65% 35%;
+  --account-exec-text: 180 60% 40%;
   --account-exec-border: 180 65% 25%;
 
-  --loan-processor-from: 43 86% 45%;
-  --loan-processor-to: 43 80% 50%;
+  --loan-processor-bg: 43 86% 45%;
+  --loan-processor-text: 43 80% 50%;
   --loan-processor-border: 43 86% 35%;
 
-  --loan-opener-from: 231 73% 45%;
-  --loan-opener-to: 231 68% 50%;
+  --loan-opener-bg: 231 73% 45%;
+  --loan-opener-text: 231 68% 50%;
   --loan-opener-border: 231 73% 35%;
 
   /* Dashboard theme colors */
@@ -134,7 +134,7 @@
 }
 
 /* Main page background with gradient */
-.dark .project-pag.bg-gray-lightest.shadcn-body.relative.flex.h-screen.max-h-screen.w-screen.overflow-hidden,
+.dark .project-page.bg-gray-lightest.shadcn-body.relative.flex.h-screen.max-h-screen.w-screen.overflow-hidden,
 .dark .flex.h-screen.w-16.flex-col.border-r.border-slate-700.bg-slate-900.text-white.sm:hidden",
 .dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800,
 .dark [class*="bg-slate-800"],
@@ -157,7 +157,7 @@
 .dark [data-testid="details-section"],
 .dark [data-testid="stages-section"],
 .dark [data-testid="navigation-sidebar"] {
-  background-color: hsl(var(--base-background)) !important;
+  background-color: hsl(var(--background)) !important;
   border-color: hsl(var(--border)) !important;
 }
 
@@ -417,25 +417,25 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 
 /* Role-specific badge styles */
 [data-testid="field-cell"] span.rounded:has(div:contains("Admin")) {
-  background: linear-gradient(135deg, hsla(var(--admin-from), 0.9), hsla(var(--admin-to), 0.8));
+  background: linear-gradient(135deg, hsla(var(--admin-bg), 0.9), hsla(var(--admin-text), 0.8));
   border-color: hsla(var(--admin-border), 0.3);
   color: hsl(var(--background));
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Account Executive")) {
-  background: linear-gradient(135deg, hsla(var(--account-exec-from), 0.9), hsla(var(--account-exec-to), 0.8));
+  background: linear-gradient(135deg, hsla(var(--account-exec-bg), 0.9), hsla(var(--account-exec-text), 0.8));
   border-color: hsla(var(--account-exec-border), 0.3);
   color: hsl(var(--background));
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Loan Processor")) {
-  background: linear-gradient(135deg, hsla(var(--loan-processor-from), 0.9), hsla(var(--loan-processor-to), 0.8));
+  background: linear-gradient(135deg, hsla(var(--loan-processor-bg), 0.9), hsla(var(--loan-processor-text), 0.8));
   border-color: hsla(var(--loan-processor-border), 0.3);
   color: hsl(var(--background));
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Loan Opener")) {
-  background: linear-gradient(135deg, hsla(var(--loan-opener-from), 0.9), hsla(var(--loan-opener-to), 0.8));
+  background: linear-gradient(135deg, hsla(var(--loan-opener-bg), 0.9), hsla(var(--loan-opener-text), 0.8));
   border-color: hsla(var(--loan-opener-border), 0.3);
   color: hsl(var(--background));
 }
