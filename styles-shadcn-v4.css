@@ -166,10 +166,7 @@
 .dark [class*="bg-gray-600"],
 .dark [class*="bg-gray-700"],
 .dark [class*="bg-gray-800"],
-.dark [class*="bg-gray-900"],
-.dark [data-testid="details-section"],
-.dark [data-testid="stages-section"],
-.dark [data-testid="navigation-sidebar"] {
+.dark [class*="bg-gray-900"] {
   background-color: hsl(var(--background)) !important;
   color: hsl(var(--foreground)) !important;
   border-color: hsl(var(--border)) !important;
@@ -346,7 +343,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   line-height: 1.25rem;
 }
 
-/* Stages Section Styling */
+/* Stages - Section Styling */
 [data-test-id="stages-section"] {
   display: flex;
   width: 100%;
@@ -360,7 +357,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   border: 1px solid hsl(var(--border));
 }
 
-/* Stage Option Styling */
+/* Stages - Group Styling */
 [data-test-id="stages-section"] .group {
   position: relative;
   display: flex;
@@ -371,12 +368,12 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   color: hsl(var(--foreground));
 }
 
-/* Stage Number Indicator */
+/* Stages - Numbered Indicator */
 [data-test-id="stages-section"] .text-white {
   color: hsl(var(--background));
 }
 
-/* Stage Title Text */
+/* Stages - Title Text */
 [data-test-id="stages-section"] .ml-3 {
   color: hsl(var(--foreground));
   margin-left: 0.75rem;
@@ -384,7 +381,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   font-weight: 500;
 }
 
-/* Active Stage Styling */
+/* Stages - Options Styling */
 [data-test-id="stages-section"] [class*="stage-option-"] {
   background-color: transparent;
   transition: background-color 0.2s;
@@ -411,6 +408,8 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   > .focus\:outline-none.focus\:shadow-none.w-full.shadow-lg.mb-2.overflow-y-hidden.overflow-x-auto.border.rounded-lg,
 .dark .collection-view-table > div {
   background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
   border-color: hsl(var(--border));
 }
 
@@ -418,7 +417,25 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 .dark .collection-view-table th,
 .dark [data-testid="view-collection"] td,
 .dark .collection-view-table td {
+  background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+}
+
+/* Dark mode link colors for table cells */
+.dark [data-testid="field-cell"] span {
+  color: hsl(var(--foreground));
+}
+
+.dark [data-testid="view-collection"] td a,
+.dark .collection-view-table td a {
+  color: hsl(187.9 85.7% 53.3%); /* Sky 400 */
+}
+
+.dark [data-testid="view-collection"] td a:hover,
+.dark .collection-view-table td a:hover,
+.dark [data-testid="view-collection"] td a:active,
+.dark .collection-view-table td a:active {
+  color: hsl(191.6 91.4% 36.5%); /* Sky 600 */
 }
 
 .dark [data-testid="view-collection"] input[type="text"],
@@ -435,19 +452,6 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 
 .dark [data-test-id="stages-section"] .ml-3 {
   color: hsl(var(--foreground));
-}
-
-/* Dark mode link colors for table cells */
-.dark [data-testid="view-collection"] td a,
-.dark .collection-view-table td a {
-  color: hsl(187.9 85.7% 53.3%); /* Sky 400 */
-}
-
-.dark [data-testid="view-collection"] td a:hover,
-.dark .collection-view-table td a:hover,
-.dark [data-testid="view-collection"] td a:active,
-.dark .collection-view-table td a:active {
-  color: hsl(191.6 91.4% 36.5%); /* Sky 600 */
 }
 
 /* Role Badges */
