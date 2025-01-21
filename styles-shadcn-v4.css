@@ -1,6 +1,7 @@
 /* <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/akraut1/noloco@refs/heads/main/styles-shadcn-v4.css"> */
 <style>
 /* Light mode variables */
+/* Light mode variables */
 :root {
   --background: 0 0% 100%;
   --foreground: 240 10% 3.9%;
@@ -23,9 +24,10 @@
   --ring: 240 5.9% 10%;
   --radius: 0.5rem;
   --table-row-bg: 0 0% 98%;
-  --sidebar-background: 0 0% 98%; 
+  --sidebar-background: 0 0% 98%;
   --sidebar-foreground: 240 5% 26%;
   --sidebar-accent: 240 5% 96%;
+
   /* Custom gray spectrum for light mode */
   --gray-50: 240 5% 96%;
   --gray-100: 240 4.8% 94%;
@@ -97,7 +99,7 @@
   --input: 240 3.7% 15.9%;
   --ring: 240 4.9% 83.9%;
   --table-row-bg: 240 10% 3.9%;
-  --sidebar-background: 240 6% 10%; 
+  --sidebar-background: 240 6% 10%;
   --sidebar-foreground: 240 5% 96%;
   --sidebar-accent: 240 4% 16%;
 
@@ -140,7 +142,8 @@
 
 /* Main page background with gradient */
 .dark .project-page.bg-gray-lightest.shadcn-body.relative.flex.h-screen.max-h-screen.w-screen.overflow-hidden,
-.dark .flex.h-screen.w-16.flex-col.border-r.border-slate-700.bg-slate-900.text-white.sm:hidden",
+.dark .flex.h-screen.w-16.flex-col.border-r.border-slate-700.bg-slate-900.text-white.sm:hidden 
+",
 .dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800,
 .dark main,
 .dark .main-content,
@@ -174,8 +177,7 @@
 .dark [class*="bg-gray-900"] {
   background-color: hsl(var(--background)) !important;
   color: hsl(var(--foreground)) !important;
-  border: 1px hsl(var(--radius)) !important;
-  border-color: hsl(var(--border)) !important;
+  border: 1px solid hsl(var(--border)) !important;
 }
 
 /* Sidebar */
@@ -193,15 +195,13 @@
 .dark [class*="bg-card"] {
   background-color: hsl(var(--background)) !important;
   color: hsl(var(--foreground)) !important;
-  border: 1px hsl(var(--radius)) !important;
-  border-color: hsl(var(--border)) !important;
+  border: 1px solid hsl(var(--border)) !important;
 }
 
 .dark [data-testid="details-section"] {
   background-color: hsl(var(--background)) !important;
   color: hsl(var(--foreground)) !important;
-  border: 1px hsl(var(--radius)) !important;
-  border-color: hsl(var(--border)) !important;
+  border: 1px solid hsl(var(--border)) !important;
 }
 
 .dark [data-testid="stages-section"] {
@@ -219,7 +219,7 @@
   border-radius: var(--radius) !important;
 }
 
-/* Data Tables Shadcn */
+/* Data Tables Shadcn Match */
 [data-testid="view-collection"]
   > div
   > div
@@ -227,46 +227,58 @@
   > div
   > .focus\:outline-none.focus\:shadow-none.w-full.shadow-lg.mb-2.overflow-y-hidden.overflow-x-auto.border.rounded-lg,
 .collection-view-table > div {
-  background-color: hsl(var(--background)) !important;
-  color: hsl(var(--foreground)) !important;
-  border: 1px solid hsl(var(--border)) !important;
-  border-radius: var(--radius) !important;
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 2px);
   width: 100%;
   overflow: hidden;
 }
 
-/* Table - Header Row */
+/* Table Header */
+[data-testid="view-collection"] thead,
+.collection-view-table thead {
+  border-bottom: 1px solid hsl(var(--border));
+  background-color: hsl(var(--muted));
+}
+
+/* Table Header Row */
 [data-testid="view-collection"] thead tr,
 .collection-view-table thead tr {
-  background-color: hsl(var(--background)) !important;
-  color: hsl(var(--foreground)) !important;
-  border: 1px solid hsl(var(--border)) !important;
-  border-radius: var(--radius) !important;
-  transition: background-color 0.3s;
+  border: 1px solid hsl(var(--border));
 }
 
 /* Table Header Cells */
 [data-testid="view-collection"] th,
 .collection-view-table th {
-  height: 3rem;
+  height: 2.5rem;
   padding: 0 1rem;
   text-align: left;
   vertical-align: middle;
   font-size: 0.875rem;
   font-weight: 500;
-  color: hsl(var(--foreground));
+  color: hsl(var(--muted-foreground));
+  border-right: 1px solid hsl(var(--border));
+  background-color: hsl(var(--muted));
+  transition: background-color 0.2s;
+}
+
+[data-testid="view-collection"] th:last-child,
+.collection-view-table th:last-child {
+  border-right: none;
+}
+
+/* Table Body */
+[data-testid="view-collection"] tbody,
+.collection-view-table tbody {
   background-color: hsl(var(--background));
-  transition: background-color 0.3s;
 }
 
 /* Table Body Rows */
 [data-testid="view-collection"] tbody tr,
-.collection-view-table thead tr,
 .collection-view-table tbody tr,
 tr[class*="record-"][data-test-id="collection-record"] {
+  border-bottom: 1px solid hsl(var(--border));
   background-color: hsl(var(--background));
-  border: 1px solid hsl(var(--border));
-  radius: hsl(var(--radius));
   transition: background-color 0.2s;
 }
 
@@ -285,12 +297,22 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   color: hsl(var(--foreground));
 }
 
+/* Table Cell Content Styling */
+[data-testid="field-cell"] span {
+  display: inline-block;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: hsl(var(--foreground));
+}
+
+/* Table Cell Hyperlink Styling */
 [data-testid="field-cell"] a,
 [data-testid="view-collection"] td a,
 .collection-view-table td a {
-  color: hsl(221.2 83.2% 53.3%);
+  color: #2563eb;
   transition: color 0.2s;
-  text decoration: none;
+  text-decoration: none;
 }
 
 [data-testid="field-cell"] a:hover,
@@ -299,16 +321,24 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 [data-testid="view-collection"] td a:active,
 .collection-view-table td a:hover,
 .collection-view-table td a:active {
-  color: hsl(225.9 70.7% 40.2%);
+  color: #1e40af;
   text-decoration: underline;
 }
 
-/* Specific selectors for the provided classes */
-.record-WyI1OCJd\@65532,
-.record-WyI1OSJd\@65532,
-.record-WyI1NyJd\@65532,
-.record-WyI1NiJd\@65532 {
-  background-color: hsl(var(--background));
+/* Dark mode link colors */
+.dark [data-testid="field-cell"] a,
+.dark [data-testid="view-collection"] td a,
+.dark .collection-view-table td a {
+  color: #38bdf8; /* Sky 400 */
+}
+
+.dark [data-testid="field-cell"] a:hover,
+.dark [data-testid="field-cell"] a:active,
+.dark [data-testid="view-collection"] td a:hover,
+.dark [data-testid="view-collection"] td a:active,
+.dark .collection-view-table td a:hover,
+.dark .collection-view-table td a:active {
+  color: #0891b2; /* Sky 600 */
 }
 
 /* Checkbox Column */
@@ -317,8 +347,9 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 .collection-view-table th:first-child,
 .collection-view-table td:first-child {
   width: 40px;
-  padding-left: 0.50rem;
-  padding-right: 0.50rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-right: 1px solid hsl(var(--border));
 }
 
 /* Filter Input */
@@ -350,6 +381,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   justify-content: space-between;
   padding: 0.75rem 1rem;
   border-top: 1px solid hsl(var(--border));
+  background-color: hsl(var(--muted));
   color: hsl(var(--muted-foreground));
 }
 
@@ -363,120 +395,6 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1.25rem;
-}
-
-/* Stages - Section Styling */
-[data-test-id="stages-section"] {
-  display: flex;
-  width: 100%;
-  max-width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  overflow-y: auto;
-  border-radius: hsl(var(--radius));
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-  border: 1px solid hsl(var(--border));
-}
-
-/* Stages - Group Styling */
-[data-test-id="stages-section"] .group {
-  position: relative;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.875rem;
-  color: hsl(var(--foreground));
-}
-
-/* Stages - Numbered Indicator */
-[data-test-id="stages-section"] .text-white {
-  color: hsl(var(--background));
-}
-
-/* Stages - Title Text */
-[data-test-id="stages-section"] .ml-3 {
-  color: hsl(var(--foreground));
-  margin-left: 0.75rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-/* Stages - Options Styling */
-[data-test-id="stages-section"] [class*="stage-option-"] {
-  background-color: transparent;
-  transition: background-color 0.2s;
-}
-
-[data-test-id="stages-section"] [class*="stage-option-"]:hover {
-  background-color: hsl(var(--accent));
-}
-
-/* Stage Number Circle */
-[data-test-id="stages-section"] .flex.h-7.w-7 {
-  background-color: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
-  border-color: transparent;
-}
-
-/* Dark mode specific styles */
-.dark
-  [data-testid="view-collection"]
-  > div
-  > div
-  > div
-  > div
-  > .focus\:outline-none.focus\:shadow-none.w-full.shadow-lg.mb-2.overflow-y-hidden.overflow-x-auto.border.rounded-lg,
-.dark .collection-view-table > div {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-  border: 1px solid hsl(var(--border));
-  border-color: hsl(var(--border));
-}
-
-.dark [data-testid="view-collection"] th,
-.dark .collection-view-table th,
-.dark [data-testid="view-collection"] td,
-.dark .collection-view-table td {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-}
-
-/* Dark mode link colors for table cells */
-.dark [data-testid="field-cell"] span {
-  color: hsl(var(--foreground));
-}
-
-.dark [data-testid="view-collection"] td a,
-.dark .collection-view-table td a {
-  color: hsl(187.9 85.7% 53.3%); /* Sky 400 */
-}
-
-.dark [data-testid="field-cell"] a:hover,
-.dark [data-testid="field-cell"] a:active,
-.dark [data-testid="view-collection"] td a:hover,
-.dark [data-testid="view-collection"] td a:active,
-.dark .collection-view-table td a:hover,
-.dark .collection-view-table td a:active {
-  color: hsl(225.9 70.7% 40.2%);
-  text-decoration: underline;
-}
-
-.dark [data-testid="view-collection"] input[type="text"],
-.dark .collection-view-table input[type="text"] {
-  background-color: hsl(var(--input));
-  color: hsl(var(--foreground));
-}
-
-.dark [data-test-id="stages-section"] {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-  border: 1px solid hsl(var(--border));
-}
-
-.dark [data-test-id="stages-section"] .ml-3 {
-  color: hsl(var(--foreground));
 }
 
 /* Role Badges */
@@ -497,7 +415,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 
 /* Role-specific badge styles */
 [data-testid="field-cell"] span.rounded:has(div:contains("Admin")) {
-  background: linear-gradient(135deg, hsla(var(--admin-bg), 0.9), hsla(var(--role-admin-text), 0.8));
+  background: linear-gradient(135deg, hsla(var(--role-admin-bg), 0.9), hsla(var(--role-admin-text), 0.8));
   border-color: hsla(var(--role-admin-border), 0.3);
   color: hsl(var(--background));
 }
@@ -544,7 +462,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 
 /* Navigation */
 [data-testid="navigation-sidebar"] {
-  background-color: hsl(var(--sidebar-background);
+  background-color: hsl(var(--sidebar-background));
   border-right: 1px solid hsl(var(--border));
 }
 
@@ -606,18 +524,18 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 
 /* Target the inner content wrapper */
 [data-test-id="record-view-section"] > div > div {
-  padding: 3.0rem; /* 24px */
+  padding: 3.0rem;
 }
 
 /* Target the flex column container */
 [data-test-id="record-view-section"] .mb-2.px-4.sm\:p-0.flex.flex-col {
-  padding: 3.0rem; /* 24px */
+  padding: 3.0rem;
 }
 
 /* Target the icon container */
 [data-test-id="record-view-section"]
   .relative.hidden.h-10.w-10.items-center.justify-center.rounded-lg.border.p-2.sm\:flex {
-  padding: 3.0rem; /* 24px */
+  padding: 3.0rem;
 }
 
 /* Ensure proper background color for all record view sections */
@@ -644,3 +562,4 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   border-color: hsl(var(--border));
 }
 
+</style>
