@@ -180,8 +180,8 @@
 
 /* Sidebar */
 .dark [data-testid="navigation-sidebar"] {
-  background-color: hsl(var(--background)) !important;
-  color: hsl(var(--foreground)) !important;
+  background-color: hsl(var(--sidebar-background)) !important;
+  color: hsl(var(--sidebar-foreground)) !important;
   border: 1px solid hsl(var(--border)) !important;
   border-radius: var(--radius) !important;
 }
@@ -207,6 +207,14 @@
 .dark [data-testid="stages-section"] {
   background-color: hsl(var(--background)) !important;
   color: hsl(var(--foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: var(--radius) !important;
+}
+
+/* Sidebar */
+[data-testid="navigation-sidebar"] {
+  background-color: hsl(var(--sidebar-background)) !important;
+  color: hsl(var(--sidebar-foreground)) !important;
   border: 1px solid hsl(var(--border)) !important;
   border-radius: var(--radius) !important;
 }
