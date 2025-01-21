@@ -179,7 +179,9 @@
 /* Table Header Row */
 [data-testid="view-collection"] thead tr,
 .collection-view-table thead tr {
-  border-bottom: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background));
+  color: hsl(var(--secondary))
+  border: 1px solid hsl(var(--border));
   transition: background-color 0.3s;
 }
 
@@ -193,7 +195,7 @@
   font-size: 0.875rem;
   font-weight: 500;
   color: hsl(var(--foreground));
-  background-color: hsl(var(--muted));
+  background-color: hsl(var(--background));
   transition: background-color 0.3s;
 }
 
@@ -202,7 +204,7 @@
 .collection-view-table tbody tr,
 tr[class*="record-"][data-test-id="collection-record"] {
   background-color: hsl(var(--background));
-  border-bottom: 1px solid hsl(var(--border));
+  border: 1px solid hsl(var(--border));
   transition: background-color 0.2s;
 }
 
