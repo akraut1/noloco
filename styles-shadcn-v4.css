@@ -151,13 +151,31 @@
 .dark [data-testid="collection-group-header"],
 .dark .card,
 .dark [class*="bg-card"],
+.dark [class*="bg-slate-50"],
+.dark [class*="bg-slate-100"],
+.dark [class*="bg-slate-200"],
+.dark [class*="bg-slate-300"],
+.dark [class*="bg-slate-400"],
+.dark [class*="bg-slate-500"],
+.dark [class*="bg-slate-600"],
+.dark [class*="bg-slate-700"],
 .dark [class*="bg-slate-800"],
 .dark [class*="bg-slate-900"],
+.dark [class*="bg-gray-50"],
+.dark [class*="bg-gray-100"],
+.dark [class*="bg-gray-200"],
+.dark [class*="bg-gray-300"],
+.dark [class*="bg-gray-400"],
+.dark [class*="bg-gray-500"],
+.dark [class*="bg-gray-600"],
+.dark [class*="bg-gray-700"],
+.dark [class*="bg-gray-800"],
 .dark [class*="bg-gray-900"],
 .dark [data-testid="details-section"],
 .dark [data-testid="stages-section"],
 .dark [data-testid="navigation-sidebar"] {
   background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
   border-color: hsl(var(--border)) !important;
 }
 
