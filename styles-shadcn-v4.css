@@ -601,7 +601,6 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 
 /* Target the outer wrapper */
 [data-test-id="record-view-section"] > div {
-  border: 1px solid hsl(var(--border));
 }
 
 /* Target the inner content wrapper */
