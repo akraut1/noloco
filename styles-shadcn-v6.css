@@ -1015,7 +1015,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 [data-testid="field-cell"] a,
 [data-testid="view-collection"] td a,
 .collection-view-table td a {
-  color: #2563eb;
+  color: hsl(221.2 83.2% 53.3%); /* Blue 600 */
   transition: color 0.2s;
   text-decoration: none;
 }
@@ -1026,7 +1026,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 [data-testid="view-collection"] td a:active,
 .collection-view-table td a:hover,
 .collection-view-table td a:active {
-  color: #1e40af;
+  color: hsl(224.3 76.3% 48%); /* Blue 700 */
   text-decoration: underline;
 }
 
@@ -1034,13 +1034,15 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 .dark [data-testid="field-cell"] a,
 .dark [data-testid="view-collection"] td a,
 .dark .collection-view-table td a {
-  color: #38bdf8; /* Sky 400 */
+  color: hsl(221.2 83.2% 53.3%); /* Blue 600 */
+  transition: color 0.2s;
+  text-decoration: none;
 }
 
 .dark.dark [data-testid="field-cell"] a,
 .dark [data-testid="view-collection"] td a,
 .dark .collection-view-table td a {
-  color: #38bdf8; /* Sky 400 */
+ color: hsl(221.2 83.2% 53.3%); /* Blue 600 */
 }
 
 .dark [data-testid="field-cell"] a:hover,
@@ -1049,7 +1051,8 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 .dark [data-testid="view-collection"] td a:active,
 .dark .collection-view-table td a:hover,
 .dark .collection-view-table td a:active {
-  color: #0891b2; /* Sky 600 */
+  color: hsl(224.3 76.3% 48%); /* Blue 700 */
+  text-decoration: underline;
 }
 
 /* Checkbox Column */
@@ -1058,9 +1061,8 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 .collection-view-table th:first-child,
 .collection-view-table td:first-child {
   width: 40px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-right: 1px solid hsl(var(--border));
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /* Filter Input */
