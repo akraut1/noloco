@@ -606,18 +606,19 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 
 /* Target the inner content wrapper */
 [data-test-id="record-view-section"] > div > div {
-  padding: 1.5rem; /* 24px */
+  padding: 3.0rem; /* 24px */
+  border: 1px solid hsl(var(--border));
 }
 
 /* Target the flex column container */
 [data-test-id="record-view-section"] .mb-2.px-4.sm\:p-0.flex.flex-col {
-  padding: 1.5rem; /* 24px */
+  padding: 3.0rem; /* 24px */
 }
 
 /* Target the icon container */
 [data-test-id="record-view-section"]
   .relative.hidden.h-10.w-10.items-center.justify-center.rounded-lg.border.p-2.sm\:flex {
-  padding: 1.5rem; /* 24px */
+  padding: 3.0rem; /* 24px */
 }
 
 /* Ensure proper background color for all record view sections */
