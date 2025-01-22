@@ -24,8 +24,8 @@
   --radius: 0.5rem;
   --table-row-bg: 0 0% 98%;
   --sidebar-background: 0 0% 98%;
-  --sidebar-foreground: 240 5% 96%;
-  --sidebar-accent: 240 4% 16%;
+  --sidebar-foreground: 240 5% 26%;
+  --sidebar-accent: 240 5% 96%;
 
   /* Custom zinc spectrum for light mode */
   --zinc-50: 240 5% 96%;
@@ -98,7 +98,7 @@
   --input: 240 3.7% 15.9%;
   --ring: 240 4.9% 83.9%;
   --table-row-bg: 240 10% 3.9%;
-  --sidebar-background: 0 0% 98%;
+  --sidebar-background: 240 6% 10%;
   --sidebar-foreground: 240 5% 96%;
   --sidebar-accent: 240 4% 16%;
 
