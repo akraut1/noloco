@@ -21,7 +21,7 @@
   --border: 240 5.9% 90%;
   --input: 240 5.9% 90%;
   --ring: 240 5.9% 10%;
-  --radius: 0.5rem;
+  --radius: 0.5em;
   --table-row-bg: 0 0% 98%;
   --sidebar-background: 0 0% 98%;
   --sidebar-foreground: 240 5% 26%;
@@ -265,9 +265,28 @@
   transition: background-color 0.2s ease;
 }
 
-[data-testid="view-collection"] th:last-child,
-.collection-view-table th:last-child {
-  border-right: none;
+/* Table Rows - Only horizontal borders */
+[data-testid="view-collection"] tr,
+.collection-view-table tr {
+  border: none;
+  border-bottom: 1px solid hsl(var(--border));
+  transition: background-color 0.2s ease;
+}
+
+/* Remove border from last row */
+[data-testid="view-collection"] tbody tr:last-child,
+.collection-view-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Checkbox Column */
+[data-testid="view-collection"] th:first-child,
+[data-testid="view-collection"] td:first-child,
+.collection-view-table th:first-child,
+.collection-view-table td:first-child {
+  width: 40px;
+  padding-left: 1rem;
+  padding-right: 0;
 }
 
 /* Table Body */
@@ -293,21 +312,14 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 
 /* Table Body Cells */
 [data-testid="view-collection"] td,
-.collection-view-table td {
+.collection-view-table td,
+[data-testid="field-cell"] span {
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: hsl(var(--foreground));
 }
 
-/* Table Cell Content Styling */
-[data-testid="field-cell"] span {
-  display: inline-block;
-  width: 100%;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: hsl(var(--foreground));
-}
 
 /* Table Cell Hyperlink Styling */
 [data-testid="field-cell"] a,
@@ -395,15 +407,19 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 }
 
 /* Status Badges */
-[data-testid="view-collection"] .status-badge,
-.collection-view-table .status-badge {
+[data-testid="field-cell"] span.rounded {
   display: inline-flex;
   align-items: center;
-  padding: 2px 10px;
-  border-radius: 6px;
-  font-size: 0.75rem;
+  justify-content: center;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  line-height: 1.25rem;
+  line-height: 1;
+  border-radius: var(--radius);
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  white-space: nowrap;
 }
 
 /* Role Badges */
