@@ -39,41 +39,38 @@
   --zinc-800: 240 4% 16%;
   --zinc-900: 240 6% 10%;
 
-  /* Role-based badge colors */
-  --role-admin-bg: 240 5% 65%;
-  --role-admin-text: 240 5% 96%;
-  --role-admin-border: 240 5% 65%;
+  /* Badge Colors */
+  --badge-role-admin-bg: 240 5% 65%;
+  --badge-role-admin-text: 240 5% 96%;
+  --badge-role-admin-border: 240 5% 65%;
+  --badge-role-ae-bg: 17 88% 40%;
+  --badge-role-ae-text: 34 100% 92%;
+  --badge-role-ae-border: 17 88% 40%;
+  --badge-role-lp-bg: 29 90% 37%;
+  --badge-role-lp-text: 48 96% 89%;
+  --badge-role-lp-border: 29 90% 37%;
+  --badge-role-loan-opener-bg: 35 92% 33%;
+  --badge-role-loan-opener-text: 55 97% 88%;
+  --badge-role-loan-opener-border: 35 92% 33%;
 
-  --role-ae-bg: 17 88% 40%;
-  --role-ae-text: 34 100% 92%;
-  --role-ae-border: 17 88% 40%;
-
-  --role-lp-bg: 29 90% 37%;
-  --role-lp-text: 48 96% 89%;
-  --role-lp-border: 29 90% 37%;
-
-  --role-loan-opener-bg: 35 92% 33%;
-  --role-loan-opener-text: 55 97% 88%;
-  --role-loan-opener-border: 35 92% 33%;
-
-  /* Dashboard theme colors */
-  --base-background: 240 10% 3.9%;
-  --base-muted: 240 4% 16%;
-  --alpha-40: 240 10% 3.9% / 0.6;
-
-  /* Deal Disposition */
+  /* Badges: Deal Disposition */
   --badge-active-bg: 142 76% 36%;
   --badge-active-text: 142 72% 29%;
   --badge-onhold-bg: 48 96% 89%;
   --badge-onhold-text: 48 96% 89%;
 
-  /* Deal Stage 1 */
+  /* Badges: Deal Stage 1 */
   --badge-stage1-bg: 221 83% 53%;
   --badge-stage1-text: 221 83% 53%;
 
-  /* Deal Stage 2 */
+  /* Badges: Deal Stage 2 */
   --badge-stage2-bg: 262 83% 58%;
   --badge-stage2-text: 262 83% 58%;
+
+    /* Dashboard theme colors */
+  --base-background: 240 10% 3.9%;
+  --base-muted: 240 4% 16%;
+  --alpha-40: 240 10% 3.9% / 0.6;
 }
 
 /* Dark mode variables */
@@ -102,41 +99,38 @@
   --sidebar-foreground: 240 5% 96%;
   --sidebar-accent: 240 4% 16%;
 
-  /* Role-based badge colors - adjusted for dark mode */
-  --role-admin-bg: 240 4% 16%;
-  --role-admin-text: 240 4% 46%;
-  --role-admin-border: 240 4% 16%;
+  /* Badges: Role */
+  --badge-role-admin-bg: 240 4% 16%;
+  --badge-role-admin-text: 240 4% 46%;
+  --badge-role-admin-border: 240 4% 16%;
+  --badge-role-ae-bg: 13 81% 15%;
+  --badge-role-ae-text: 27 96% 61%;
+  --badge-role-ae-border: 13 81% 15%;
+  --badge-role-lp-bg: 21 92% 14%;
+  --badge-role-lp-text: 43 96% 56%;
+  --badge-role-lp-border: 21 92% 14%;
+  --badge-role-loan-opener-bg: 26 83% 14%;
+  --badge-role-loan-opener-text: 48 96% 53%;
+  --badge-role-loan-opener-border: 26 83% 14%;
 
-  --role-ae-bg: 13 81% 15%;
-  --role-ae-text: 27 96% 61%;
-  --role-ae-border: 13 81% 15%;
-
-  --role-lp-bg: 21 92% 14%;
-  --role-lp-text: 43 96% 56%;
-  --role-lp-border: 21 92% 14%;
-
-  --role-loan-opener-bg: 26 83% 14%;
-  --role-loan-opener-text: 48 96% 53%;
-  --role-loan-opener-border: 26 83% 14%;
-
-  /* Dashboard theme colors */
-  --base-background: 240 10% 3.9%;
-  --base-muted: 240 4% 16%;
-  --alpha-40: 240 10% 3.9% / 0.6;
-
-  /* Deal Disposition */
+  /* Badge: Deal Disposition */
   --badge-active-bg: 142 76% 36%;
   --badge-active-text: 142 72% 29%;
   --badge-onhold-bg: 48 96% 89%;
   --badge-onhold-text: 48 96% 89%;
 
-  /* Deal Stage 1 */
+  /* Badge: Deal Stage 1 */
   --badge-stage1-bg: 221 83% 53%;
   --badge-stage1-text: 221 83% 53%;
 
-  /* Deal Stage 2 */
+  /* Badge: Deal Stage 2 */
   --badge-stage2-bg: 262 83% 58%;
   --badge-stage2-text: 262 83% 58%;
+
+    /* Dashboard Theme Colors */
+  --base-background: 240 10% 3.9%;
+  --base-muted: 240 4% 16%;
+  --alpha-40: 240 10% 3.9% / 0.6;
 }
 
 /* Main page background with gradient */
@@ -180,14 +174,78 @@
 }
 
 /* Sidebar */
-.dark [data-testid="navigation-sidebar"] {
+[data-testid="navigation-sidebar"] {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2rem !important;
+  padding: 1.5rem 1rem !important;;
   background-color: hsl(var(--sidebar-background)) !important;
   color: hsl(var(--sidebar-foreground)) !important;
-  border: 1px solid hsl(var(--border)) !important;
+  border-right: 1px solid hsl(var(--border)) !important;
   border-radius: var(--radius) !important;
 }
 
-/* Component Backgrounds */
+/* Sidebar Group Headers */
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-group"] > div:first-child {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Sidebar Navigation Items */
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a.bg-nlc_primary-900 {
+  background-color: hsl(var(--accent)) !important;
+  color: hsl(var(--accent-foreground)) !important;
+}
+
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a:hover,
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a.active,
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a[aria-current="page"] {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+/* Sidebar Icons */
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a:hover svg,
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a.active svg,
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a[aria-current="page"] svg {
+  opacity: 1;
+}
+
+.dark [data-testid="navigation-sidebar"] {
+  background-color: hsl(var(--sidebar-background)) !important;
+  color: hsl(var(--sidebar-foreground)) !important;
+}
+
+/* Sections */
 .dark .collection-view-table > div,
 .dark [data-testid="collection-group-header"],
 .dark .card,
@@ -206,14 +264,6 @@
 .dark [data-testid="stages-section"] {
   background-color: hsl(var(--background)) !important;
   color: hsl(var(--foreground)) !important;
-  border: 1px solid hsl(var(--border)) !important;
-  border-radius: var(--radius) !important;
-}
-
-/* Sidebar */
-[data-testid="navigation-sidebar"] {
-  background-color: hsl(var(--sidebar-background)) !important;
-  color: hsl(var(--sidebar-foreground)) !important;
   border: 1px solid hsl(var(--border)) !important;
   border-radius: var(--radius) !important;
 }
@@ -265,7 +315,7 @@
   transition: background-color 0.2s ease;
 }
 
-/* Table Rows - Only horizontal borders */
+/* Table Rows */
 [data-testid="view-collection"] tr,
 .collection-view-table tr {
   border: none;
@@ -273,20 +323,9 @@
   transition: background-color 0.2s ease;
 }
 
-/* Remove border from last row */
 [data-testid="view-collection"] tbody tr:last-child,
 .collection-view-table tbody tr:last-child {
   border-bottom: none;
-}
-
-/* Checkbox Column */
-[data-testid="view-collection"] th:first-child,
-[data-testid="view-collection"] td:first-child,
-.collection-view-table th:first-child,
-.collection-view-table td:first-child {
-  width: 40px;
-  padding-left: 1rem;
-  padding-right: 0;
 }
 
 /* Table Body */
@@ -320,8 +359,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   color: hsl(var(--foreground));
 }
 
-
-/* Table Cell Hyperlink Styling */
+/* Table Cell Hyperlinks */
 [data-testid="field-cell"] a,
 [data-testid="view-collection"] td a,
 .collection-view-table td a {
@@ -340,7 +378,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   text-decoration: underline;
 }
 
-/* Dark mode link colors */
+/* Dark Mode Tabele Cell Hyperlinks */
 .dark [data-testid="field-cell"] a,
 .dark [data-testid="view-collection"] td a,
 .dark .collection-view-table td a {
@@ -406,7 +444,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   color: hsl(var(--muted-foreground));
 }
 
-/* Status Badges */
+/* Badges: Status */
 [data-testid="field-cell"] span.rounded {
   display: inline-flex;
   align-items: center;
@@ -422,7 +460,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   white-space: nowrap;
 }
 
-/* Role Badges */
+/* Badges: Role */
 [class*="px-3 py-0 rounded bg-green-700"],
 [data-testid="field-cell"] span.rounded {
   display: inline-flex;
@@ -438,32 +476,32 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   height: 1.5rem;
 }
 
-/* Role-specific badge styles */
+/* Badges: Role-Specific */
 [data-testid="field-cell"] span.rounded:has(div:contains("Admin")) {
-  background: linear-gradient(135deg, hsla(var(--role-admin-bg), 0.9), hsla(var(--role-admin-text), 0.8));
-  border-color: hsla(var(--role-admin-border), 0.3);
+  background: linear-gradient(135deg, hsla(var(--badge-role-admin-bg), 0.9), hsla(var(--badge-role-admin-text), 0.8));
+  border-color: hsla(var(--badge-role-admin-border), 0.3);
   color: hsl(var(--background));
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Account Executive")) {
-  background: linear-gradient(135deg, hsla(var(--role-ae-bg), 0.9), hsla(var(--role-ae-text), 0.8));
-  border-color: hsla(var(--role-ae-border), 0.3);
+  background: linear-gradient(135deg, hsla(var(--badge-role-ae-bg), 0.9), hsla(var(--badge-role-ae-text), 0.8));
+  border-color: hsla(var(--badge-role-ae-border), 0.3);
   color: hsl(var(--background));
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Loan Processor")) {
-  background: linear-gradient(135deg, hsla(var(--role-lp-bg), 0.9), hsla(var(--role-lp-text), 0.8));
-  border-color: hsla(var(--role-lp-border), 0.3);
+  background: linear-gradient(135deg, hsla(var(--badge-role-lp-bg), 0.9), hsla(var(--badge-role-lp-text), 0.8));
+  border-color: hsla(var(--badge-role-lp-border), 0.3);
   color: hsl(var(--background));
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Loan Opener")) {
-  background: linear-gradient(135deg, hsla(var(--role-loan-opener-bg), 0.9), hsla(var(--role-loan-opener-text), 0.8));
-  border-color: hsla(var(--role-loan-opener-border), 0.3);
+  background: linear-gradient(135deg, hsla(var(--badge-role-loan-opener-bg), 0.9), hsla(var(--role-badge-loan-opener-text), 0.8));
+  border-color: hsla(var(--badge-role-loan-opener-border), 0.3);
   color: hsl(var(--background));
 }
 
-/* Deal Disposition Badges */
+/* Badges: Deal Disposition */
 [data-testid="field-cell"] span.rounded:has(div:contains("Active")) {
   background-color: hsl(var(--badge-active-bg));
   color: hsl(var(--badge-active-text));
@@ -474,7 +512,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   color: hsl(var(--badge-onhold-text));
 }
 
-/* Deal Stage Badges */
+/* Badges: Deal Stage 1 */
 [data-testid="field-cell"] span.rounded:has(div:contains("Stage 1")) {
   background-color: hsl(var(--badge-stage1-bg));
   color: hsl(var(--badge-stage1-text));
@@ -483,27 +521,6 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
 [data-testid="field-cell"] span.rounded:has(div:contains("Stage 2")) {
   background-color: hsl(var(--badge-stage2-bg));
   color: hsl(var(--badge-stage2-text));
-}
-
-/* Navigation */
-[data-testid="navigation-sidebar"] {
-  background-color: hsl(var(--sidebar-background));
-  border-right: 1px solid hsl(var(--border));
-}
-
-[data-testid="sidebar-nav-item"] > div > a {
-  color: hsl(var(--sidebar-foreground));
-  transition: color 0.2s;
-}
-
-[data-testid="sidebar-nav-item"] > div > a:hover {
-  color: hsl(var(--sidebar-foreground));
-  background-color: hsl(var(--sidebar-accent));
-}
-
-[data-testid="sidebar-nav-item"] > div > a.bg-nlc_primary-900 {
-  background-color: hsl(var(--accent)) !important;
-  color: hsl(var(--accent-foreground)) !important;
 }
 
 /* Action Buttons */
@@ -537,38 +554,33 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   border-color: hsl(var(--border));
 }
 
-/* Record View Section Styles */
-[data-test-id="record-view-section"] {
-  background-color: hsl(var(--background));
+/* Record View Section */
+[data-test-id="record-view-section"],
+.dark [data-test-id="record-view-section"],
+[id="FNLvmEeio"] [data-test-id="record-view-section"] {
+  background-color: hsl(var(--background)) !important;
 }
 
-/* Target the outer wrapper */
+/* Record View Section: Outer Wrapper  */
 [data-test-id="record-view-section"] > div {
   border: 1px solid hsl(var(--border));
 }
 
-/* Target the inner content wrapper */
+/* Record View Section: Inner Content Wrapper */
 [data-test-id="record-view-section"] > div > div {
   padding: 3.0rem;
 }
 
-/* Target the flex column container */
+/* Record View Section: Flex Column Container */
 [data-test-id="record-view-section"] .mb-2.px-4.sm\:p-0.flex.flex-col {
   padding: 3.0rem;
   border: 0px
 }
 
-/* Target the icon container */
+/* Record View Section: icon Container */
 [data-test-id="record-view-section"]
   .relative.hidden.h-10.w-10.items-center.justify-center.rounded-lg.border.p-2.sm\:flex {
   padding: 3.0rem;
-}
-
-/* Ensure proper background color for all record view sections */
-[data-test-id="record-view-section"],
-.dark [data-test-id="record-view-section"],
-[id="FNLvmEeio"] [data-test-id="record-view-section"] {
-  background-color: hsl(var(--background)) !important;
 }
 
 /* Record View Tabs */
@@ -633,69 +645,6 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   font-weight: 500;
 }
 
-/* Navigation Sidebar - Shadcn Style */
-[data-testid="navigation-sidebar"] {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 1.5rem 1rem;
-  background-color: hsl(var(--sidebar-background));
-  border-right: 1px solid hsl(var(--border));
-}
-
-[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  color: hsl(var(--muted-foreground));
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: all 0.2s;
-}
-
-[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a:hover {
-  background-color: hsl(var(--accent));
-  color: hsl(var(--accent-foreground));
-}
-
-[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a.active,
-[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a[aria-current="page"] {
-  background-color: hsl(var(--accent));
-  color: hsl(var(--accent-foreground));
-}
-
-/* Sidebar Group Headers */
-[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-group"] > div:first-child {
-  padding: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: hsl(var(--muted-foreground));
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Sidebar Icons */
-[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] svg {
-  width: 1.25rem;
-  height: 1.25rem;
-  opacity: 0.5;
-  transition: opacity 0.2s;
-}
-
-[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a:hover svg,
-[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a.active svg,
-[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a[aria-current="page"] svg {
-  opacity: 1;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   [data-testid="record-view-body"] {
@@ -726,371 +675,7 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   background-color: hsl(var(--zinc-50)) !important;
 }
 .noloco-theme .bg-gray-100 {
-  background-color: hsl(var(--zinc-100/* Light mode variables */
-:root {
-  --background: 0 0% 100%;
-  --foreground: 240 10% 3.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 240 10% 3.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 3.9%;
-  --primary: 240 5.9% 10%;
-  --primary-foreground: 0 0% 98%;
-  --secondary: 240 4.8% 95.9%;
-  --secondary-foreground: 240 5.9% 10%;
-  --muted: 240 4.8% 95.9%;
-  --muted-foreground: 240 3.8% 46.1%;
-  --accent: 240 4.8% 95.9%;
-  --accent-foreground: 240 5.9% 10%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 240 5.9% 90%;
-  --input: 240 5.9% 90%;
-  --ring: 240 5.9% 10%;
-  --radius: 0.5rem;
-  --table-row-bg: 0 0% 98%;
-  --sidebar-background: 0 0% 98%;
-  --sidebar-foreground: 240 5% 26%;
-  --sidebar-accent: 240 5% 96%;
-
-  /* Custom zinc spectrum for light mode */
-  --zinc-50: 240 5% 96%;
-  --zinc-100: 240 6% 90%;
-  --zinc-200: 240 5% 84%;
-  --zinc-300: 240 4% 77%;
-  --zinc-400: 240 5% 65%;
-  --zinc-500: 240 4% 46%;
-  --zinc-600: 240 5% 34%;
-  --zinc-700: 240 5% 26%;
-  --zinc-800: 240 4% 16%;
-  --zinc-900: 240 6% 10%;
-
-  /* Role-based badge colors */
-  --role-admin-bg: 272 90% 60%;
-  --role-admin-text: 272 85% 65%;
-  --role-admin-border: 272 90% 40%;
-
-  --role-ae-bg: 180 75% 45%;
-  --role-ae-text: 180 70% 50%;
-  --role-ae-border: 180 75% 35%;
-
-  --role-lp-bg: 43 96% 50%;
-  --role-lp-text: 43 90% 55%;
-  --role-lp-border: 43 96% 40%;
-
-  --role-loan-opener-bg: 231 83% 60%;
-  --role-loan-opener-text: 231 78% 65%;
-  --role-loan-opener-border: 231 83% 50%;
-
-  /* Dashboard theme colors */
-  --base-background: 240 10% 3.9%;
-  --base-muted: 240 4% 16%;
-  --alpha-40: 240 10% 3.9% / 0.6;
-
-  /* Deal Disposition */
-  --badge-active-bg: 142 76% 36%;
-  --badge-active-text: 142 72% 29%;
-  --badge-onhold-bg: 48 96% 89%;
-  --badge-onhold-text: 48 96% 89%;
-
-  /* Deal Stage 1 */
-  --badge-stage1-bg: 221 83% 53%;
-  --badge-stage1-text: 221 83% 53%;
-
-  /* Deal Stage 2 */
-  --badge-stage2-bg: 262 83% 58%;
-  --badge-stage2-text: 262 83% 58%;
-}
-
-/* Dark mode variables */
-.dark {
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
-  --card: 240 10% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --popover: 240 10% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --primary: 0 0% 98%;
-  --primary-foreground: 240 5.9% 10%;
-  --secondary: 240 3.7% 15.9%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  --accent: 240 3.7% 15.9%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --ring: 240 4.9% 83.9%;
-  --table-row-bg: 240 10% 3.9%;
-  --sidebar-background: 240 6% 10%;
-  --sidebar-foreground: 240 5% 96%;
-  --sidebar-accent: 240 4% 16%;
-
-  /* Role-based badge colors - adjusted for dark mode */
-  --role-admin-bg: 272 70% 45%;
-  --role-admin-text: 272 65% 50%;
-  --role-admin-border: 272 70% 35%;
-
-  --role-ae-bg: 180 65% 35%;
-  --role-ae-text: 180 60% 40%;
-  --role-ae-border: 180 65% 25%;
-
-  --role-lp-bg: 43 86% 45%;
-  --role-lp-text: 43 80% 50%;
-  --role-lp-border: 43 86% 35%;
-
-  --role-loan-opener-bg: 231 73% 45%;
-  --role-loan-opener-text: 231 68% 50%;
-  --role-loan-opener-border: 231 73% 35%;
-
-  /* Dashboard theme colors */
-  --base-background: 240 10% 3.9%;
-  --base-muted: 240 4% 16%;
-  --alpha-40: 240 10% 3.9% / 0.6;
-
-  /* Deal Disposition */
-  --badge-active-bg: 142 76% 36%;
-  --badge-active-text: 142 72% 29%;
-  --badge-onhold-bg: 48 96% 89%;
-  --badge-onhold-text: 48 96% 89%;
-
-  /* Deal Stage 1 */
-  --badge-stage1-bg: 221 83% 53%;
-  --badge-stage1-text: 221 83% 53%;
-
-  /* Deal Stage 2 */
-  --badge-stage2-bg: 262 83% 58%;
-  --badge-stage2-text: 262 83% 58%;
-}
-
-/* Main page background with gradient */
-.dark .project-page.bg-zinc-50.shadcn-body.relative.flex.h-screen.max-h-screen.w-screen.overflow-hidden,
-.dark .flex.h-screen.w-16.flex-col.border-r.border-zinc-700.bg-zinc-900.text-white.sm:hidden 
-",
-.dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-zinc-800,
-.dark main,
-.dark .main-content,
-.dark body,
-.dark #root,
-.dark #__next {
-  background: linear-gradient(0deg, hsl(var(--alpha-40)) 0%, hsl(var(--alpha-40)) 100%),
-    linear-gradient(0deg, hsl(var(--base-muted)) 0%, hsl(var(--base-muted)) 100%), hsl(var(--base-background)) !important;
-}
-
-/* Component backgrounds */
-.dark [class*="bg-zinc-50"],
-.dark [class*="bg-zinc-100"],
-.dark [class*="bg-zinc-200"],
-.dark [class*="bg-zinc-300"],
-.dark [class*="bg-zinc-400"],
-.dark [class*="bg-zinc-500"],
-.dark [class*="bg-zinc-600"],
-.dark [class*="bg-zinc-700"],
-.dark [class*="bg-zinc-800"],
-.dark [class*="bg-zinc-900"],
-.dark [class*="bg-gray-50"],
-.dark [class*="bg-gray-100"],
-.dark [class*="bg-gray-200"],
-.dark [class*="bg-gray-300"],
-.dark [class*="bg-gray-400"],
-.dark [class*="bg-gray-500"],
-.dark [class*="bg-gray-600"],
-.dark [class*="bg-gray-700"],
-.dark [class*="bg-gray-800"],
-.dark [class*="bg-gray-900"] {
-  background-color: hsl(var(--background)) !important;
-  color: hsl(var(--foreground)) !important;
-  border: 1px solid hsl(var(--border)) !important;
-}
-
-/* Sidebar */
-.dark [data-testid="navigation-sidebar"] {
-  background-color: hsl(var(--sidebar-background)) !important;
-  color: hsl(var(--sidebar-foreground)) !important;
-  border: 1px solid hsl(var(--border)) !important;
-  border-radius: var(--radius) !important;
-}
-
-/* Component Backgrounds */
-.dark .collection-view-table > div,
-.dark [data-testid="collection-group-header"],
-.dark .card,
-.dark [class*="bg-card"] {
-  background-color: hsl(var(--background)) !important;
-  color: hsl(var(--foreground)) !important;
-  border: 1px solid hsl(var(--border)) !important;
-}
-
-.dark [data-testid="details-section"] {
-  background-color: hsl(var(--background)) !important;
-  color: hsl(var(--foreground)) !important;
-  border: 1px solid hsl(var(--border)) !important;
-}
-
-.dark [data-testid="stages-section"] {
-  background-color: hsl(var(--background)) !important;
-  color: hsl(var(--foreground)) !important;
-  border: 1px solid hsl(var(--border)) !important;
-  border-radius: var(--radius) !important;
-}
-
-/* Sidebar */
-[data-testid="navigation-sidebar"] {
-  background-color: hsl(var(--sidebar-background)) !important;
-  color: hsl(var(--sidebar-foreground)) !important;
-  border: 1px solid hsl(var(--border)) !important;
-  border-radius: var(--radius) !important;
-}
-
-/* Data Tables Shadcn Match */
-[data-testid="view-collection"]
-  > div
-  > div
-  > div
-  > div
-  > .focus\:outline-none.focus\:shadow-none.w-full.shadow-lg.mb-2.overflow-y-hidden.overflow-x-auto.border.rounded-lg,
-.collection-view-table > div {
-  background-color: hsl(var(--background));
-  border: 1px solid hsl(var(--border));
-  border-radius: calc(var(--radius) - 2px);
-  width: 100%;
-  overflow: hidden;
-}
-
-/* Table Header */
-[data-testid="view-collection"] thead,
-.collection-view-table thead {
-  border-bottom: 1px solid hsl(var(--border));
-  background-color: hsl(var(--muted));
-}
-
-/* Table Header Row */
-[data-testid="view-collection"] thead tr,
-.collection-view-table thead tr {
-  border: 1px solid hsl(var(--border));
-}
-
-/* Table Header Cells */
-[data-testid="view-collection"] th,
-.collection-view-table th {
-  height: 2.5rem;
-  padding: 0 1rem;
-  text-align: left;
-  vertical-align: middle;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: hsl(var(--muted-foreground));
-  border-right: 1px solid hsl(var(--border));
-  background-color: hsl(var(--muted));
-  transition: background-color 0.2s;
-}
-
-[data-testid="view-collection"] th:last-child,
-.collection-view-table th:last-child {
-  border-right: none;
-}
-
-/* Table Body */
-[data-testid="view-collection"] tbody,
-.collection-view-table tbody {
-  background-color: hsl(var(--background));
-}
-
-/* Table Body Rows */
-[data-testid="view-collection"] tbody tr,
-.collection-view-table tbody tr,
-tr[class*="record-"][data-test-id="collection-record"] {
-  border-bottom: 1px solid hsl(var(--border));
-  background-color: hsl(var(--background));
-  transition: background-color 0.2s;
-}
-
-[data-testid="view-collection"] tbody tr:hover,
-.collection-view-table tbody tr:hover,
-tr[class*="record-"][data-test-id="collection-record"]:hover {
-  background-color: hsl(var(--muted));
-}
-
-/* Table Body Cells */
-[data-testid="view-collection"] td,
-.collection-view-table td {
-  padding: 0.75rem 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: hsl(var(--foreground));
-}
-
-/* Table Cell Content Styling */
-[data-testid="field-cell"] span {
-  display: inline-block;
-  width: 100%;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: hsl(var(--foreground));
-}
-
-/* Table Cell Hyperlink Styling */
-[data-testid="field-cell"] a,
-[data-testid="view-collection"] td a,
-.collection-view-table td a {
-  color: hsl(221.2 83.2% 53.3%); /* Blue 600 */
-  transition: color 0.2s;
-  text-decoration: none;
-}
-
-[data-testid="field-cell"] a:hover,
-[data-testid="field-cell"] a:active,
-[data-testid="view-collection"] td a:hover,
-[data-testid="view-collection"] td a:active,
-.collection-view-table td a:hover,
-.collection-view-table td a:active {
-  color: hsl(224.3 76.3% 48%); /* Blue 700 */
-  text-decoration: underline;
-}
-
-/* Dark mode link colors */
-.dark [data-testid="field-cell"] a,
-.dark [data-testid="view-collection"] td a,
-.dark .collection-view-table td a {
-  color: hsl(221.2 83.2% 53.3%); /* Blue 600 */
-  transition: color 0.2s;
-  text-decoration: none;
-}
-
-.dark.dark [data-testid="field-cell"] a,
-.dark [data-testid="view-collection"] td a,
-.dark .collection-view-table td a {
- color: hsl(221.2 83.2% 53.3%); /* Blue 600 */
-}
-
-.dark [data-testid="field-cell"] a:hover,
-.dark [data-testid="field-cell"] a:active,
-.dark [data-testid="view-collection"] td a:hover,
-.dark [data-testid="view-collection"] td a:active,
-.dark .collection-view-table td a:hover,
-.dark .collection-view-table td a:active {
-  color: hsl(224.3 76.3% 48%); /* Blue 700 */
-  text-decoration: underline;
-}
-
-/* Checkbox Column */
-[data-testid="view-collection"] th:first-child,
-[data-testid="view-collection"] td:first-child,
-.collection-view-table th:first-child,
-.collection-view-table td:first-child {
-  width: 40px;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-/* Filter Input */
-[data-testid="view-collection"] input[type="text"],
-.collection-view-table input[type="text"] {
-  width: 100%;
-  height: 2.25rem;
-  );
+  background-color: hsl(var(--zinc-100)) !important;
 }
 .noloco-theme .bg-gray-200 {
   background-color: hsl(var(--zinc-200)) !important;
