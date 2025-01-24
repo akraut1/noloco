@@ -1,7 +1,33 @@
+/* Ensure consistent styling for all collection filters in dark mode */
+.dark .collection-filter,
+.dark .collection-filter[class*="bg-"],
+.dark [class*="collection-filter-"],
+.dark [class*="collection-filter-"][class*="bg-"] {
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+}
+
+/* Style inputs and selects within collection filters */
+.dark .collection-filter input,
+.dark .collection-filter select,
+.dark [class*="collection-filter-"] input,
+.dark [class*="collection-filter-"] select {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--border));
+}
+
+/* Hover and focus states */
+.dark .collection-filter:hover,
+.dark .collection-filter:focus-within,
+.dark [class*="collection-filter-"]:hover,
+.dark [class*="collection-filter-"]:focus-within {
+  background-color: hsl(var(--secondary));
+}
+
 /* <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/akraut1/noloco@refs/heads/main/styles-shadcn-v6.css"> */
-<style>
-/* Light mode variables */
-:root {
+<style> :root {
   --background: 0 0% 100%;
   --foreground: 240 10% 3.9%;
   --card: 0 0% 100%;
@@ -67,7 +93,7 @@
   --badge-stage2-bg: 262 83% 58%;
   --badge-stage2-text: 262 83% 58%;
 
-    /* Dashboard theme colors */
+  /* Dashboard theme colors */
   --base-background: 240 10% 3.9%;
   --base-muted: 240 4% 16%;
   --alpha-40: 240 10% 3.9% / 0.6;
@@ -127,7 +153,7 @@
   --badge-stage2-bg: 262 83% 58%;
   --badge-stage2-text: 262 83% 58%;
 
-    /* Dashboard Theme Colors */
+  /* Dashboard Theme Colors */
   --base-background: 240 10% 3.9%;
   --base-muted: 240 4% 16%;
   --alpha-40: 240 10% 3.9% / 0.6;
@@ -135,8 +161,7 @@
 
 /* Main page background with gradient */
 .dark .project-page.bg-zinc-50.shadcn-body.relative.flex.h-screen.max-h-screen.w-screen.overflow-hidden,
-.dark .flex.h-screen.w-16.flex-col.border-r.border-zinc-700.bg-zinc-900.text-white.sm:hidden 
-",
+.dark .flex.h-screen.w-16.flex-col.border-r.border-zinc-700.bg-zinc-900.text-white.sm:hidden,
 .dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-zinc-800,
 .dark main,
 .dark .main-content,
@@ -148,29 +173,11 @@
 }
 
 /* Component backgrounds */
-.dark [class*="bg-zinc-50"],
-.dark [class*="bg-zinc-100"],
-.dark [class*="bg-zinc-200"],
-.dark [class*="bg-zinc-300"],
-.dark [class*="bg-zinc-400"],
-.dark [class*="bg-zinc-500"],
-.dark [class*="bg-zinc-600"],
-.dark [class*="bg-zinc-700"],
-.dark [class*="bg-zinc-800"],
-.dark [class*="bg-zinc-900"],
-.dark [class*="bg-gray-50"],
-.dark [class*="bg-gray-100"],
-.dark [class*="bg-gray-200"],
-.dark [class*="bg-gray-300"],
-.dark [class*="bg-gray-400"],
-.dark [class*="bg-gray-500"],
-.dark [class*="bg-gray-600"],
-.dark [class*="bg-gray-700"],
-.dark [class*="bg-gray-800"],
-.dark [class*="bg-gray-900"] {
-  background-color: hsl(var(--background)) !important;
-  color: hsl(var(--foreground)) !important;
-  border: 1px solid hsl(var(--border)) !important;
+.dark [class*="bg-zinc-"],
+.dark [class*="bg-gray-"] {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
 }
 
 /* Sidebar */
@@ -178,7 +185,7 @@
   display: flex !important;
   flex-direction: column !important;
   gap: 2rem !important;
-  padding: 1.5rem 1rem !important;;
+  padding: 1.5rem 1rem !important;
   background-color: hsl(var(--sidebar-background)) !important;
   color: hsl(var(--sidebar-foreground)) !important;
   border-right: 1px solid hsl(var(--border)) !important;
@@ -378,14 +385,695 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   text-decoration: underline;
 }
 
-/* Dark Mode Tabele Cell Hyperlinks */
+/* Dark Mode Table Cell Hyperlinks */
 .dark [data-testid="field-cell"] a,
 .dark [data-testid="view-collection"] td a,
 .dark .collection-view-table td a {
   color: hsl(221.2 83.2% 53.3%); /* blue 600 */
 }
 
-.dark.dark [data-testid="field-cell"] a,
+.dark [data-testid="field-cell"] a:hover,
+.dark [data-testid="field-cell"] a:active,
+.dark [data-testid="view-collection"] td a:hover,
+.dark [data-testid="view-collection"] td a:active,
+.dark .collection-view-table td a:hover,
+.dark .collection-view-table td a:active {
+  color: hsl(224.3 76.3% 48%); /* blue 700 */
+}
+
+/* Filter Input */
+[data-testid="view-collection"] input[type="text"],
+.collection-view-table input[type="text"] {
+  width: 100%;
+  height: 2.25rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--input));
+  border-radius: var(--radius);
+}
+
+[data-testid="view-collection"] input[type="text"]:focus,
+.collection-view-table input[type="text"]:focus {
+  outline: none;
+  ring: 2px solid hsl(var(--ring));
+  border-color: hsl(var(--ring));
+}
+
+/* Pagination Controls */
+[data-testid="view-collection"] .pagination,
+.collection-view-table .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid hsl(var(--border));
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+}
+
+/* Badges: Status */
+[data-testid="field-cell"] span.rounded {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: var(--radius);
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  white-space: nowrap;
+}
+
+/* Badges: Role */
+[class*="px-3 py-0 rounded bg-green-700"],
+[data-testid="field-cell"] span.rounded {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 150ms;
+  height: 1.5rem;
+}
+
+/* Badges: Role-Specific */
+[data-testid="field-cell"] span.rounded:has(div:contains("Admin")) {
+  background: linear-gradient(135deg, hsla(var(--badge-role-admin-bg), 0.9), hsla(var(--badge-role-admin-text), 0.8));
+  border-color: hsla(var(--badge-role-admin-border), 0.3);
+  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Account Executive")) {
+  background: linear-gradient(135deg, hsla(var(--badge-role-ae-bg), 0.9), hsla(var(--badge-role-ae-text), 0.8));
+  border-color: hsla(var(--badge-role-ae-border), 0.3);
+  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Loan Processor")) {
+  background: linear-gradient(135deg, hsla(var(--badge-role-lp-bg), 0.9), hsla(var(--badge-role-lp-text), 0.8));
+  border-color: hsla(var(--badge-role-lp-border), 0.3);
+  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Loan Opener")) {
+  background: linear-gradient(135deg, hsla(var(--badge-role-loan-opener-bg), 0.9), hsla(var(--role-badge-loan-opener-text), 0.8));
+  border-color: hsla(var(--badge-role-loan-opener-border), 0.3);
+  color: hsl(var(--background));
+}
+
+/* Badges: Deal Disposition */
+[data-testid="field-cell"] span.rounded:has(div:contains("Active")) {
+  background-color: hsl(var(--badge-active-bg));
+  color: hsl(var(--badge-active-text));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("On Hold")) {
+  background-color: hsl(var(--badge-onhold-bg));
+  color: hsl(var(--badge-onhold-text));
+}
+
+/* Badges: Deal Stage 1 */
+[data-testid="field-cell"] span.rounded:has(div:contains("Stage 1")) {
+  background-color: hsl(var(--badge-stage1-bg));
+  color: hsl(var(--badge-stage1-text));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Stage 2")) {
+  background-color: hsl(var(--badge-stage2-bg));
+  color: hsl(var(--badge-stage2-text));
+}
+
+/* Action Buttons */
+[data-testid="action-button"] {
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  transition: all 150ms;
+}
+
+[data-testid="action-button"].bg-zinc-700 {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border-color: hsl(var(--border));
+}
+
+[data-testid="action-button"].bg-zinc-700:hover {
+  opacity: 0.9;
+}
+
+[data-testid="action-button"].bg-red-500 {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+/* Dark Mode Toggle */
+[data-testid="dark-mode-switch"] {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border-color: hsl(var(--border));
+}
+
+/* Record View Section */
+[data-test-id="record-view-section"],
+.dark [data-test-id="record-view-section"],
+[id="FNLvmEeio"] [data-test-id="record-view-section"] {
+  background-color: hsl(var(--background)) !important;
+}
+
+/* Record View Section: Outer Wrapper  */
+[data-test-id="record-view-section"] > div {
+  border: 1px solid hsl(var(--border));
+}
+
+/* Record View Section: Inner Content Wrapper */
+[data-test-id="record-view-section"] > div > div {
+  padding: 3.0rem;
+}
+
+/* Record View Section: Flex Column Container */
+[data-test-id="record-view-section"] .mb-2.px-4.sm\:p-0.flex.flex-col {
+  padding: 3.0rem;
+  border: 0px;
+}
+
+/* Record View Section: icon Container */
+[data-test-id="record-view-section"]
+  .relative.hidden.h-10.w-10.items-center.justify-center.rounded-lg.border.p-2.sm\:flex {
+  padding: 3.0rem;
+}
+
+/* Record View Tabs */
+[data-testid="record-view-tabs"] {
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.dark [data-testid="record-view-tabs"] button {
+  color: #a1a1aa;
+  transition: color 0.2s ease;
+}
+
+.dark [data-testid="record-view-tabs"] button:hover {
+  color: hsl(var(--foreground));
+}
+
+[data-testid="record-view-tabs"] button[aria-selected="true"] {
+  color: hsl(var(--foreground));
+  border-bottom-width: 2px;
+  border-image: linear-gradient(90deg, #f72121 24%, #ff9500 71%, #f0d047 100%) 1;
+}
+
+/* Pivot Table Styles */
+.collection-view.collection-view-pivot_table {
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 2px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.collection-view.collection-view-pivot_table thead {
+  border-bottom: 1px solid hsl(var(--border));
+  background-color: hsl(var(--muted));
+}
+
+.collection-view.collection-view-pivot_table th {
+  height: 2.5rem;
+  padding: 0 1rem;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #a1a1aa;
+  border-right: 1px solid hsl(var(--border));
+  background-color: hsl(var(--muted));
+  transition: background-color 0.2s;
+}
+
+.collection-view.collection-view-pivot_table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: hsl(var(--foreground));
+  border-right: 1px solid hsl(var(--border));
+}
+
+/* Style for the SUM row */
+.collection-view.collection-view-pivot_table tr:last-child td {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  [data-testid="record-view-body"] {
+    padding: 0.75rem;
+    background-color: hsl(var(--secondary));
+  }
+
+  .collection-view-table .collection-filter input {
+    width: 100%;
+  }
+}
+
+.sticky.top-0.z-40.flex.w-full.flex-col.overflow-hidden.border-b.sm\:static.bg-zinc-800.border-zinc-700.px-3 {
+  background-color: hsl(var(--background));
+  border-color: hsl(var(--border));
+}
+
+/* Zinc Overrides for Tailwind Gray Classes */
+.noloco-theme [class*="bg-gray-"],
+.noloco-theme [class*="text-gray-"],
+.noloco-theme [class*="border-gray-"] {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  --tw-border-opacity: 1;
+}
+
+.noloco-theme .bg-gray-50 {
+  background-color: hsl(var(--zinc-50)) !important;
+}
+.noloco-theme .bg-gray-100 {
+  background-color: hsl(var(--zinc-100)) !important;
+}
+.noloco-theme .bg-gray-200 {
+  background-color: hsl(var(--zinc-200)) !important;
+}
+.noloco-theme .bg-gray-300 {
+  background-color: hsl(var(--zinc-300)) !important;
+}
+.noloco-theme .bg-gray-400 {
+  background-color: hsl(var(--zinc-400)) !important;
+}
+.noloco-theme .bg-gray-500 {
+  background-color: hsl(var(--zinc-500)) !important;
+}
+.noloco-theme .bg-gray-600 {
+  background-color: hsl(var(--zinc-600)) !important;
+}
+.noloco-theme .bg-gray-700 {
+  background-color/* Ensure consistent styling for all collection filters in dark mode */
+.dark .collection-filter,
+.dark .collection-filter[class*="bg-"],
+.dark [class*="collection-filter-"],
+.dark [class*="collection-filter-"][class*="bg-"] {
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+}
+
+/* Style inputs and selects within collection filters */
+.dark .collection-filter input,
+.dark .collection-filter select,
+.dark [class*="collection-filter-"] input,
+.dark [class*="collection-filter-"] select {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--border));
+}
+
+/* Hover and focus states */
+.dark .collection-filter:hover,
+.dark .collection-filter:focus-within,
+.dark [class*="collection-filter-"]:hover,
+.dark [class*="collection-filter-"]:focus-within {
+  background-color: hsl(var(--secondary));
+}
+
+/* <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/akraut1/noloco@refs/heads/main/styles-shadcn-v6.css"> */
+<style>
+/* Light mode variables */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 240 5.9% 10%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 240 5.9% 10%;
+  --radius: 0.5em;
+  --table-row-bg: 0 0% 98%;
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5% 26%;
+  --sidebar-accent: 240 5% 96%;
+
+  /* Custom zinc spectrum for light mode */
+  --zinc-50: 240 5% 96%;
+  --zinc-100: 240 6% 90%;
+  --zinc-200: 240 5% 84%;
+  --zinc-300: 240 4% 77%;
+  --zinc-400: 240 5% 65%;
+  --zinc-500: 240 4% 46%;
+  --zinc-600: 240 5% 34%;
+  --zinc-700: 240 5% 26%;
+  --zinc-800: 240 4% 16%;
+  --zinc-900: 240 6% 10%;
+
+  /* Badge Colors */
+  --badge-role-admin-bg: 240 5% 65%;
+  --badge-role-admin-text: 240 5% 96%;
+  --badge-role-admin-border: 240 5% 65%;
+  --badge-role-ae-bg: 17 88% 40%;
+  --badge-role-ae-text: 34 100% 92%;
+  --badge-role-ae-border: 17 88% 40%;
+  --badge-role-lp-bg: 29 90% 37%;
+  --badge-role-lp-text: 48 96% 89%;
+  --badge-role-lp-border: 29 90% 37%;
+  --badge-role-loan-opener-bg: 35 92% 33%;
+  --badge-role-loan-opener-text: 55 97% 88%;
+  --badge-role-loan-opener-border: 35 92% 33%;
+
+  /* Badges: Deal Disposition */
+  --badge-active-bg: 142 76% 36%;
+  --badge-active-text: 142 72% 29%;
+  --badge-onhold-bg: 48 96% 89%;
+  --badge-onhold-text: 48 96% 89%;
+
+  /* Badges: Deal Stage 1 */
+  --badge-stage1-bg: 221 83% 53%;
+  --badge-stage1-text: 221 83% 53%;
+
+  /* Badges: Deal Stage 2 */
+  --badge-stage2-bg: 262 83% 58%;
+  --badge-stage2-text: 262 83% 58%;
+
+  /* Dashboard theme colors */
+  --base-background: 240 10% 3.9%;
+  --base-muted: 240 4% 16%;
+  --alpha-40: 240 10% 3.9% / 0.6;
+}
+
+/* Dark mode variables */
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 240 5.9% 10%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
+  --table-row-bg: 240 10% 3.9%;
+  --sidebar-background: 240 6% 10%;
+  --sidebar-foreground: 240 5% 96%;
+  --sidebar-accent: 240 4% 16%;
+
+  /* Badges: Role */
+  --badge-role-admin-bg: 240 4% 16%;
+  --badge-role-admin-text: 240 4% 46%;
+  --badge-role-admin-border: 240 4% 16%;
+  --badge-role-ae-bg: 13 81% 15%;
+  --badge-role-ae-text: 27 96% 61%;
+  --badge-role-ae-border: 13 81% 15%;
+  --badge-role-lp-bg: 21 92% 14%;
+  --badge-role-lp-text: 43 96% 56%;
+  --badge-role-lp-border: 21 92% 14%;
+  --badge-role-loan-opener-bg: 26 83% 14%;
+  --badge-role-loan-opener-text: 48 96% 53%;
+  --badge-role-loan-opener-border: 26 83% 14%;
+
+  /* Badge: Deal Disposition */
+  --badge-active-bg: 142 76% 36%;
+  --badge-active-text: 142 72% 29%;
+  --badge-onhold-bg: 48 96% 89%;
+  --badge-onhold-text: 48 96% 89%;
+
+  /* Badge: Deal Stage 1 */
+  --badge-stage1-bg: 221 83% 53%;
+  --badge-stage1-text: 221 83% 53%;
+
+  /* Badge: Deal Stage 2 */
+  --badge-stage2-bg: 262 83% 58%;
+  --badge-stage2-text: 262 83% 58%;
+
+  /* Dashboard Theme Colors */
+  --base-background: 240 10% 3.9%;
+  --base-muted: 240 4% 16%;
+  --alpha-40: 240 10% 3.9% / 0.6;
+}
+
+/* Main page background with gradient */
+.dark .project-page.bg-zinc-50.shadcn-body.relative.flex.h-screen.max-h-screen.w-screen.overflow-hidden,
+.dark .flex.h-screen.w-16.flex-col.border-r.border-zinc-700.bg-zinc-900.text-white.sm:hidden,
+.dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-zinc-800,
+.dark main,
+.dark .main-content,
+.dark body,
+.dark #root,
+.dark #__next {
+  background: linear-gradient(0deg, hsl(var(--alpha-40)) 0%, hsl(var(--alpha-40)) 100%),
+    linear-gradient(0deg, hsl(var(--base-muted)) 0%, hsl(var(--base-muted)) 100%), hsl(var(--base-background)) !important;
+}
+
+/* Component backgrounds */
+.dark [class*="bg-zinc-"],
+.dark [class*="bg-gray-"] {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+/* Sidebar */
+[data-testid="navigation-sidebar"] {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2rem !important;
+  padding: 1.5rem 1rem !important;
+  background-color: hsl(var(--sidebar-background)) !important;
+  color: hsl(var(--sidebar-foreground)) !important;
+  border-right: 1px solid hsl(var(--border)) !important;
+  border-radius: var(--radius) !important;
+}
+
+/* Sidebar Group Headers */
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-group"] > div:first-child {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Sidebar Navigation Items */
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a.bg-nlc_primary-900 {
+  background-color: hsl(var(--accent)) !important;
+  color: hsl(var(--accent-foreground)) !important;
+}
+
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a:hover,
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a.active,
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a[aria-current="page"] {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+/* Sidebar Icons */
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a:hover svg,
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a.active svg,
+[data-testid="navigation-sidebar"] [data-testid="sidebar-nav-item"] > div > a[aria-current="page"] svg {
+  opacity: 1;
+}
+
+.dark [data-testid="navigation-sidebar"] {
+  background-color: hsl(var(--sidebar-background)) !important;
+  color: hsl(var(--sidebar-foreground)) !important;
+}
+
+/* Sections */
+.dark .collection-view-table > div,
+.dark [data-testid="collection-group-header"],
+.dark .card,
+.dark [class*="bg-card"] {
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+}
+
+.dark [data-testid="details-section"] {
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+}
+
+.dark [data-testid="stages-section"] {
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: var(--radius) !important;
+}
+
+/* Data Tables Shadcn Match */
+[data-testid="view-collection"]
+  > div
+  > div
+  > div
+  > div
+  > .focus\:outline-none.focus\:shadow-none.w-full.shadow-lg.mb-2.overflow-y-hidden.overflow-x-auto.border.rounded-lg,
+.collection-view-table > div {
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 2px);
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Table Header */
+[data-testid="view-collection"] thead,
+.collection-view-table thead {
+  border-bottom: 1px solid hsl(var(--border));
+  background-color: hsl(var(--muted));
+}
+
+/* Table Header Row */
+[data-testid="view-collection"] thead tr,
+.collection-view-table thead tr {
+  border: 1px solid hsl(var(--border));
+}
+
+/* Table Header Cells */
+[data-testid="view-collection"] th,
+.collection-view-table th {
+  height: 3rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  border-right: 1px solid hsl(var(--border));
+  background-color: transparent;
+  border-bottom: 1px solid hsl(var(--border));
+  transition: background-color 0.2s ease;
+}
+
+/* Table Rows */
+[data-testid="view-collection"] tr,
+.collection-view-table tr {
+  border: none;
+  border-bottom: 1px solid hsl(var(--border));
+  transition: background-color 0.2s ease;
+}
+
+[data-testid="view-collection"] tbody tr:last-child,
+.collection-view-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Table Body */
+[data-testid="view-collection"] tbody,
+.collection-view-table tbody {
+  background-color: hsl(var(--background));
+}
+
+/* Table Body Rows */
+[data-testid="view-collection"] tbody tr,
+.collection-view-table tbody tr,
+tr[class*="record-"][data-test-id="collection-record"] {
+  border-bottom: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background));
+  transition: background-color 0.2s;
+}
+
+[data-testid="view-collection"] tbody tr:hover,
+.collection-view-table tbody tr:hover,
+tr[class*="record-"][data-test-id="collection-record"]:hover {
+  background-color: hsl(var(--muted));
+}
+
+/* Table Body Cells */
+[data-testid="view-collection"] td,
+.collection-view-table td,
+[data-testid="field-cell"] span {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: hsl(var(--foreground));
+}
+
+/* Table Cell Hyperlinks */
+[data-testid="field-cell"] a,
+[data-testid="view-collection"] td a,
+.collection-view-table td a {
+  color: #2563eb;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+[data-testid="field-cell"] a:hover,
+[data-testid="field-cell"] a:active,
+[data-testid="view-collection"] td a:hover,
+[data-testid="view-collection"] td a:active,
+.collection-view-table td a:hover,
+.collection-view-table td a:active {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+/* Dark Mode Table Cell Hyperlinks */
+.dark [data-testid="field-cell"] a,
 .dark [data-testid="view-collection"] td a,
 .dark .collection-view-table td a {
   color: hsl(221.2 83.2% 53.3%); /* blue 600 */
@@ -682,6 +1370,10 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   background-color: hsl(var(--zinc-600)) !important;
 }
 .noloco-theme .bg-gray-700 {
+  background-color<cut_off_point>
+zinc-600)) !important;
+}
+.noloco-theme .bg-gray-700 {
   background-color: hsl(var(--zinc-700)) !important;
 }
 .noloco-theme .bg-gray-800 {
@@ -753,6 +1445,32 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   border-color: hsl(var(--zinc-900)) !important;
 }
 
-/* Add any other gray-related classes that need to be overridden */
+/* Ensure consistent styling for all collection filters */
+.dark .collection-filter,
+.dark [class*="collection-filter-"],
+.dark .collection-filter[class*="bg-"],
+.dark [class*="collection-filter-"][class*="bg-"] {
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+}
 
+.dark .collection-filter input,
+.dark .collection-filter select,
+.dark [class*="collection-filter-"] input,
+.dark [class*="collection-filter-"] select {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--border));
+}
+
+/* Hover and focus states */
+.dark .collection-filter:hover,
+.dark [class*="collection-filter-"]:hover,
+.dark .collection-filter:focus-within,
+.dark [class*="collection-filter-"]:focus-within {
+  background-color: hsl(var(--secondary));
+}
+
+/* Add any other gray-related classes that need to be overridden */
 </style>
