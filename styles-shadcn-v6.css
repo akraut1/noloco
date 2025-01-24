@@ -400,17 +400,6 @@ tr[class*="record-"][data-test-id="collection-record"]:hover {
   color: hsl(224.3 76.3% 48%); /* blue 700 */
 }
 
-/* Checkbox Column */
-[data-testid="view-collection"] th:first-child,
-[data-testid="view-collection"] td:first-child,
-.collection-view-table th:first-child,
-.collection-view-table td:first-child {
-  width: 40px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-right: 1px solid hsl(var(--border));
-}
-
 /* Filter Input */
 [data-testid="view-collection"] input[type="text"],
 .collection-view-table input[type="text"] {
