@@ -179,81 +179,105 @@
   --background-hover-overlay-inverse: 0 0% 0% 0.03;
 }
 
-/* Override Tailwind & Noloco Classes */
+/* Override Text Classes */
+.text-gray-50,
+.text-slate-50 {
+  color: hsl(var(--zinc-50)) !important;
+} 
+.text-gray-100,
+.text-slate-100 {
+  color: hsl(var(--zinc-100)) !important;
+}
+.text-gray-200,
+.text-slate-200 {
+  color: hsl(var(--zinc-200)) !important;
+}
+.text-gray-300,
+.text-slate-300 {
+  color: hsl(var(--zinc-300)) !important;
+}
+.text-gray-400,
+.text-slate-400 {
+  color: hsl(var(--zinc-400)) !important;
+}
+.text-gray-500,
+.text-slate-500 {
+  color: hsl(var(--zinc-500)) !important;
+}
+.text-gray-600,
+.text-slate-600 {
+  color: hsl(var(--zinc-600)) !important;
+}
+.text-gray-700,
+.text-slate-700 {
+  color: hsl(var(--zinc-700)) !important;
+}
+.text-gray-800,
+.text-slate-800 {
+  color: hsl(var(--zinc-800)) !important;
+}
+.text-gray-900,
+.text-slate-900 {
+  color: hsl(var(--zinc-900)) !important;
+}
+.text-gray-950,
+.text-slate-950 {
+  color: hsl(var(--zinc-950)) !important;
+}
+
+/* Override Background Classes */
 .bg-gray-50,
 .bg-slate-50,
-.text-gray-50,
-.text-slate-50,
 .bg-nlc_primary-50 {
   background-color: hsl(var(--zinc-50)) !important;
 }
 .bg-gray-100,
 .bg-slate-100, 
-.text-gray-100,
-.text-slate-100,
 .bg-nlc_primary-100 {
   background-color: hsl(var(--zinc-100)) !important;
 }
 .bg-gray-200,
 .bg-slate-200,
-.text-gray-200,
-.text-slate-200,
 .bg-nlc_primary-200 {
   background-color: hsl(var(--zinc-200)) !important;
 }
 .bg-gray-300,
 .bg-slate-300,
-.text-gray-300,
-.text-slate-300,
 .bg-nlc_primary-300 {
   background-color: hsl(var(--zinc-300)) !important;
 }
 .bg-gray-400,
 .bg-slate-400,
-.text-gray-400,
-.text-slate-400,
 .bg-nlc_primary-400 {
   background-color: hsl(var(--zinc-400)) !important;
 }
 .bg-gray-500,
 .bg-slate-500,
-.text-gray-500,
-.text-slate-500,
 .bg-nlc_primary-500 {
   background-color: hsl(var(--zinc-500)) !important;
 }
 .bg-gray-600,
 .bg-slate-600,
-.text-gray-600,
-.text-slate-600,
 .bg-nlc_primary-600 {
   background-color: hsl(var(--zinc-600)) !important;
 }
 .bg-gray-700,
 .bg-slate-700,
-.text-gray-700,
-.text-slate-700,
 .bg-nlc_primary-700 {
   background-color: hsl(var(--zinc-700)) !important;
 }
 .bg-gray-800,
 .bg-slate-800,
-.text-gray-800,
-.text-slate-800,
 .bg-nlc_primary-800 {
   background-color: hsl(var(--zinc-800)) !important;
 }
 .bg-gray-900,
 .bg-slate-900,
-.text-gray-900,
-.text-slate-900,
 .bg-nlc_primary-900 {
   background-color: hsl(var(--zinc-900)) !important;
 }
 .bg-gray-950,
 .bg-slate-950,
-.text-gray-950,
-.text-slate-950,
 .bg-nlc_primary-950 {
   background-color: hsl(var(--zinc-950)) !important;
 }
@@ -520,83 +544,109 @@
   background-color: hsl(var(--background)) !important;
 }
 
-/* Ensure text colors are properly contrasted */
+/* Override Text Colors */
+.dark .text-gray-50,
+.dark .text-slate-50 {
+  color: hsl(var(--zinc-50)) !important;
+}
+.dark .text-gray-100,
+.dark .text-slate-100 {
+  color: hsl(var(--zinc-100)) !important;
+}
+.dark .text-gray-200,
+.dark .text-slate-200 {
+  color: hsl(var(--zinc-200)) !important;
+}
+.dark .text-gray-300,
+.dark .text-slate-300 {
+  color: hsl(var(--zinc-300)) !important;
+}
+.dark .text-gray-400,
+.dark .text-slate-400 {
+  color: hsl(var(--zinc-400)) !important;
+}
+.dark .text-gray-500,
+.dark .text-slate-500 {
+  color: hsl(var(--zinc-500)) !important;
+}
+.dark .text-gray-600,
+.dark .text-slate-600 {
+  color: hsl(var(--zinc-600)) !important;
+}
+.dark .text-gray-700,
+.dark .text-slate-700 {
+  color: hsl(var(--zinc-700)) !important;
+}
+.dark .text-gray-800,
+.dark .text-slate-800 {
+  color: hsl(var(--zinc-800)) !important;
+}
+.dark .text-gray-900,
+.dark .text-slate-900 {
+  color: hsl(var(--zinc-900)) !important;
+}
+.dark .text-gray-950,
+.dark .text-slate-950 {
+  color: hsl(var(--zinc-950)) !important;
+}
+
+/* Override Background Colors */
 .dark .bg-gray-50,
 .dark .bg-slate-50,
-.dark .text-gray-50,
-.dark .text-slate-50,
 .dark .bg-nlc_primary-50 {
-  color: hsl(var(--zinc-50)) !important;
+  background-color: hsl(var(--zinc-50)) !important;
 }
 .dark .bg-gray-100,
 .dark .bg-slate-100,
 .dark .text-gray-100,
 .dark .text-slate-100,
 .dark .bg-nlc_primary-100 {
-  color: hsl(var(--zinc-100)) !important;
+  background-color: hsl(var(--zinc-100)) !important;
 }
 .dark .bg-gray-200,
 .dark .bg-slate-200,
-.dark .text-gray-200,
-.dark .text-slate-200,
 .dark .bg-nlc_primary-200 {
-  color: hsl(var(--zinc-200)) !important;
+  background-color: hsl(var(--zinc-200)) !important;
 }
 .dark .bg-gray-300,
 .dark .bg-slate-300,
-.dark .text-gray-300,
-.dark .text-slate-300,
 .dark .bg-nlc_primary-300 {
-  color: hsl(var(--zinc-300)) !important;
+  background-color: hsl(var(--zinc-300)) !important;
 }
 .dark .bg-gray-400,
 .dark .bg-slate-400,
-.dark .text-gray-400,
-.dark .text-slate-400,
 .dark .bg-nlc_primary-400 {
-  color: hsl(var(--zinc-400)) !important;
+  background-color: hsl(var(--zinc-400)) !important;
 }
 .dark .bg-gray-500,
 .dark .bg-slate-500,
-.dark .text-gray-500,
-.dark .text-slate-500,
 .dark .bg-nlc_primary-500 {
-  color: hsl(var(--zinc-500)) !important;
+  background-color: hsl(var(--zinc-500)) !important;
 }
 .dark .bg-gray-600,
 .dark .bg-slate-600,
-.dark .text-gray-600,
-.dark .text-slate-600,
 .dark .bg-nlc_primary-600 {
-  color: hsl(var(--zinc-600)) !important;
+  background-color: hsl(var(--zinc-600)) !important;
 }
 .dark .bg-gray-700,
 .dark .bg-slate-700,
-.dark .text-gray-700,
-.dark .text-slate-700,
 .dark .bg-nlc_primary-700 {
-  color: hsl(var(--zinc-700)) !important;
+  background-color: hsl(var(--zinc-700)) !important;
 }
 .dark .bg-gray-800,
 .dark .bg-slate-800,
-.dark .text-gray-800,
-.dark .text-slate-800,
 .dark .bg-nlc_primary-800 {
-  color: hsl(var(--zinc-800)) !important;
+  background-color: hsl(var(--zinc-800)) !important;
 }
 .dark .bg-gray-900,
 .dark .bg-slate-900,
-.dark .text-gray-900,
-.dark .text-slate-900,
 .dark .bg-nlc_primary-900 {
-  color: hsl(var(--zinc-900)) !important;
+  background-color: hsl(var(--zinc-900)) !important;
 }
 .dark .bg-gray-950,
 .dark .bg-slate-950,
-.dark .text-gray-950,
-.dark .text-slate-950,
 .dark .bg-nlc_primary-950 {
-  color: hsl(var(--zinc-950)) !important;
+  background-color: hsl(var(--zinc-950)) !important;
 }
 
 /* Add specific attribute selectors for inline styles */
