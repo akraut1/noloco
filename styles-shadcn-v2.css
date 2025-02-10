@@ -452,27 +452,22 @@
 }
 
 /* Override Tailwind Slate Backgrounds */
-.dark .bg-slate-800 {
+.dark .bg-slate-800,
+.dark [class*="bg-slate-800"],
+.dark [class*="bg-slate-800"],
+.dark div[class*="bg-slate-800"] {
   background-color: hsl(var(--zinc-800)) !important;
 }
 
 .dark .bg-slate-900,
-.dark [class*="bg-slate-"],
-.dark div[class*="bg-slate-"] {
+.dark [class*="bg-slate-900"],
+.dark div[class*="bg-slate-900"] {
   background-color: hsl(var(--zinc-900)) !important;
 }
 
 /* Target the specific flex container causing the blue background */
 .dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800 {
-  background-color: hsl(var(--zinc-900)) !important;
-}
-
-/* Additional slate background overrides */
-.dark [class*="bg-slate-800"] {
   background-color: hsl(var(--zinc-800)) !important;
-}
-.dark [class*="bg-slate-900"] {
-  background-color: hsl(var(--zinc-900)) !important;
 }
 
 /* Header specific override */
@@ -483,10 +478,10 @@
   border-bottom: 1px solid hsl(var(--border));
 }
 
-/* Main content area override */
+/* Override Main Content Area */
 .dark main,
 .dark .main-content {
-  background-color: hsl(var(--zinc-800)) !important;
+  background-color: hsl(var(--background)) !important;
 }
 
 /* Additional specific overrides for any remaining blue backgrounds */
@@ -494,7 +489,7 @@
 .dark [class*="bg-indigo"],
 .dark [style*="background-color: rgb(30, 41, 59)"],
 .dark [style*="background-color: #1e293b"] {
-  background-color: hsl(var(--zinc-950)) !important;
+  background-color: hsl(var(--background)) !important;
 }
 
 /* Ensure text colors are properly contrasted */
@@ -564,6 +559,40 @@
 }
 .dark .bg-gray-950 {
   background-color: hsl(var(--zinc-950)) !important;
+}
+
+.dark .bg-nlc_primary-50 {
+  color: hsl(var(--zinc-50)) !important;
+}
+.dark .bg-nlc_primary-100 {
+  color: hsl(var(--zinc-100)) !important;
+}
+.dark .bg-nlc_primary-200 {
+  color: hsl(var(--zinc-200)) !important;
+}
+.dark .bg-nlc_primary-300 {
+  color: hsl(var(--zinc-300)) !important;
+}
+.dark .bg-nlc_primary-400 {
+  color: hsl(var(--zinc-400)) !important;
+}
+.dark .bg-nlc_primary-500 {
+  color: hsl(var(--zinc-500)) !important;
+}
+.dark .bg-nlc_primary-600 {
+  color: hsl(var(--zinc-600)) !important;
+}
+.dark .bg-nlc_primary-700 {
+  color: hsl(var(--zinc-700)) !important;
+}
+.dark .bg-nlc_primary-800 {
+  color: hsl(var(--zinc-800)) !important;
+}
+.dark .bg-nlc_primary-900 {
+  color: hsl(var(--zinc-900)) !important;
+}
+.dark .bg-nlc_primary-950 {
+  color: hsl(var(--zinc-950)) !important;
 }
 
 /* Add specific attribute selectors for inline styles */
