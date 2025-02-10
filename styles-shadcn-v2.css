@@ -71,25 +71,25 @@
   --sidebar-foreground: 240 5% 26%;
   --sidebar-accent: 240 5% 96%;
   
-  /* Royal Purple */
-  --badge-role-admin-from: 272 90% 60%;
-  --badge-role-admin-to: 272 85% 65%;
-  --badge-role-admin-border: 272 90% 40%;
+  --badge-role-admin-bg: 240 5% 65%;
+  --badge-role-admin-text: 240 5% 96%;
+  --badge-role-admin-border: 240 5% 65%;
+  --badge-role-account-executive-bg: 17 88% 40%;
+  --badge-role-account-executive-text: 34 100% 92%;
+  --badge-role-account-executive-border: 17 88% 40%;
+  --badge-role-loan-processor-bg: 22 90% 37%;
+  --badge-role-loan-processor-text: 48 96% 89%;
+  --badge-role-loan-processor-border: 22 90% 37%;
+  --badge-role-loan-opener-bg: 35 92% 33%;
+  --badge-role-loan-opener-text: 55 97% 88%;
+  --badge-role-loan-opener-border: 35 92% 33%;
 
-  /* Deep Teal */
-  --badge-role-account-executive-from: 180 75% 45%;
-  --badge-role-account-executive-to: 180 70% 50%;
-  --badge-role-account-executive-border: 180 75% 35%;
-
-  /* Rich Amber */
-  --badge-role-loan-processor-from: 43 96% 50%;
-  --badge-role-loan-processor-to: 43 90% 55%;
-  --badge-role-loan-processor-border: 43 96% 40%;
-
-  /* Vibrant Indigo */
-  --badge-role-loan-opener-from: 231 83% 60%;
-  --badge-role-loan-opener-to: 231 78% 65%;
-  --badge-role-loan-opener-border: 231 83% 50%;
+  --badge-disposition-active-bg: 141 84% 93%;
+  --badge-disposition-active-text: 142 72% 29%;
+  --badge-disposition-onhold-bg: 34 100% 92%;
+  --badge-disposition-onhold-text: 17 88% 40%;
+  --badge-disposition-dead-bg: 0 93% 94%;
+  --badge-disposition-dead-text: 0 74% 42%;  
 
     /* Shadcn Zinc */
   --zinc-50: 0 0% 98%; /* White */
@@ -135,21 +135,25 @@
   --sidebar-foreground: 240 5% 96%;
   --sidebar-accent: 240 4% 16%;
   
-  --badge-role-admin-from: 272 70% 45%;
-  --badge-role-admin-to: 272 65% 50%;
-  --badge-role-admin-border: 272 70% 35%;
+  --badge-role-admin-bg: 240 4% 16%;
+  --badge-role-admin-text: 240 4% 46%;
+  --badge-role-admin-border: 240 4% 16%;
+  --badge-role-account-executive-bg: 13 81% 15%;
+  --badge-role-account-executive-text: 27 96% 61%;
+  --badge-role-account-executive-border: 13 81% 15%;
+  --badge-role-loan-processor-bg: 21 92% 14%;
+  --badge-role-loan-processor-text: 43 96% 56%;
+  --badge-role-loan-processor-border: 21 92% 14%;
+  --badge-role-loan-opener-bg: 26 83% 14%;
+  --badge-role-loan-opener-to: 48 96% 53%;
+  --badge-role-loan-opener-border: 26 83% 14%;
 
-  --badge-role-account-executive-from: 180 65% 35%;
-  --badge-role-account-executive-to: 180 60% 40%;
-  --badge-role-account-executive-border: 180 65% 25%;
-
-  --badge-role-loan-processor-from: 43 86% 45%;
-  --badge-role-loan-processor-to: 43 80% 50%;
-  --badge-role-loan-processor-border: 43 86% 35%;
-
-  --badge-role-loan-opener-from: 231 73% 45%;
-  --badge-role-loan-opener-to: 231 68% 50%;
-  --badge-role-loan-opener-border: 231 73% 35%;
+  --badge-disposition-active-bg: 145 80% 10%;
+  --badge-disposition-active-text: 142 69% 58%;
+  --badge-disposition-onhold-bg: 13 81% 15%;
+  --badge-disposition-onhold-text: 27 96% 61%;
+  --badge-disposition-dead-bg: 0 75% 15%;
+  --badge-disposition-dead-text: 0 91% 71%;  
 
     /* Shadcn Zinc */
   --zinc-50: 0 0% 98%; /* White */
