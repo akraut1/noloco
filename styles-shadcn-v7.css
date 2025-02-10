@@ -262,8 +262,7 @@
 .dark .simplebar-wrapper,
 .dark .simplebar-mask,
 .dark .simplebar-content-wrapper,
-.dark .collection-view,
-.dark [data-testid="record-view-section"] {
+.dark .collection-view {
   background-color: hsl(var(--background)) !important;
 }
 
@@ -279,12 +278,18 @@
   background-color: hsl(var(--background)) !important;
 }
 
-
 /* Sidebar */
 .dark [data-testid="navigation-sidebar"],
 .dark [data-testid="navigation-sidebar"] > div,
 .dark [data-testid="sidebar-logo"] {
   background-color: hsl(var(--background)) !important;
+}
+
+/* Section Notice */
+.dark .section-notice > div > .w-full {
+  background-color: hsl(var(--background)),
+  color: hsl(var(--foreground)),
+  border: 1px solid hsl(var(--border)) !important;
 }
 
 /* Table Styles */
