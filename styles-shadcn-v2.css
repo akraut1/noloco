@@ -337,6 +337,10 @@
   color: hsl(var(--foreground));
 }
 
+.collection-view-table tbody td a {
+  color: hsl(var(--hyperlink), hsl(217 91% 60%)));
+}
+
 /* Badge Styles */
 [data-testid="field-cell"] span.rounded {
   padding: 0.5rem 1rem;
