@@ -23,8 +23,7 @@
 .dark [data-testid="canvas"],
 .dark [data-testid="project-canvas"],
 .dark [data-testid="inner-project-canvas"],
-.dark [data-testid="record-view-section"],
-.dark [data-testd="navigation-sidebar"] {
+.dark [data-testid="record-view-section"] {
   background-color: hsl(var(--background)) !important;
 }
 
@@ -290,6 +289,13 @@
 [data-testid="project-canvas"] {
   background-color: hsl(var(--background)) !important;
   color: hsl(var(--foreground));
+}
+
+/* Sidebar */
+.dark [data-testid="navigation-sidebar"],
+.dark [data-testid="navigation-sidebar"] > div,
+.dark [data-testid="sidebar-logo"] {
+  background-color: hsl(var(--background)) !important;
 }
 
 /* Table Styles */
