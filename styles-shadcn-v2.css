@@ -14,16 +14,17 @@
 .dark main,
 .dark .main-content,
 .dark .canvas,
-.dark .project-preview
+.dark .project-preview,
+.dark .simplebar-wrapper,
+.dark .simplebar-mask,
+.dark .simplebar-content-wrapper,
+.dark .collection-view,
 .dark [data-tour="canvas"],
 .dark [data-testid="canvas"],
 .dark [data-testid="project-canvas"],
 .dark [data-testid="inner-project-canvas"],
 .dark [data-testid="record-view-section"],
-.dark .simplebar-wrapper,
-.dark .simplebar-mask,
-.dark .simplebar-content-wrapper,
-.dark .collection-view {
+.dark [data-testd="navigation-sidebar"] {
   background-color: hsl(var(--background)) !important;
 }
 
