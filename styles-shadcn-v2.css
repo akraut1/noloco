@@ -131,7 +131,9 @@
   --chart-4: 280 65% 60%;
   --chart-5: 340 75% 55%;
   --sidebar-background: 240 5.9% 10%;
-
+  --sidebar-foreground: 240 5% 96%;
+  --sidebar-accent: 240 4% 16%;
+  
   /* Shadcn Zinc */
   --zinc-50: 0 0% 98%; /* White */
   --zinc-100: 240 4.8% 95.9%;
