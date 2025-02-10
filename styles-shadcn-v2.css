@@ -12,7 +12,7 @@
 }
 
 /* Target parent containers */
-.dark html body.noloco-theme,
+.dark body.noloco-theme,
 .dark #root,
 .dark #__next,
 .dark main,
