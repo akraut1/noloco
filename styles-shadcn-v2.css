@@ -297,9 +297,10 @@
 }
 
 /* Table Styles */
+.collection-view collection-view-table,
 .collection-view-table {
-  --table-bg: hsl(var(--background));
-  --table-border-color: hsl(var(--border));
+  background-color: hsl(var(--background));
+  border-color: hsl(var(--border));
 }
 
 .collection-view-table > div {
