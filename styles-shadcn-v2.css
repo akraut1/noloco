@@ -15,9 +15,8 @@
 .dark div.bg-slate-800,
 .dark div.bg-gray-900,
 .dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800,
-.dark
-  .canvas.project-preview.relative.z-10.mx-auto.flex.h-full.max-h-screen.w-full.flex-grow.flex-col.overflow-hidden.shadow.sm\:h-screen.bg-gray-900 {
-    background-color: hsl(var(--background)) !important;
+.dark .canvas.project-preview.relative.z-10.mx-auto.flex.h-full.max-h-screen.w-full.flex-grow.flex-col.overflow-hidden.shadow.sm\:h-screen.bg-gray-900 {
+  background-color: hsl(var(--background)) !important;
 }
 
 /* Target parent containers */
@@ -62,8 +61,14 @@
   --input: 240 5.9% 90%;
   --ring: 240 5.9% 10%;
   --radius: 0.5rem;
-
-  /* LIGHT -- SHADCN ZINC */
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --sidebar-background: 0 0% 98%;
+  
+  /* Shadcn Zinc */
   --zinc-50: 0 0% 98%; /* White */
   --zinc-100: 240 4.8% 95.9%;
   --zinc-200: 240 5.9% 90%;
@@ -75,7 +80,7 @@
   --zinc-800: 240 3.7% 15.9%;
   --zinc-900: 240 5.9% 10%;
   --zinc-950: 240 10% 3.9%; /* Black */
-
+  
   /* Royal Purple */
   --badge-role-admin-from: 272 90% 60%;
   --badge-role-admin-to: 272 85% 65%;
@@ -123,6 +128,7 @@
   --chart-3: 30 80% 55%;
   --chart-4: 280 65% 60%;
   --chart-5: 340 75% 55%;
+  --sidebar-background: 240 5.9% 10%;
   
   --badge-role-admin-from: 272 70% 45%;
   --badge-role-admin-to: 272 65% 50%;
@@ -140,7 +146,7 @@
   --badge-role-loan-opener-to: 231 68% 50%;
   --badge-role-loan-opener-border: 231 73% 35%;
 
-  /* DARK - SHADCN ZINC */
+  /* Shadcn Zinc */
   --zinc-50: 0 0% 98%; /* White */
   --zinc-100: 240 4.8% 95.9%;
   --zinc-200: 240 5.9% 90%;
@@ -154,7 +160,7 @@
   --zinc-950: 240 10% 3.9%; /* Black */
 }
 
-/* Override Tailwind gray classes */
+/* Override Tailwind Gray Classes */
 .bg-gray-50 {
   background-color: hsl(var(--zinc-50)) !important;
 }
@@ -223,9 +229,44 @@
   color: hsl(var(--zinc-950)) !important;
 }
 
+/* Override Noloco Classe */
+.nlc_primary-50 {
+  color: hsl(var(--zinc-50)) !important;
+}
+.nlc_primary-100 {
+  color: hsl(var(--zinc-100)) !important;
+}
+.nlc_primary-200 {
+  color: hsl(var(--zinc-200)) !important;
+}
+.nlc_primary-300 {
+  color: hsl(var(--zinc-300)) !important;
+}
+.nlc_primary-400 {
+  color: hsl(var(--zinc-400)) !important;
+}
+.nlc_primary-500 {
+  color: hsl(var(--zinc-500)) !important;
+}
+.nlc_primary-600 {
+  color: hsl(var(--zinc-600)) !important;
+}
+.nlc_primary-700 {
+  color: hsl(var(--zinc-700)) !important;
+}
+.nlc_primary-800 {
+  color: hsl(var(--zinc-800)) !important;
+}
+.nlc_primary-900 {
+  color: hsl(var(--zinc-900)) !important;
+}
+.nlc_primary-950 {
+  color: hsl(var(--zinc-950)) !important;
+}
+
 /* Project Canvas */
 [data-testid="project-canvas"] {
-  background-color: hsl(var(--gray-950)) !important;
+  background-color: hsl(var(--background)) !important;
   color: hsl(var(--foreground));
 }
 
@@ -323,13 +364,13 @@
 }
 
 [data-testid="action-button"].bg-gray-700 {
-  background-color: hsl(var(--gray-700));
+  background-color: hsl(var(--zinc-700));
   color: hsl(var(--secondary-foreground));
   border-color: hsl(var(--border));
 }
 
 [data-testid="action-button"].bg-gray-700:hover {
-  background-color: hsl(var(--gray-700));
+  background-color: hsl(var(--zinc-700));
   opacity: 0.9;
 }
 
@@ -340,12 +381,7 @@
 
 /* Navigation Sidebar */
 [data-testid="navigation-sidebar"] {
-  background-color: hsl(var(--gray-100)) !important;
-  border-right: 1px solid hsl(var(--border));
-}
-
-.dark [data-testid="navigation-sidebar"] {
-  background-color: hsl(var(--gray-800)) !important;
+  background-color: hsl(var(--sidebar-background)) !important;
   border-right: 1px solid hsl(var(--border));
 }
 
@@ -364,7 +400,7 @@
   color: hsl(var(--accent-foreground)) !important;
 }
 
-/* Dark Mode Toggle */
+/* Theme Toggle Switch */
 [data-testid="dark-mode-switch"] {
   background-color: hsl(var(--secondary));
   color: hsl(var(--secondary-foreground));
