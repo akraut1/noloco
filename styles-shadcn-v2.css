@@ -294,7 +294,7 @@
 .collection-view,
 .collection-view-table,
 .collection-view.collection-view-table,
-[data-testid="record-view-section"] > .w-full > .collection-view.collection-view-table  {
+#R_eFL0CUy > .w-full > .collection-view.collection-view-table  {
   background-color: hsl(var(--background)) !important;
   border-color: hsl(var(--border)) !important;
 }
