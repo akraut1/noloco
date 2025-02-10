@@ -12,10 +12,12 @@
 }
 
 /* Target parent containers */
-.dark body.noloco-theme,
+.dark body,
 .dark #root,
 .dark #__next,
+.dark .project-page,
 .dark main,
+.dark .main-content,
 .dark [data-testid="project-canvas"],
 .dark [data-testid="inner-project-canvas"],
 .dark .simplebar-wrapper,
