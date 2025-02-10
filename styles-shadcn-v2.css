@@ -3,6 +3,7 @@
 .dark .canvas,
 .dark [data-testid="canvas"],
 .dark [data-testid="inner-project-canvas"],
+.dark [data-testid="record-view-section"],
 .dark .project-preview,
 .dark [data-tour="canvas"],
 .dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800,
