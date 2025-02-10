@@ -4,8 +4,10 @@
 .dark .bg-slate-900,
 .dark [class*="bg-slate-"],
 .dark div[class*="bg-slate-"],
+.dark div[class*="bg-slate-800"],
 .dark .bg-gray-900,
 .dark [class*="bg-gray-900"],
+.dark div[class*="bg-gray-900"],
 .dark .canvas,
 .dark [data-testid="canvas"],
 .dark .project-preview,
@@ -14,10 +16,8 @@
 .dark div.bg-gray-900,
 .dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800,
 .dark
-  .canvas.project-preview.relative.z-10.mx-auto.flex.h-full.max-h-screen.w-full.flex-grow.flex-col.overflow-hidden.shadow.sm\:h-screen.bg-gray-900,
-.dark div[class*="bg-gray-900"],
-.dark div[class*="bg-slate-800"] {
-  background-color: hsl(var(--background)) !important;
+  .canvas.project-preview.relative.z-10.mx-auto.flex.h-full.max-h-screen.w-full.flex-grow.flex-col.overflow-hidden.shadow.sm\:h-screen.bg-gray-900 {
+    background-color: hsl(var(--background)) !important;
 }
 
 /* Target parent containers */
