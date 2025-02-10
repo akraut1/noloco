@@ -7,8 +7,7 @@
 .dark [data-tour="canvas"],
 .dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800,
 .dark .shadcn-body flex max-h-screen w-full bg-opacity-25 sm:fixed sm:left-0 sm:top-0 sm:max-h-full sm:flex-col min-h-screen bg-gray-800,
-.dark .canvas.project-preview.relative.z-10.mx-auto.flex.h-full.max-h-screen.w-full.flex-grow.flex-col.overflow-hidden.shadow.sm\:h-screen.bg-gray-900,
-.dark .min-h-screen sidebar text-xs text-white sm:relative sm:h-16 sm:min-h-0 sm:w-full sm:max-w-none sm:flex-col bg-nlc_primary-800 relative h-full max-h-screen flex-col items-start flex w-full max-w-64 {
+.dark .canvas.project-preview.relative.z-10.mx-auto.flex.h-full.max-h-screen.w-full.flex-grow.flex-col.overflow-hidden.shadow.sm\:h-screen.bg-gray-900 {  
   background-color: hsl(var(--background)) !important;
 }
 
@@ -308,6 +307,10 @@
 
 .dark collection-view-table tbody tr:hover {
   background-color: hsl(var(--accent)) !important;
+}
+
+.collection-view-table tbody td {
+  color: hsl(var(--foreground));
 }
 
 /* Badge Styles */
