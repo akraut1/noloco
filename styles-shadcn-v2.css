@@ -279,6 +279,12 @@
   border-color: hsl(var(--border)) !important;
 }
 
+.dark .collection-view collection-view-table,
+.dark .collection-view-table {
+  background-color: hsl(var(--background)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
 .collection-view-table > div {
   background-color: hsl(var(--background)) !important;
   border-color: hsl(var(--border)) !important;
@@ -299,7 +305,15 @@
   border-bottom: 1px solid hsl(var(--border));
 }
 
+.dark .collection-view-table tbody tr {
+  border-bottom: 1px solid hsl(var(--border));
+}
+
 .collection-view-table tbody tr:hover {
+  background-color: hsl(var(--accent)) !important;
+}
+
+.dark collection-view-table tbody tr:hover {
   background-color: hsl(var(--accent)) !important;
 }
 
