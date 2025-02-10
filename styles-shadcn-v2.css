@@ -15,6 +15,7 @@
 .dark div.bg-slate-800,
 .dark div.bg-gray-900,
 .dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800,
+.dark .shadcn-body flex max-h-screen w-full bg-opacity-25 sm:fixed sm:left-0 sm:top-0 sm:max-h-full sm:flex-col min-h-screen bg-gray-800,
 .dark .canvas.project-preview.relative.z-10.mx-auto.flex.h-full.max-h-screen.w-full.flex-grow.flex-col.overflow-hidden.shadow.sm\:h-screen.bg-gray-900 {
   background-color: hsl(var(--background)) !important;
 }
