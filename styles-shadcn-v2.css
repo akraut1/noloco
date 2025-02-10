@@ -22,7 +22,8 @@
 .dark [data-testid="inner-project-canvas"],
 .dark .simplebar-wrapper,
 .dark .simplebar-mask,
-.dark .simplebar-content-wrapper {
+.dark .simplebar-content-wrapper,
+.dark .collection-view {
   background-color: hsl(var(--background)) !important;
 }
 
