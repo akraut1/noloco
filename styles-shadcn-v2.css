@@ -289,13 +289,13 @@
 }
 
 /* Table Styles */
-.collection-view collection-view-table,
+.collection-view.collection-view-table,
 .collection-view-table {
   background-color: hsl(var(--background)) !important;
   border-color: hsl(var(--border)) !important;
 }
 
-.dark .collection-view collection-view-table,
+.dark .collection-view.collection-view-table,
 .dark .collection-view-table {
   background-color: hsl(var(--background)) !important;
   border-color: hsl(var(--border)) !important;
@@ -504,7 +504,7 @@
 .dark [data-testid="project-canvas"],
 .dark .bg-gray-900,
 .dark [class*="bg-gray-900"] {
-  background-color: hsl(var(--zinc-900)) !important;
+  background-color: hsl(var(--background)) !important;
 }
 
 /* Override Tailwind Slate Backgrounds */
@@ -512,18 +512,18 @@
 .dark [class*="bg-slate-800"],
 .dark [class*="bg-slate-800"],
 .dark div[class*="bg-slate-800"] {
-  background-color: hsl(var(--zinc-800)) !important;
+  background-color: hsl(var(--background)) !important;
 }
 
 .dark .bg-slate-900,
 .dark [class*="bg-slate-900"],
 .dark div[class*="bg-slate-900"] {
-  background-color: hsl(var(--zinc-900)) !important;
+  background-color: hsl(var(--background)) !important;
 }
 
 /* Target the specific flex container causing the blue background */
 .dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800 {
-  background-color: hsl(var(--zinc-800)) !important;
+  background-color: hsl(var(--background)) !important;
 }
 
 /* Header specific override */
