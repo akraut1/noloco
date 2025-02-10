@@ -83,15 +83,20 @@
   --badge-role-loan-opener-bg: 35 92% 33%;
   --badge-role-loan-opener-text: 55 97% 88%;
   --badge-role-loan-opener-border: 35 92% 33%;
-
-  --badge-disposition-active-bg: 141 84% 93%;
+  --badge-disposition-active-bg: 141 84% 93%; /* Green */
   --badge-disposition-active-text: 142 72% 29%;
-  --badge-disposition-onhold-bg: 34 100% 92%;
+  --badge-disposition-onhold-bg: 34 100% 92%; /* Orange */
   --badge-disposition-onhold-text: 17 88% 40%;
-  --badge-disposition-dead-bg: 0 93% 94%;
-  --badge-disposition-dead-text: 0 74% 42%;  
+  --badge-disposition-dead-bg: 0 93% 94%; /* Red */
+  --badge-disposition-dead-text: 0 74% 42%;
+  --badge-dealstage1-lead-bg: 55 97% 88%; /* Yellow */
+  --badge-dealstage1-lead-text: 35 92% 33%;
+  --badge-dealstage1-scenario-bg: 185 96% 90%; /* Cyan */
+  --badge-dealstage1-scenario-text: 193 82% 31%;
+  --badge-dealstage1-deal-bg: 141 84% 93%; /* Green */
+  --badge-dealstage1-deal-text: 142 72% 29%;
 
-    /* Shadcn Zinc */
+  /* Shadcn Zinc */
   --zinc-50: 0 0% 98%; /* White */
   --zinc-100: 240 4.8% 95.9%;
   --zinc-200: 240 5.9% 90%;
@@ -103,6 +108,10 @@
   --zinc-800: 240 3.7% 15.9%;
   --zinc-900: 240 5.9% 10%;
   --zinc-950: 240 10% 3.9%; /* Black */
+  
+  /* Hover Overlay */
+  --background-hover-overlay: 0 0% 0% 0.03;
+  --background-hover-overlay-inverse: 0 0% 100% 0.05;
 }
 
 /* DARK MODE VARIABLRES */
@@ -147,13 +156,18 @@
   --badge-role-loan-opener-bg: 26 83% 14%;
   --badge-role-loan-opener-to: 48 96% 53%;
   --badge-role-loan-opener-border: 26 83% 14%;
-
-  --badge-disposition-active-bg: 145 80% 10%;
+  --badge-disposition-active-bg: 145 80% 10%; /* Green */
   --badge-disposition-active-text: 142 69% 58%;
-  --badge-disposition-onhold-bg: 13 81% 15%;
+  --badge-disposition-onhold-bg: 13 81% 15%; /* Orange */
   --badge-disposition-onhold-text: 27 96% 61%;
-  --badge-disposition-dead-bg: 0 75% 15%;
-  --badge-disposition-dead-text: 0 91% 71%;  
+  --badge-disposition-dead-bg: 0 75% 15%; /* Red */
+  --badge-disposition-dead-text: 0 91% 71%;
+  --badge-dealstage1-lead-bg: 26 83% 14%; /* Yellow */
+  --badge-dealstage1-lead-text: 48 96% 53%;
+  --badge-dealstage1-scenario-bg: 197 79% 15%; /* Cyan */
+  --badge-dealstage1-scenario-text: 188 86% 53%;
+  --badge-dealstage1-deal-bg: 145 80% 10%; /* Green */
+  --badge-dealstage1-deal-text: 142 69% 58%;
 
     /* Shadcn Zinc */
   --zinc-50: 0 0% 98%; /* White */
@@ -167,6 +181,10 @@
   --zinc-800: 240 3.7% 15.9%;
   --zinc-900: 240 5.9% 10%;
   --zinc-950: 240 10% 3.9%; /* Black */
+  
+  /* Hover Overlay */
+  --background-hover-overlay: 0 0% 100% 0.05;
+  --background-hover-overlay-inverse: 0 0% 0% 0.03;
 }
 
 /* Override Tailwind Gray & Slate Classes */
@@ -335,8 +353,8 @@
 /* Role Badges */
 /* Base badge styles */
 [data-testid="field-cell"] span.rounded {
-  padding: 0.5rem 1.0rem;
-  border-radius: 0.75rem;
+  padding: 2px 10px;
+  border-radius: 6px;
   font-weight: 500;
   font-size: 0.75rem;
   letter-spacing: 0.025em;
@@ -351,31 +369,72 @@
 [data-testid="field-cell"] span.rounded:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: var(--border-radius-rounded-md, 6px);
 }
 
 /* Role-specific styles */
 [data-testid="field-cell"] span.rounded:has(div:contains("Admin")) {
-  background: linear-gradient(135deg, hsla(var(--badge-role-admin-from), 0.9), hsla(var(--badge-role-admin-to), 0.8));
+  background-color: hsla(var(--badge-role-admin-bg), 1);
+  color: hsl(var(--badge-role-admin-text));
   border-color: hsla(var(--badge-role-admin-border), 0.3);
-  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Admin")):hover {
+  background-color: 
+    linear-gradient(
+      0deg, 
+      hsla(var(--background-hover-overlay)) 0%, 
+      hsla(var(--background-hover-overlay)) 100%
+    ), 
+    hsla(var(--badge-role-admin-bg), 1);
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Account Executive")) {
-  background: linear-gradient(135deg, hsla(var(--badge-role-account-executive-from), 0.9), hsla(var(--badge-role-account-executive-to), 0.8));
+  background-color: hsla(var(--badge-role-account-executive-bg), 1);
+  color: hsl(var(--badge-role-account-executive-text));
   border-color: hsla(var(--badge-role-account-executive-border), 0.3);
-  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Account Executive")):hover {
+  background-color: 
+    linear-gradient(
+      0deg, 
+      hsla(var(--background-hover-overlay)) 0%, 
+      hsla(var(--background-hover-overlay)) 100%
+    ), 
+    hsla(var(--badge-role-account-executive-bg), 1);
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Loan Processor")) {
-  background: linear-gradient(135deg, hsla(var(--badge-role-loan-processor-from), 0.9), hsla(var(--badge-role-loan-processor-to), 0.8));
+  background-color: hsla(var(--badge-role-loan-processor-bg), 1);
+  color: hsl(var(--badge-role-loan-processor-text));
   border-color: hsla(var(--badge-role-loan-processor-border), 0.3);
-  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Loan Processor")):hover {
+  background-color: 
+    linear-gradient(
+      0deg, 
+      hsla(var(--background-hover-overlay)) 0%, 
+      hsla(var(--background-hover-overlay)) 100%
+    ), 
+    hsla(var(--badge-role-loan-processor-bg), 1);
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Loan Opener")) {
-  background: linear-gradient(135deg, hsla(var(--badge-role-loan-opener-from), 0.9), hsla(var(--badge-role-loan-opener-to), 0.8));
+  background-color: hsla(var(--badge-role-loan-opener-bg), 1);
+  color: hsl(var(--badge-role-loan-opener-text));
   border-color: hsla(var(--badge-role-loan-opener-border), 0.3);
-  color: hsl(var(--background));
+}
+
+[data-testid="field-cell"] span.rounded:has(div:contains("Loan Opener")):hover {
+  background-color: 
+    linear-gradient(
+      0deg, 
+      hsla(var(--background-hover-overlay)) 0%, 
+      hsla(var(--background-hover-overlay)) 100%
+    ), 
+    hsla(var(--badge-role-loan-opener-bg), 1);
 }
 
 /* Group header count badges */
