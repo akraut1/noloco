@@ -71,19 +71,6 @@
   --sidebar-foreground: 240 5% 26%;
   --sidebar-accent: 240 5% 96%;
   
-  /* Shadcn Zinc */
-  --zinc-50: 0 0% 98%; /* White */
-  --zinc-100: 240 4.8% 95.9%;
-  --zinc-200: 240 5.9% 90%;
-  --zinc-300: 240 4.9% 83.9%;
-  --zinc-400: 240 5.0% 64.9%;
-  --zinc-500: 240 3.8% 46.1%;
-  --zinc-600: 240 5.2% 33.9%;
-  --zinc-700: 240 5.3% 26.1%;
-  --zinc-800: 240 3.7% 15.9%;
-  --zinc-900: 240 5.9% 10%;
-  --zinc-950: 240 10% 3.9%; /* Black */
-  
   /* Royal Purple */
   --badge-role-admin-from: 272 90% 60%;
   --badge-role-admin-to: 272 85% 65%;
@@ -103,6 +90,19 @@
   --badge-role-loan-opener-from: 231 83% 60%;
   --badge-role-loan-opener-to: 231 78% 65%;
   --badge-role-loan-opener-border: 231 83% 50%;
+
+    /* Shadcn Zinc */
+  --zinc-50: 0 0% 98%; /* White */
+  --zinc-100: 240 4.8% 95.9%;
+  --zinc-200: 240 5.9% 90%;
+  --zinc-300: 240 4.9% 83.9%;
+  --zinc-400: 240 5.0% 64.9%;
+  --zinc-500: 240 3.8% 46.1%;
+  --zinc-600: 240 5.2% 33.9%;
+  --zinc-700: 240 5.3% 26.1%;
+  --zinc-800: 240 3.7% 15.9%;
+  --zinc-900: 240 5.9% 10%;
+  --zinc-950: 240 10% 3.9%; /* Black */
 }
 
 /* DARK MODE VARIABLRES */
@@ -135,19 +135,6 @@
   --sidebar-foreground: 240 5% 96%;
   --sidebar-accent: 240 4% 16%;
   
-  /* Shadcn Zinc */
-  --zinc-50: 0 0% 98%; /* White */
-  --zinc-100: 240 4.8% 95.9%;
-  --zinc-200: 240 5.9% 90%;
-  --zinc-300: 240 4.9% 83.9%;
-  --zinc-400: 240 5.0% 64.9%;
-  --zinc-500: 240 3.8% 46.1%;
-  --zinc-600: 240 5.2% 33.9%;
-  --zinc-700: 240 5.3% 26.1%;
-  --zinc-800: 240 3.7% 15.9%;
-  --zinc-900: 240 5.9% 10%;
-  --zinc-950: 240 10% 3.9%; /* Black */
-  
   --badge-role-admin-from: 272 70% 45%;
   --badge-role-admin-to: 272 65% 50%;
   --badge-role-admin-border: 272 70% 35%;
@@ -163,6 +150,19 @@
   --badge-role-loan-opener-from: 231 73% 45%;
   --badge-role-loan-opener-to: 231 68% 50%;
   --badge-role-loan-opener-border: 231 73% 35%;
+
+    /* Shadcn Zinc */
+  --zinc-50: 0 0% 98%; /* White */
+  --zinc-100: 240 4.8% 95.9%;
+  --zinc-200: 240 5.9% 90%;
+  --zinc-300: 240 4.9% 83.9%;
+  --zinc-400: 240 5.0% 64.9%;
+  --zinc-500: 240 3.8% 46.1%;
+  --zinc-600: 240 5.2% 33.9%;
+  --zinc-700: 240 5.3% 26.1%;
+  --zinc-800: 240 3.7% 15.9%;
+  --zinc-900: 240 5.9% 10%;
+  --zinc-950: 240 10% 3.9%; /* Black */
 }
 
 /* Override Tailwind Gray & Slate Classes */
