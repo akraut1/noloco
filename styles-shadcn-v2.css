@@ -431,7 +431,8 @@
 }
 
 /* Navigation Sidebar */
-[data-testid="navigation-sidebar"] {
+[data-testid="navigation-sidebar"],
+[data-testid="navigation-sidebar"] > div {
   background-color: hsl(var(--sidebar-background)) !important;
   border-right: 1px solid hsl(var(--border));
 }
