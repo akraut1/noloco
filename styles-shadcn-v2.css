@@ -290,17 +290,19 @@
 
 /* Table Styles */
 .collection-view.collection-view-table,
-.collection-view-table,
-.collection-view.collection-view-table .mb-2.pb-2.mb-4.px-4.sm\:p-0.flex.flex-col {
+.collection-view-table {
   background-color: hsl(var(--background)) !important;
   border-color: hsl(var(--border)) !important;
 }
 
 .dark .collection-view.collection-view-table,
-.dark .collection-view-table,
-.collection-view.collection-view-table .mb-2.pb-2.mb-4.px-4.sm\:p-0.flex.flex-col {
+.dark .collection-view-table {
   background-color: hsl(var(--background)) !important;
   border-color: hsl(var(--border)) !important;
+}
+
+.collection-view.collection-view-table .mb-2.pb-2.mb-4.px-4.sm\:p-0.flex.flex-col {
+  padding: 24px;
 }
 
 .collection-view-table > div {
