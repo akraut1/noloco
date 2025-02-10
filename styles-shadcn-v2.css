@@ -291,14 +291,10 @@
 }
 
 /* Table Styles */
+.collection-view,
+.collection-view-table,
 .collection-view.collection-view-table,
-.collection-view-table {
-  background-color: hsl(var(--background)) !important;
-  border-color: hsl(var(--border)) !important;
-}
-
-.dark .collection-view.collection-view-table,
-.dark .collection-view-table {
+[data-testid="record-view-section" > .w-full > .collection-view.collection-view-table  {
   background-color: hsl(var(--background)) !important;
   border-color: hsl(var(--border)) !important;
 }
