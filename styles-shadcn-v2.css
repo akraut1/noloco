@@ -323,26 +323,26 @@
 
 /* Role-specific styles */
 [data-testid="field-cell"] span.rounded:has(div:contains("Admin")) {
-  background: linear-gradient(135deg, hsla(var(--admin-from), 0.9), hsla(var(--admin-to), 0.8));
-  border-color: hsla(var(--admin-border), 0.3);
+  background: linear-gradient(135deg, hsla(var(--badge-role-admin-from), 0.9), hsla(var(--badge-role-admin-to), 0.8));
+  border-color: hsla(var(--badge-role-admin-border), 0.3);
   color: hsl(var(--background));
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Account Executive")) {
-  background: linear-gradient(135deg, hsla(var(--account-exec-from), 0.9), hsla(var(--account-exec-to), 0.8));
-  border-color: hsla(var(--account-exec-border), 0.3);
+  background: linear-gradient(135deg, hsla(var(--badge-role-account-executive-from), 0.9), hsla(var(--badge-role-account-executive-to), 0.8));
+  border-color: hsla(var(--badge-role-account-executive-border), 0.3);
   color: hsl(var(--background));
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Loan Processor")) {
-  background: linear-gradient(135deg, hsla(var(--loan-processor-from), 0.9), hsla(var(--loan-processor-to), 0.8));
-  border-color: hsla(var(--loan-processor-border), 0.3);
+  background: linear-gradient(135deg, hsla(var(--badge-role-loan-processor-from), 0.9), hsla(var(--badge-role-loan-processor-to), 0.8));
+  border-color: hsla(var(--badge-role-loan-processor-border), 0.3);
   color: hsl(var(--background));
 }
 
 [data-testid="field-cell"] span.rounded:has(div:contains("Loan Opener")) {
-  background: linear-gradient(135deg, hsla(var(--loan-opener-from), 0.9), hsla(var(--loan-opener-to), 0.8));
-  border-color: hsla(var(--loan-opener-border), 0.3);
+  background: linear-gradient(135deg, hsla(var(--badge-role-loan-opener-from), 0.9), hsla(var(--badge-role-loan-opener-to), 0.8));
+  border-color: hsla(var(--badge-role-loan-opener-border), 0.3);
   color: hsl(var(--background));
 }
 
@@ -421,40 +421,45 @@
 .dark [data-testid="project-canvas"],
 .dark .bg-gray-900,
 .dark [class*="bg-gray-900"] {
-  background-color: hsl(var(--gray-900)) !important;
+  background-color: hsl(var(--zinc-900)) !important;
 }
 
-/* Override Tailwind slate backgrounds */
-.dark .bg-slate-800,
+/* Override Tailwind Slate Backgrounds */
+.dark .bg-slate-800 {
+  background-color: hsl(var(--zinc-800)) !important;
+}
+
 .dark .bg-slate-900,
 .dark [class*="bg-slate-"],
 .dark div[class*="bg-slate-"] {
-  background-color: hsl(var(--gray-900)) !important;
+  background-color: hsl(var(--zinc-900)) !important;
 }
 
 /* Target the specific flex container causing the blue background */
 .dark .flex.h-screen.w-full.flex-col.overflow-hidden.bg-slate-800 {
-  background-color: hsl(var(--gray-900)) !important;
+  background-color: hsl(var(--zinc-900)) !important;
 }
 
 /* Additional slate background overrides */
-.dark [class*="bg-slate-800"],
+.dark [class*="bg-slate-800"] {
+  background-color: hsl(var(--zinc-800)) !important;
+}
 .dark [class*="bg-slate-900"] {
-  background-color: hsl(var(--gray-900)) !important;
+  background-color: hsl(var(--zinc-900)) !important;
 }
 
 /* Header specific override */
 .dark [data-testid="header"],
 .dark header,
 .dark .header {
-  background-color: hsl(var(--gray-950)) !important;
+  background-color: hsl(var(--zinc-950)) !important;
   border-bottom: 1px solid hsl(var(--border));
 }
 
 /* Main content area override */
 .dark main,
 .dark .main-content {
-  background-color: hsl(var(--gray-800)) !important;
+  background-color: hsl(var(--zinc-800)) !important;
 }
 
 /* Additional specific overrides for any remaining blue backgrounds */
@@ -462,61 +467,81 @@
 .dark [class*="bg-indigo"],
 .dark [style*="background-color: rgb(30, 41, 59)"],
 .dark [style*="background-color: #1e293b"] {
-  background-color: hsl(var(--gray-950)) !important;
+  background-color: hsl(var(--zinc-950)) !important;
 }
 
 /* Ensure text colors are properly contrasted */
+.dark .text-gray-50 {
+  color: hsl(var(--zinc-50)) !important;
+}
 .dark .text-gray-100 {
-  color: hsl(var(--gray-100)) !important;
+  color: hsl(var(--zinc-100)) !important;
 }
 .dark .text-gray-200 {
-  color: hsl(var(--gray-200)) !important;
+  color: hsl(var(--zinc-200)) !important;
 }
 .dark .text-gray-300 {
-  color: hsl(var(--gray-300)) !important;
+  color: hsl(var(--zinc-300)) !important;
 }
 .dark .text-gray-400 {
-  color: hsl(var(--gray-400)) !important;
+  color: hsl(var(--zinc-400)) !important;
+}
+.dark .text-gray-500 {
+  color: hsl(var(--zinc-500)) !important;
+}
+.dark .text-gray-600 {
+  color: hsl(var(--zinc-600)) !important;
+}
+.dark .text-gray-700 {
+  color: hsl(var(--zinc-700)) !important;
+}
+.dark .text-gray-800 {
+  color: hsl(var(--zinc-800)) !important;
+}
+.dark .text-gray-900 {
+  color: hsl(var(--zinc-900)) !important;
+}
+.dark .text-gray-950 {
+  color: hsl(var(--zinc-950)) !important;
 }
 
-/* Add !important to all existing gray background classes to ensure they override */
 .dark .bg-gray-50 {
-  background-color: hsl(var(--gray-50)) !important;
+  background-color: hsl(var(--zinc-50)) !important;
 }
 .dark .bg-gray-100 {
-  background-color: hsl(var(--gray-100)) !important;
+  background-color: hsl(var(--zinc-100)) !important;
 }
 .dark .bg-gray-200 {
-  background-color: hsl(var(--gray-200)) !important;
+  background-color: hsl(var(--zinc-200)) !important;
 }
 .dark .bg-gray-300 {
-  background-color: hsl(var(--gray-300)) !important;
+  background-color: hsl(var(--zinc-300)) !important;
 }
 .dark .bg-gray-400 {
-  background-color: hsl(var(--gray-400)) !important;
+  background-color: hsl(var(--zinc-400)) !important;
 }
 .dark .bg-gray-500 {
-  background-color: hsl(var(--gray-500)) !important;
+  background-color: hsl(var(--zinc-500)) !important;
 }
 .dark .bg-gray-600 {
-  background-color: hsl(var(--gray-600)) !important;
+  background-color: hsl(var(--zinc-600)) !important;
 }
 .dark .bg-gray-700 {
-  background-color: hsl(var(--gray-700)) !important;
+  background-color: hsl(var(--zinc-700)) !important;
 }
 .dark .bg-gray-800 {
-  background-color: hsl(var(--gray-800)) !important;
+  background-color: hsl(var(--zinc-800)) !important;
 }
 .dark .bg-gray-900 {
-  background-color: hsl(var(--gray-900)) !important;
+  background-color: hsl(var(--zinc-900)) !important;
 }
 .dark .bg-gray-950 {
-  background-color: hsl(var(--gray-950)) !important;
+  background-color: hsl(var(--zinc-950)) !important;
 }
 
 /* Add specific attribute selectors for inline styles */
 .dark [style*="background-color"] {
-  background-color: hsl(var(--gray-950)) !important;
+  background-color: hsl(var(--zinc-950)) !important;
 }
 
 /* Responsive Design */
