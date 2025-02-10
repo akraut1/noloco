@@ -129,6 +129,19 @@
   --chart-4: 280 65% 60%;
   --chart-5: 340 75% 55%;
   --sidebar-background: 240 5.9% 10%;
+
+  /* Shadcn Zinc */
+  --zinc-50: 0 0% 98%; /* White */
+  --zinc-100: 240 4.8% 95.9%;
+  --zinc-200: 240 5.9% 90%;
+  --zinc-300: 240 4.9% 83.9%;
+  --zinc-400: 240 5.0% 64.9%;
+  --zinc-500: 240 3.8% 46.1%;
+  --zinc-600: 240 5.2% 33.9%;
+  --zinc-700: 240 5.3% 26.1%;
+  --zinc-800: 240 3.7% 15.9%;
+  --zinc-900: 240 5.9% 10%;
+  --zinc-950: 240 10% 3.9%; /* Black */
   
   --badge-role-admin-from: 272 70% 45%;
   --badge-role-admin-to: 272 65% 50%;
@@ -145,122 +158,131 @@
   --badge-role-loan-opener-from: 231 73% 45%;
   --badge-role-loan-opener-to: 231 68% 50%;
   --badge-role-loan-opener-border: 231 73% 35%;
-
-  /* Shadcn Zinc */
-  --zinc-50: 0 0% 98%; /* White */
-  --zinc-100: 240 4.8% 95.9%;
-  --zinc-200: 240 5.9% 90%;
-  --zinc-300: 240 4.9% 83.9%;
-  --zinc-400: 240 5.0% 64.9%;
-  --zinc-500: 240 3.8% 46.1%;
-  --zinc-600: 240 5.2% 33.9%;
-  --zinc-700: 240 5.3% 26.1%;
-  --zinc-800: 240 3.7% 15.9%;
-  --zinc-900: 240 5.9% 10%;
-  --zinc-950: 240 10% 3.9%; /* Black */
 }
 
-/* Override Tailwind Gray Classes */
-.bg-gray-50 {
+/* Override Tailwind Gray & Slate Classes */
+.bg-gray-50,
+.bg-slate-50 {
   background-color: hsl(var(--zinc-50)) !important;
 }
-.bg-gray-100 {
+.bg-gray-100,
+.bg-slate-100 {
   background-color: hsl(var(--zinc-100)) !important;
 }
-.bg-gray-200 {
+.bg-gray-200
+.bg-slate-200 {
   background-color: hsl(var(--zinc-200)) !important;
 }
-.bg-gray-300 {
+.bg-gray-300,
+.bg-slate-300 {
   background-color: hsl(var(--zinc-300)) !important;
 }
-.bg-gray-400 {
+.bg-gray-400,
+.bg-slate-400 {
   background-color: hsl(var(--zinc-400)) !important;
 }
-.bg-gray-500 {
+.bg-gray-500,
+.bg-slate-500 {
   background-color: hsl(var(--zinc-500)) !important;
 }
-.bg-gray-600 {
+.bg-gray-600,
+.bg-slate-600 {
   background-color: hsl(var(--zinc-600)) !important;
 }
-.bg-gray-700 {
+.bg-gray-700,
+.bg-slate-700 {
   background-color: hsl(var(--zinc-700)) !important;
 }
-.bg-gray-800 {
+.bg-gray-800,
+.bg-slate-800 {
   background-color: hsl(var(--zinc-800)) !important;
 }
-.bg-gray-900 {
+.bg-gray-900,
+.bg-slate-900 {
   background-color: hsl(var(--zinc-900)) !important;
 }
-.bg-gray-950 {
+.bg-gray-950,
+.bg-slate-950 {
   background-color: hsl(var(--zinc-950)) !important;
 }
 
-.text-gray-50 {
+.text-gray-50,
+.text-slate-50 {
   color: hsl(var(--zinc-50)) !important;
 }
-.text-gray-100 {
+.text-gray-100,
+.text-slate-100 {
   color: hsl(var(--zinc-100)) !important;
 }
-.text-gray-200 {
+.text-gray-200,
+.text-slate-200 {
   color: hsl(var(--zinc-200)) !important;
 }
-.text-gray-300 {
+.text-gray-300,
+.text-slate-300 {
   color: hsl(var(--zinc-300)) !important;
 }
-.text-gray-400 {
+.text-gray-400,
+.text-slate-400 {
   color: hsl(var(--zinc-400)) !important;
 }
-.text-gray-500 {
+.text-gray-500,
+.text-slate-500 {
   color: hsl(var(--zinc-500)) !important;
 }
-.text-gray-600 {
+.text-gray-600,
+.text-slate-600 {
   color: hsl(var(--zinc-600)) !important;
 }
-.text-gray-700 {
+.text-gray-700,
+.text-slate-700 {
   color: hsl(var(--zinc-700)) !important;
 }
-.text-gray-800 {
+.text-gray-800,
+.text-slate-800 {
   color: hsl(var(--zinc-800)) !important;
 }
-.text-gray-900 {
+.text-gray-900,
+.text-slate-900 {
   color: hsl(var(--zinc-900)) !important;
 }
-.text-gray-950 {
+.text-gray-950,
+.text-slate-950 {
   color: hsl(var(--zinc-950)) !important;
 }
 
 /* Override Noloco Classe */
-.nlc_primary-50 {
+.bg-nlc_primary-50 {
   color: hsl(var(--zinc-50)) !important;
 }
-.nlc_primary-100 {
+.bg-nlc_primary-100 {
   color: hsl(var(--zinc-100)) !important;
 }
-.nlc_primary-200 {
+.bg-nlc_primary-200 {
   color: hsl(var(--zinc-200)) !important;
 }
-.nlc_primary-300 {
+.bg-nlc_primary-300 {
   color: hsl(var(--zinc-300)) !important;
 }
-.nlc_primary-400 {
+.bg-nlc_primary-400 {
   color: hsl(var(--zinc-400)) !important;
 }
-.nlc_primary-500 {
+.bg-nlc_primary-500 {
   color: hsl(var(--zinc-500)) !important;
 }
-.nlc_primary-600 {
+.bg-nlc_primary-600 {
   color: hsl(var(--zinc-600)) !important;
 }
-.nlc_primary-700 {
+.bg-nlc_primary-700 {
   color: hsl(var(--zinc-700)) !important;
 }
-.nlc_primary-800 {
+.bg-nlc_primary-800 {
   color: hsl(var(--zinc-800)) !important;
 }
-.nlc_primary-900 {
+.bg-nlc_primary-900 {
   color: hsl(var(--zinc-900)) !important;
 }
-.nlc_primary-950 {
+.bg-nlc_primary-950 {
   color: hsl(var(--zinc-950)) !important;
 }
 
