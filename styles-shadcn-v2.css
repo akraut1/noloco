@@ -303,7 +303,7 @@
   border-color: hsl(var(--border)) !important;
 }
 
-.collection-view.collection-view-table > .mb-2.pb-2.mb-4.px-4.sm:p-0.flex.flex-col,
+.collection-view.collection-view-table > .mb-2.pb-2.mb-4.px-4.sm\:p-0.flex.flex-col,
 .collection-view.collection-view-table > .my-3.flex.flex-wrap.items-end.justify-end.gap-y-2,
 .collection-view.collection-view-table > .focus:outline-none.focus:shadow-none.bg-gray-800.w-full.shadow-lg.mb-2.overflow-y-hidden.overflow-x-auto.border.border-gray-700.rounded-lg {
     padding: 24px;
