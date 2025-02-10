@@ -350,7 +350,7 @@
 
 .collection-view-table tbody td a,
 [data-testid="field-cell"] a {
-  color: hsl(var(--hyperlink), hsl(217 91% 60%)));
+  color: hsl(217 91% 60%) !important;
 }
 
 /* Badge Styles */
