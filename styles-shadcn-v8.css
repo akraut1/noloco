@@ -129,7 +129,7 @@
   --badge-role-loan-processor-text: 43 96% 56%;
   --badge-role-loan-processor-border: 21 92% 14%;
   --badge-role-loan-opener-bg: 26 83% 14%;
-  --badge-role-loan-opener-to: 48 96% 53%;
+  --badge-role-loan-opener-text: 48 96% 53%;
   --badge-role-loan-opener-border: 26 83% 14%;
   --badge-disposition-active-bg: 145 80% 10%; /* Green */
   --badge-disposition-active-text: 142 69% 58%;
@@ -355,14 +355,14 @@
 }
 
 .collection-view-table tbody tr {
-  background-color: hsl(var(--background);
-  color: hsl(var(--foreground);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
   border-bottom: 1px solid hsl(var(--border));
 }
 
 .collection-view-table tbody tr:hover {
   background-color: hsl(var(--accent)) !important;
-  color: hsl(var(--accent-foreground) !important;
+  color: hsl(var(--accent-foreground)) !important;
 }
 
 .collection-view-table tbody td a,
@@ -532,21 +532,10 @@
 /* Force override any existing background colors */
 .dark [data-testid="project-canvas"],
 .dark .bg-gray-900,
-.dark [class*="bg-gray-900"] {
-  background-color: hsl(var(--background)) !important;
-}
-
-/* Override Tailwind Slate Backgrounds */
 .dark .bg-slate-800,
-.dark [class*="bg-slate-800"],
+.dark [class*="bg-gray-900"],
 .dark [class*="bg-slate-800"],
 .dark div[class*="bg-slate-800"] {
-  background-color: hsl(var(--background)) !important;
-}
-
-.dark .bg-slate-900,
-.dark [class*="bg-slate-900"],
-.dark div[class*="bg-slate-900"] {
   background-color: hsl(var(--background)) !important;
 }
 
@@ -681,7 +670,7 @@
 }
 
 /* Add specific attribute selectors for inline styles */
-.dark [style*="background-color"] {
+.dark [style*="background-color"]:not([data-exempt]) {
   background-color: hsl(var(--background)) !important;
 }
 
