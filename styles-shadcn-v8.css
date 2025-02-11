@@ -278,7 +278,7 @@
 .dark [data-testid="navigation-sidebar"],
 .dark [data-testid="navigation-sidebar"] > div,
 .dark [data-testid="sidebar-logo"] {
-  background-color: hsl(var(--background)) !important;
+  background-color: hsl(var(--sidebar-background)) !important;
 }
 
 /* Section Notice */
