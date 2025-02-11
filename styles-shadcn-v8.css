@@ -1,34 +1,6 @@
 /* <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/akraut1/noloco@refs/heads/main/styles-shadcn-v8.css"> */
 <style>
 
-/* Target parent containers */
-.dark body,
-.dark #root,
-.dark #__next,
-.dark .project-page,
-.dark main,
-.dark .main-content,
-.dark .canvas,
-.dark .project-preview,
-.dark .simplebar-wrapper,
-.dark .simplebar-mask,
-.dark .simplebar-content-wrapper,
-.dark .collection-view {
-  background-color: hsl(var(--background)) !important;
-}
-
-/* Target specific canvas elements */
-.dark [data-tour="canvas"],
-.dark [data-testid="canvas"],
-.dark [data-testid="project-canvas"],
-.dark [data-testid="inner-project-canvas"],
-.dark .canvas.h-100.project-preview,
-.dark .canvas.project-preview.relative,
-.dark [data-testid="canvas"].bg-gray-900,
-.dark [data-testid="canvas"].bg-slate-800 {
-  background-color: hsl(var(--background)) !important;
-}
-
 /* LIGHT MODE VARIABLES */
 :root {
   --background: 0 0% 100%;
@@ -272,6 +244,34 @@
 [class^="divide-gray-"], 
 [class*=" divide-gray-"] {
   border-color: hsl(var(--border)) !important;
+}
+
+/* Target parent containers */
+.dark body,
+.dark #root,
+.dark #__next,
+.dark .project-page,
+.dark main,
+.dark .main-content,
+.dark .canvas,
+.dark .project-preview,
+.dark .simplebar-wrapper,
+.dark .simplebar-mask,
+.dark .simplebar-content-wrapper,
+.dark .collection-view {
+  background-color: hsl(var(--background)) !important;
+}
+
+/* Target specific canvas elements */
+.dark [data-tour="canvas"],
+.dark [data-testid="canvas"],
+.dark [data-testid="project-canvas"],
+.dark [data-testid="inner-project-canvas"],
+.dark .canvas.h-100.project-preview,
+.dark .canvas.project-preview.relative,
+.dark [data-testid="canvas"].bg-gray-900,
+.dark [data-testid="canvas"].bg-slate-800 {
+  background-color: hsl(var(--background)) !important;
 }
 
 /* Sidebar */
