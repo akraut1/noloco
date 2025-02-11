@@ -255,9 +255,6 @@
 .dark .main-content,
 .dark .canvas,
 .dark .project-preview,
-.dark .simplebar-wrapper,
-.dark .simplebar-mask,
-.dark .simplebar-content-wrapper,
 .dark .collection-view {
   background-color: hsl(var(--background)) !important;
 }
@@ -275,6 +272,9 @@
 }
 
 /* Sidebar */
+.dark .simplebar-wrapper,
+.dark .simplebar-mask,
+.dark .simplebar-content-wrapper,
 .dark [data-testid="navigation-sidebar"],
 .dark [data-testid="navigation-sidebar"] > div,
 .dark [data-testid="sidebar-logo"] {
