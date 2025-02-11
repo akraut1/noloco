@@ -268,7 +268,7 @@
 .bg-gray-950,
 .bg-slate-950,
 .bg-nlc_primary-950 {
-  background-color: hsl(var(--zinc-950)) !important;
+  background-color: hsl(var(--background)) !important;
 }
 
 /* Override Border and Divide Colors */
