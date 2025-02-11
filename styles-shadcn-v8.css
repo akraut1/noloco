@@ -411,8 +411,8 @@
 
 /* Action Buttons */
 [data-testid="action-button"] {
-  background-color: hsl(var(--background);
-  color: hsl(var(--foreground);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
   border-radius: 6px;
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
