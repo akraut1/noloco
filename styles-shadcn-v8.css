@@ -169,105 +169,72 @@
 }
 
 /* Override Text Classes */
-.text-gray-50,
-.text-slate-50 {
+.text-gray-50, .text-slate-50 {
   color: hsl(var(--primary)) !important;
 } 
-.text-gray-100,
-.text-slate-100 {
+.text-gray-100, .text-slate-100 {
   color: hsl(var(--primary)) !important;
 }
-.text-gray-200,
-.text-slate-200 {
+.text-gray-200, .text-slate-200 {
   color: hsl(var(--popover-foreground)) !important;
 }
-.text-gray-300,
-.text-slate-300 {
+.text-gray-300, .text-slate-300 {
   color: hsl(var(--destructive-foreground)) !important;
 }
-.text-gray-400,
-.text-slate-400 {
+.text-gray-400, .text-slate-400 {
   color: hsl(var(--primary-foreground)) !important;
 }
-.text-gray-500,
-.text-slate-500 {
+.text-gray-500, .text-slate-500 {
   color: hsl(var(--secondary-foreground)) !important;
 }
-.text-gray-600,
-.text-slate-600 {
+.text-gray-600, .text-slate-600 {
   color: hsl(var(--accent-foreground)) !important;
 }
-.text-gray-700,
-.text-slate-700 {
+.text-gray-700, .text-slate-700 {
   color: hsl(var(--muted-foreground)) !important;
 }
-.text-gray-800,
-.text-slate-800 {
+.text-gray-800, .text-slate-800 {
   color: hsl(var(--card-foreground)) !important;
 }
-.text-gray-900,
-.text-slate-900 {
+.text-gray-900, .text-slate-900 {
   color: hsl(var(--foreground)) !important;
 }
-.text-gray-950,
-.text-slate-950 {
+.text-gray-950, .text-slate-950 {
   color: hsl(var(--foreground)) !important;
 }
 
 /* Override Background Classes */
-.bg-gray-50,
-.bg-slate-50,
-.bg-nlc_primary-50 {
+.bg-gray-50, .bg-slate-50, .bg-nlc_primary-50 {
   background-color: hsl(var(--primary)) !important;
 }
-.bg-gray-100,
-.bg-slate-100, 
-.bg-nlc_primary-100 {
+.bg-gray-100, .bg-slate-100, .bg-nlc_primary-100 {
   background-color: hsl(var(--primary)) !important;
 }
-.bg-gray-200,
-.bg-slate-200,
-.bg-nlc_primary-200 {
+.bg-gray-200, .bg-slate-200, .bg-nlc_primary-200 {
   background-color: hsl(var(--ring)) !important;
 }
-.bg-gray-300,
-.bg-slate-300,
-.bg-nlc_primary-300 {
+.bg-gray-300, .bg-slate-300, .bg-nlc_primary-300 {
   background-color: hsl(var(--input)) !important;
 }
-.bg-gray-400,
-.bg-slate-400,
-.bg-nlc_primary-400 {
+.bg-gray-400, .bg-slate-400, .bg-nlc_primary-400 {
   background-color: hsl(var(--border)) !important;
 }
-.bg-gray-500,
-.bg-slate-500,
-.bg-nlc_primary-500 {
+.bg-gray-500, .bg-slate-500, .bg-nlc_primary-500 {
   background-color: hsl(var(--secondary)) !important;
 }
-.bg-gray-600,
-.bg-slate-600,
-.bg-nlc_primary-600 {
+.bg-gray-600, .bg-slate-600, .bg-nlc_primary-600 {
   background-color: hsl(var(--accent)) !important;
 }
-.bg-gray-700,
-.bg-slate-700,
-.bg-nlc_primary-700 {
+.bg-gray-700, .bg-slate-700, .bg-nlc_primary-700 {
   background-color: hsl(var(--muted)) !important;
 }
-.bg-gray-800,
-.bg-slate-800,
-.bg-nlc_primary-800 {
+.bg-gray-800, .bg-slate-800, .bg-nlc_primary-800 {
   background-color: hsl(var(--card)) !important;
 }
-.bg-gray-900,
-.bg-slate-900,
-.bg-nlc_primary-900 {
+.bg-gray-900, .bg-slate-900, .bg-nlc_primary-900 {
   background-color: hsl(var(--background)) !important;
 }
-.bg-gray-950,
-.bg-slate-950,
-.bg-nlc_primary-950 {
+.bg-gray-950, .bg-slate-950, .bg-nlc_primary-950 {
   background-color: hsl(var(--background)) !important;
 }
 
@@ -531,9 +498,8 @@
 
 /* Force override any existing background colors */
 .dark [data-testid="project-canvas"],
-.dark .bg-gray-900,
-.dark .bg-slate-800,
 .dark [class*="bg-gray-900"],
+.dark [class*="bg-gray-800"],
 .dark [class*="bg-slate-800"],
 .dark div[class*="bg-slate-800"] {
   background-color: hsl(var(--background)) !important;
@@ -564,52 +530,6 @@
 .dark [style*="background-color: rgb(30, 41, 59)"],
 .dark [style*="background-color: #1e293b"] {
   background-color: hsl(var(--background)) !important;
-}
-
-/* Override Text Colors */
-.dark .text-gray-50,
-.dark .text-slate-50 {
-  color: hsl(var(--primary)) !important;
-}
-.dark .text-gray-100,
-.dark .text-slate-100 {
-  color: hsl(var(--primary)) !important;
-}
-.dark .text-gray-200,
-.dark .text-slate-200 {
-  color: hsl(var(--popover-foreground)) !important;
-}
-.dark .text-gray-300,
-.dark .text-slate-300 {
-  color: hsl(var(--destructive-foreground)) !important;
-}
-.dark .text-gray-400,
-.dark .text-slate-400 {
-  color: hsl(var(--primary-foreground)) !important;
-}
-.dark .text-gray-500,
-.dark .text-slate-500 {
-  color: hsl(var(--secondary-foreground)) !important;
-}
-.dark .text-gray-600,
-.dark .text-slate-600 {
-  color: hsl(var(--accent-foreground)) !important;
-}
-.dark .text-gray-700,
-.dark .text-slate-700 {
-  color: hsl(var(--muted-foreground)) !important;
-}
-.dark .text-gray-800,
-.dark .text-slate-800 {
-  color: hsl(var(--card-foreground)) !important;
-}
-.dark .text-gray-900,
-.dark .text-slate-900 {
-  color: hsl(var(--foreground)) !important;
-}
-.dark .text-gray-950,
-.dark .text-slate-950 {
-  color: hsl(var(--foreground)) !important;
 }
 
 /* Override Background Colors */
