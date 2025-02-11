@@ -272,13 +272,6 @@
   color: hsl(var(--accent-foreground)) !important;
 }
 
-/* Section Notice */
-.dark [data-testid="record-view-section"] .relative.w-full.px-4.py-2.sm\:px-1.col-span-6.md\:col-span-12.section-notice {
-  background-color: hsl(var(--popover)) !important;
-  color: hsl(var(--popover-foreground)) !important;
-  border: 1px solid hsl(var(--border)) !important;
-}
-
 /* Table Styles */
 .collection-view,
 .collection-view-table,
