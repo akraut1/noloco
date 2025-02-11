@@ -246,7 +246,7 @@
   border-color: hsl(var(--border)) !important;
 }
 
-/* Sidebar */
+/* Navigation Sidebar */
 .dark .simplebar-wrapper,
 .dark .simplebar-mask,
 .dark .simplebar-content-wrapper,
@@ -254,6 +254,22 @@
 .dark [data-testid="navigation-sidebar"] > div,
 .dark [data-testid="sidebar-logo"] {
   background-color: hsl(var(--sidebar-background)) !important;
+    border-right: 1px solid hsl(var(--border));
+}
+
+[data-testid="sidebar-nav-item"] > div > a {
+  color: hsl(var(--muted-foreground));
+  transition: color 0.2s;
+}
+
+[data-testid="sidebar-nav-item"] > div > a:hover {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--accent));
+}
+
+[data-testid="sidebar-nav-item"] > div > a.bg-nlc_primary-900 {
+  background-color: hsl(var(--accent)) !important;
+  color: hsl(var(--accent-foreground)) !important;
 }
 
 /* Section Notice */
@@ -430,28 +446,6 @@
 [data-testid="action-button"].bg-red-500 {
   background-color: hsl(var(--destructive));
   color: hsl(var(--destructive-foreground));
-}
-
-/* Navigation Sidebar */
-[data-testid="navigation-sidebar"],
-[data-testid="navigation-sidebar"] > div {
-  background-color: hsl(var(--sidebar-background)) !important;
-  border-right: 1px solid hsl(var(--border));
-}
-
-[data-testid="sidebar-nav-item"] > div > a {
-  color: hsl(var(--muted-foreground));
-  transition: color 0.2s;
-}
-
-[data-testid="sidebar-nav-item"] > div > a:hover {
-  color: hsl(var(--foreground));
-  background-color: hsl(var(--accent));
-}
-
-[data-testid="sidebar-nav-item"] > div > a.bg-nlc_primary-900 {
-  background-color: hsl(var(--accent)) !important;
-  color: hsl(var(--accent-foreground)) !important;
 }
 
 /* Theme Toggle Switch */
