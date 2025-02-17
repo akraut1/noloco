@@ -117,6 +117,10 @@
   --sidebar-accent: 240 4% 16%;
   --sidebar-accent-foreground: 240 4.9% 83.9%;
 
+    /* Hover Overlay */
+  --background-hover-overlay: 0 0% 0% 0.03;
+  --background-hover-overlay-inverse: 0 0% 100% 0.05;
+  
   /* Badges */
   --badge-bg: 0 0% 98%;
   --badge-text: 240 5.9% 10%;
