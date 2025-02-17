@@ -32,6 +32,8 @@
   --sidebar-foreground: 240 5% 26%;
   --sidebar-accent: 240 5% 96%;
   --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+
 
   /* Hover Overlay */
   --background-hover-overlay: 0 0% 0% 0.03;
@@ -116,6 +118,7 @@
   --sidebar-foreground: 240 5% 96%;
   --sidebar-accent: 240 4% 16%;
   --sidebar-accent-foreground: 240 4.9% 83.9%;
+  --sidebar-border: 240 4% 16%;
 
     /* Hover Overlay */
   --background-hover-overlay: 0 0% 0% 0.03;
@@ -253,15 +256,15 @@
 }
 
 /* Navigation Sidebar */
-.dark .simplebar-wrapper,
-.dark .simplebar-mask,
-.dark .simplebar-content,
-.dark .simplebar-content-wrapper,
-.dark [data-testid="navigation-sidebar"],
-.dark [data-testid="navigation-sidebar"] > div,
-.dark [data-testid="sidebar-logo"] {
+.simplebar-wrapper,
+.simplebar-mask,
+.simplebar-content,
+.simplebar-content-wrapper,
+[data-testid="navigation-sidebar"],
+[data-testid="navigation-sidebar"] > div,
+[data-testid="sidebar-logo"] {
   background-color: hsl(var(--sidebar-background)) !important;
-  border-right: 1px solid hsl(var(--border));
+  border-right: 1px solid hsl(var(--sidebar-border)) !important;
 }
 
 [data-testid="sidebar-nav-item"] > div > a {
@@ -281,6 +284,17 @@
 
 [data-testid="navigation-sidebar"] a.flex.items-center {
   justify-content: flex-start !important;
+}
+
+.dark .simplebar-wrapper,
+.dark .simplebar-mask,
+.dark .simplebar-content,
+.dark .simplebar-content-wrapper,
+.dark [data-testid="navigation-sidebar"],
+.dark [data-testid="navigation-sidebar"] > div,
+.dark [data-testid="sidebar-logo"] {
+  background-color: hsl(var(--sidebar-background)) !important;
+  border-right: 1px solid hsl(var(--sidebar-border)) !important;
 }
 
 /* Badge Styles */
