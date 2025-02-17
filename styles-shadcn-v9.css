@@ -286,7 +286,8 @@
 }
 
 [data-testid="sidebar-nav-footer"],
-[data-testid="sidebar-nav-footer"] > div { 
+[data-testid="sidebar-nav-footer"] > div,
+[data-testid="sidebar-nav-footer"] > div > a { 
   color: hsl(var(--sidebar-foreground)) !important;
   background-color: hsl(var(--sidebar-background)) !important;
 }
@@ -421,6 +422,7 @@
 
 /* Force override any existing background colors */
 .dark [data-testid="project-canvas"],
+.dark [data-testid="inner-project-canvas"],
 .dark [class*="bg-gray-900"],
 .dark [class*="bg-gray-800"],
 .dark div[class*="bg-grey-800"],
