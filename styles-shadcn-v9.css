@@ -171,10 +171,6 @@
   --zinc-800: 240 3.7% 15.9%;
   --zinc-900: 240 5.9% 10%;
   --zinc-950: 240 10% 3.9%; /* Black */
-  
-  /* Hover Overlay */
-  --background-hover-overlay: 0 0% 100% 0.05;
-  --background-hover-overlay-inverse: 0 0% 0% 0.03;
 }
 
 /* Override Text Classes */
@@ -247,14 +243,6 @@
   background-color: hsl(var(--background)) !important;
 }
 
-/* Override Border and Divide Colors */
-[class^="border-gray-"], 
-[class*=" border-gray-"], 
-[class^="divide-gray-"], 
-[class*=" divide-gray-"] {
-  border-color: hsl(var(--border)) !important;
-}
-
 /* Navigation Sidebar */
 .simplebar-wrapper,
 .simplebar-mask,
@@ -263,6 +251,17 @@
 [data-testid="navigation-sidebar"],
 [data-testid="navigation-sidebar"] > div,
 [data-testid="sidebar-logo"] {
+  background-color: hsl(var(--sidebar-background)) !important;
+  border-right: 1px solid hsl(var(--sidebar-border)) !important;
+}
+
+.dark .simplebar-wrapper,
+.dark .simplebar-mask,
+.dark .simplebar-content,
+.dark .simplebar-content-wrapper,
+.dark [data-testid="navigation-sidebar"],
+.dark [data-testid="navigation-sidebar"] > div,
+.dark [data-testid="sidebar-logo"] {
   background-color: hsl(var(--sidebar-background)) !important;
   border-right: 1px solid hsl(var(--sidebar-border)) !important;
 }
@@ -284,17 +283,6 @@
 
 [data-testid="navigation-sidebar"] a.flex.items-center {
   justify-content: flex-start !important;
-}
-
-.dark .simplebar-wrapper,
-.dark .simplebar-mask,
-.dark .simplebar-content,
-.dark .simplebar-content-wrapper,
-.dark [data-testid="navigation-sidebar"],
-.dark [data-testid="navigation-sidebar"] > div,
-.dark [data-testid="sidebar-logo"] {
-  background-color: hsl(var(--sidebar-background)) !important;
-  border-right: 1px solid hsl(var(--sidebar-border)) !important;
 }
 
 /* Badge Styles */
