@@ -31,6 +31,7 @@
   --sidebar-background: 0 0% 98%;
   --sidebar-foreground: 240 5% 26%;
   --sidebar-accent: 240 5% 96%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
 
   /* Hover Overlay */
   --background-hover-overlay: 0 0% 0% 0.03;
@@ -114,6 +115,7 @@
   --sidebar-background: 240 5.9% 10%;
   --sidebar-foreground: 240 5% 96%;
   --sidebar-accent: 240 4% 16%;
+  --sidebar-accent-foreground: 240 4.9% 83.9%;
 
   /* Badges */
   --badge-bg: 0 0% 98%;
@@ -249,6 +251,7 @@
 /* Navigation Sidebar */
 .dark .simplebar-wrapper,
 .dark .simplebar-mask,
+.dark .simplebar-content,
 .dark .simplebar-content-wrapper,
 .dark [data-testid="navigation-sidebar"],
 .dark [data-testid="navigation-sidebar"] > div,
