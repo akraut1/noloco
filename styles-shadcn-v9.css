@@ -263,25 +263,6 @@
 [data-testid="navigation-sidebar"] > div,
 [data-testid="sidebar-logo"] {
   background-color: hsl(var(--sidebar-background)) !important;
-}
-
-[data-testid="navigation-sidebar"],
-[data-testid="navigation-sidebar"] > div {
-  border-right: 1px solid hsl(var(--sidebar-border)) !important;
-}
-
-.dark .simplebar-wrapper,
-.dark .simplebar-mask,
-.dark .simplebar-content,
-.dark .simplebar-content-wrapper,
-.dark [data-testid="navigation-sidebar"],
-.dark [data-testid="navigation-sidebar"] > div,
-.dark [data-testid="sidebar-logo"] {
-  background-color: hsl(var(--sidebar-background)) !important;
-}
-
-.dark [data-testid="navigation-sidebar"],
-.dark [data-testid="navigation-sidebar"] > div {
   border-right: 1px solid hsl(var(--sidebar-border)) !important;
 }
 
@@ -303,6 +284,13 @@
 [data-testid="navigation-sidebar"] a.flex.items-center {
   justify-content: flex-start !important;
 }
+
+[data-testid="sidebar-nav-footer"],
+[data-testid="sidebar-nav-footer"] > div { 
+  color: hsl(var(--sidebar-foreground)) !important;
+  background-color: hsl(var(--sidebar-background)) !important;
+}
+
 
 /* Badge Styles */
 [data-testid="field-cell"] span.rounded {
@@ -435,6 +423,8 @@
 .dark [data-testid="project-canvas"],
 .dark [class*="bg-gray-900"],
 .dark [class*="bg-gray-800"],
+.dark div[class*="bg-grey-800"],
+.dark [class*="bg-slate-900"],
 .dark [class*="bg-slate-800"],
 .dark div[class*="bg-slate-800"] {
   background-color: hsl(var(--background)) !important;
