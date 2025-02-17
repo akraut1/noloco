@@ -118,7 +118,7 @@
   --sidebar-foreground: 240 5% 96%;
   --sidebar-accent: 240 4% 16%;
   --sidebar-accent-foreground: 240 4.9% 83.9%;
-  --sidebar-border: 240 4% 16%;
+  --sidebar-border: 240 3.7% 15.9%;
 
     /* Hover Overlay */
   --background-hover-overlay: 0 0% 100% 0.05;
@@ -241,6 +241,17 @@
 }
 .bg-gray-950, .bg-slate-950, .bg-nlc_primary-950 {
   background-color: hsl(var(--background)) !important;
+}
+
+/* Backgrounds by Class */
+[class*="bg-gray-lightest-"] {
+  background-color: hsl(var(--background));
+}
+
+/* Borders by Class */
+[class*="border-gray-"],
+[class*="border-slate-"] {
+  border-color: hsl(var(--border));
 }
 
 /* Navigation Sidebar */
