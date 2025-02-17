@@ -268,13 +268,13 @@
 }
 
 [data-testid="sidebar-nav-item"] > div > a {
-  color: hsl(var(--muted-foreground));
-  transition: color 0.2s;
+  color: hsl(var(--sidebar-foreground)) !important;
+  background-color: hsl(var(--sidebar-background)) !important;
 }
 
 [data-testid="sidebar-nav-item"] > div > a:hover {
-  color: hsl(var(--foreground));
-  background-color: hsl(var(--accent));
+  color: hsl(var(--sidebar-accent-foreground)) !important;
+  background-color: hsl(var(--sidebar-accent)) !important;
 }
 
 [data-testid="sidebar-nav-item"] > div > a.bg-nlc_primary-900 {
