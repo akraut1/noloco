@@ -440,21 +440,7 @@
   gap: 16px;
   background-color: hsl(var(--popover));
   color: hsl(var(--popover-foreground)); 
-  border: 1px solid hsl(var(--border));  
-}
-
-[data-testid="popover-tooltip"] > div > div > div > div,
-[data-testid="popover-tooltip"] > div > div > div > div > a,
-[data-testid="popover-tooltip"] > div > div > div > div > button {
-  display: flex;
-  width: 320px;
-  padding: 16px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  background-color: hsl(var(--popover));
-  color: hsl(var(--popover-foreground)); 
-  border: 1px solid hsl(var(--border));
+  border: 1px solid hsl(var(--border)); 
   border-radius: 6px;
   box-shadow: hsl(var(--shadow-md));
 }
@@ -462,9 +448,7 @@
 [data-testid="popover-tooltip"] > div > div > div > div:hover,
 [data-testid="popover-tooltip"] > div > div > div > div > a:hover,
 [data-testid="popover-tooltip"] > div > div > div > div > button:hover {
-  background-color: hsl(var(--popover));
-  color: hsl(var(--popover-foreground)); 
-  border: 1px solid hsl(var(--border));  
+  background-color: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), hsl(var(--base-primary));
 }
   
 
