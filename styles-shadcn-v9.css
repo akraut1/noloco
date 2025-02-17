@@ -33,6 +33,8 @@
   --sidebar-accent: 240 5% 96%;
   --sidebar-accent-foreground: 240 5.9% 10%;
   --sidebar-border: 220 13% 91%;
+  --shadow-base: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.10), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
 
 
   /* Hover Overlay */
@@ -86,7 +88,6 @@
   --zinc-800: 240 3.7% 15.9%;
   --zinc-900: 240 5.9% 10%;
   --zinc-950: 240 10% 3.9%; /* Black */
-}
 
 /* DARK MODE VARIABLES */
 .dark {
@@ -119,6 +120,8 @@
   --sidebar-accent: 240 4% 16%;
   --sidebar-accent-foreground: 240 4.9% 83.9%;
   --sidebar-border: 240 3.7% 15.9%;
+  --shadow-base: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.10), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
 
     /* Hover Overlay */
   --background-hover-overlay: 0 0% 0% 0.03;
@@ -241,11 +244,6 @@
 }
 .bg-gray-950, .bg-slate-950, .bg-nlc_primary-950 {
   background-color: hsl(var(--background)) !important;
-}
-
-/* Backgrounds by Class */
-[class*="bg-gray-lightest-"] {
-  background-color: hsl(var(--background));
 }
 
 /* Borders by Class */
@@ -380,15 +378,33 @@
   -webkit-backdrop-filter: blur(8px);
 }
 
+  /* Theme Toggle Switch */
+[data-testid="dark-mode-switch"] {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border-color: hsl(var(--border));
+}
+  
 /* Action Buttons */
 [data-testid="action-button"] {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
   border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-size: 0.75rem;
-  line-height: 1rem;
+  display: flex;
+  height: 36px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  box-shadow: hsl(var(--shadow-base));
   transition: all 150ms;
+}
+
+[data-testid="action-button"]:hover {
+  background-color: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), hsl(var(--base-primary));
 }
 
 [data-testid="action-button"]:focus {
@@ -412,12 +428,45 @@
   color: hsl(var(--destructive-foreground));
 }
 
-/* Theme Toggle Switch */
-[data-testid="dark-mode-switch"] {
-  background-color: hsl(var(--secondary));
-  color: hsl(var(--secondary-foreground));
-  border-color: hsl(var(--border));
+/* Record View */
+
+/* Popover Tooltip */
+[data-testid="popover-tooltip"] {
+  display: flex;
+  width: 320px;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: hsl(var(--popover));
+  color: hsl(var(--popover-foreground)); 
+  border: 1px solid hsl(var(--border));  
 }
+
+[data-testid="popover-tooltip"] > div > div > div > div,
+[data-testid="popover-tooltip"] > div > div > div > div > a,
+[data-testid="popover-tooltip"] > div > div > div > div > button {
+  display: flex;
+  width: 320px;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: hsl(var(--popover));
+  color: hsl(var(--popover-foreground)); 
+  border: 1px solid hsl(var(--border));
+  border-radius: 6px;
+  box-shadow: hsl(var(--shadow-md));
+}
+
+[data-testid="popover-tooltip"] > div > div > div > div:hover,
+[data-testid="popover-tooltip"] > div > div > div > div > a:hover,
+[data-testid="popover-tooltip"] > div > div > div > div > button:hover {
+  background-color: hsl(var(--popover));
+  color: hsl(var(--popover-foreground)); 
+  border: 1px solid hsl(var(--border));  
+}
+  
 
 /* Force override any existing background colors */
 .dark [data-testid="project-canvas"],
