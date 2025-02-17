@@ -275,6 +275,10 @@
   color: hsl(var(--accent-foreground)) !important;
 }
 
+[data-testid="navigation-sidebar"] a.flex.items-center {
+  justify-content: flex-start !important;
+}
+
 /* Badge Styles */
 [data-testid="field-cell"] span.rounded {
   background-color: var(--badge-bg);
