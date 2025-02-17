@@ -257,7 +257,7 @@
 .dark [data-testid="navigation-sidebar"] > div,
 .dark [data-testid="sidebar-logo"] {
   background-color: hsl(var(--sidebar-background)) !important;
-    border-right: 1px solid hsl(var(--border));
+  border-right: 1px solid hsl(var(--border));
 }
 
 [data-testid="sidebar-nav-item"] > div > a {
