@@ -86,7 +86,7 @@
   --zinc-950: 240 10% 3.9%; /* Black */
 }
 
-/* DARK MODE VARIABLRES */
+/* DARK MODE VARIABLES */
 .dark {
   --background: 240 10% 3.9%;
   --foreground: 0 0% 98%;
@@ -187,7 +187,7 @@
 .text-gray-300, .text-slate-300, .text-nlc_primary-300 {
   color: hsl(var(--destructive-foreground)) !important;
 }
-.text-gray-400, .text-slate-400, .text-nlc_primary-5400 {
+.text-gray-400, .text-slate-400, .text-nlc_primary-400 {
   color: hsl(var(--primary-foreground)) !important;
 }
 .text-gray-500, .text-slate-500, .text-nlc_primary-500 {
