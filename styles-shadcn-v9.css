@@ -431,7 +431,7 @@
 /* Record View */
 
 /* Popover Tooltip */
-[data-testid="popover-tooltip"] {
+[data-testid="popover-tooltip"] > div {
   display: flex;
   width: 320px;
   padding: 16px;
@@ -445,9 +445,9 @@
   box-shadow: hsl(var(--shadow-md));
 }
 
-[data-testid="popover-tooltip"] > div > div > div > div:hover,
-[data-testid="popover-tooltip"] > div > div > div > div > a:hover,
-[data-testid="popover-tooltip"] > div > div > div > div > button:hover {
+[data-testid="popover-tooltip"] > div > div:hover,
+[data-testid="popover-tooltip"] > div > a:hover,
+[data-testid="popover-tooltip"] > div > button:hover {
   background-color: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), hsl(var(--base-primary));
 }
   
