@@ -448,7 +448,7 @@
 [data-testid="popover-tooltip"] > div > div:hover,
 [data-testid="popover-tooltip"] > div > a:hover,
 [data-testid="popover-tooltip"] > div > button:hover {
-  background-color: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), hsl(var(--base-primary));
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), hsl(var(--base-primary));
 }
   
 
