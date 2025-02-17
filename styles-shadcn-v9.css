@@ -252,6 +252,10 @@
 [data-testid="navigation-sidebar"] > div,
 [data-testid="sidebar-logo"] {
   background-color: hsl(var(--sidebar-background)) !important;
+}
+
+[data-testid="navigation-sidebar"],
+[data-testid="navigation-sidebar"] > div {
   border-right: 1px solid hsl(var(--sidebar-border)) !important;
 }
 
@@ -263,6 +267,10 @@
 .dark [data-testid="navigation-sidebar"] > div,
 .dark [data-testid="sidebar-logo"] {
   background-color: hsl(var(--sidebar-background)) !important;
+}
+
+.dark [data-testid="navigation-sidebar"],
+.dark [data-testid="navigation-sidebar"] > div {
   border-right: 1px solid hsl(var(--sidebar-border)) !important;
 }
 
