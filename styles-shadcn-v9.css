@@ -179,10 +179,10 @@
 
 /* Override Text Classes */
 .text-gray-50, .text-slate-50, .text-nlc_primary-50 {
-  color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
 } 
 .text-gray-100, .text-slate-100, .text-nlc_primary-100 {
-  color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
 }
 .text-gray-200, .text-slate-200, .text-nlc_primary-200 {
   color: hsl(var(--popover-foreground)) !important;
@@ -214,10 +214,10 @@
 
 /* Override Background Classes */
 .bg-gray-50, .bg-slate-50, .bg-nlc_primary-50 {
-  background-color: hsl(var(--primary)) !important;
+  background-color: hsl(var(--primary-foreground)) !important;
 }
 .bg-gray-100, .bg-slate-100, .bg-nlc_primary-100 {
-  background-color: hsl(var(--primary)) !important;
+  background-color: hsl(var(--primary-foreground)) !important;
 }
 .bg-gray-200, .bg-slate-200, .bg-nlc_primary-200 {
   background-color: hsl(var(--ring)) !important;
