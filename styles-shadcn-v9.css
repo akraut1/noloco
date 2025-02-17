@@ -253,10 +253,6 @@
 }
 
 /* Navigation Sidebar */
-.simplebar-wrapper,
-.simplebar-mask,
-.simplebar-content,
-.simplebar-content-wrapper,
 [data-testid="navigation-sidebar"],
 [data-testid="navigation-sidebar"] > div,
 [data-testid="sidebar-logo"] {
@@ -429,6 +425,9 @@
 }
 
 /* Record View */
+[data-testid="record-view"],
+[data-testid="record-view-body"],  {
+  
 
 /* Popover Tooltip */
 [data-testid="popover-tooltip"] {
