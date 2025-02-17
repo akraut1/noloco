@@ -263,7 +263,6 @@
 [data-testid="navigation-sidebar"] > div,
 [data-testid="sidebar-logo"] {
   background-color: hsl(var(--sidebar-background)) !important;
-  border-right: 1px solid hsl(var(--sidebar-border)) !important;
 }
 
 [data-testid="sidebar-nav-item"] > div > a {
